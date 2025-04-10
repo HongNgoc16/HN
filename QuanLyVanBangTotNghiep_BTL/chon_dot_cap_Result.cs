@@ -14,7 +14,6 @@ namespace QuanLyVanBangTotNghiep_BTL
     public partial class chon_dot_cap_Result
     {
         public int Id_Dot_Cap { get; set; }
-        public string Ten_Van_Bang { get; set; }
         public string Ten_Dot_Cap { get; set; }
     }
 }

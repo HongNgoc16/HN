@@ -189,7 +189,6 @@
     </AssociationSet>
     <FunctionImport Name="chon_chuyennganh" ReturnType="Collection(QuanLyVanBangModel.chon_chuyennganh_Result)" />
     <FunctionImport Name="chon_donviquanly" ReturnType="Collection(QuanLyVanBangModel.chon_donviquanly_Result)" />
-    <FunctionImport Name="chon_dot_cap" ReturnType="Collection(QuanLyVanBangModel.chon_dot_cap_Result)" />
     <FunctionImport Name="chon_khoahoc" ReturnType="Collection(QuanLyVanBangModel.chon_khoahoc_Result)" />
     <FunctionImport Name="chon_nganhhoc" ReturnType="Collection(QuanLyVanBangModel.chon_nganhhoc_Result)" />
     <FunctionImport Name="chon_nguoidung" ReturnType="Collection(QuanLyVanBangModel.chon_nguoidung_Result)" />
@@ -210,7 +209,6 @@
     </FunctionImport>
     <FunctionImport Name="sua_dot_cap">
       <Parameter Name="Id_Dot_Cap" Mode="In" Type="Int32" />
-      <Parameter Name="Ten_Van_Bang" Mode="In" Type="String" />
       <Parameter Name="Ten_Dot_Cap" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="sua_khoahoc">
@@ -251,15 +249,11 @@
     <FunctionImport Name="sua_vanbang">
       <Parameter Name="Id_VanBang" Mode="In" Type="Int32" />
       <Parameter Name="So_Hieu_Van_Bang" Mode="In" Type="String" />
-      <Parameter Name="Ma_SV" Mode="In" Type="String" />
-      <Parameter Name="Ho_Va_Ten" Mode="In" Type="String" />
-      <Parameter Name="Gioi_Tinh" Mode="In" Type="Boolean" />
-      <Parameter Name="Ngay_Sinh" Mode="In" Type="DateTime" />
-      <Parameter Name="Noi_Sinh" Mode="In" Type="String" />
-      <Parameter Name="Nganh_Hoc" Mode="In" Type="String" />
-      <Parameter Name="Khoa_Hoc" Mode="In" Type="String" />
+      <Parameter Name="Id_DotCap" Mode="In" Type="Int32" />
+      <Parameter Name="Id_SinhVien" Mode="In" Type="Int32" />
       <Parameter Name="Ngay_Cap" Mode="In" Type="DateTime" />
-      <Parameter Name="Xep_Loai_Tot_Nghiep" Mode="In" Type="String" />
+      <Parameter Name="Noi_Cap" Mode="In" Type="String" />
+      <Parameter Name="Trang_Thai" Mode="In" Type="Boolean" />
     </FunctionImport>
     <FunctionImport Name="sua_xeploai">
       <Parameter Name="Id_XepLoai" Mode="In" Type="Int32" />
@@ -282,7 +276,6 @@
       <Parameter Name="Trang_Thai_Su_Dung" Mode="In" Type="Boolean" />
     </FunctionImport>
     <FunctionImport Name="them_dot_cap">
-      <Parameter Name="Ten_Van_Bang" Mode="In" Type="String" />
       <Parameter Name="Ten_Dot_Cap" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="them_khoahoc">
@@ -318,15 +311,11 @@
     </FunctionImport>
     <FunctionImport Name="them_vanbang">
       <Parameter Name="So_Hieu_Van_Bang" Mode="In" Type="String" />
-      <Parameter Name="Ma_SV" Mode="In" Type="String" />
-      <Parameter Name="Ho_Va_Ten" Mode="In" Type="String" />
-      <Parameter Name="Gioi_Tinh" Mode="In" Type="Boolean" />
-      <Parameter Name="Ngay_Sinh" Mode="In" Type="DateTime" />
-      <Parameter Name="Noi_Sinh" Mode="In" Type="String" />
-      <Parameter Name="Nganh_Hoc" Mode="In" Type="String" />
-      <Parameter Name="Khoa_Hoc" Mode="In" Type="String" />
+      <Parameter Name="Id_DotCap" Mode="In" Type="Int32" />
+      <Parameter Name="Id_SinhVien" Mode="In" Type="Int32" />
       <Parameter Name="Ngay_Cap" Mode="In" Type="DateTime" />
-      <Parameter Name="Xep_Loai_Tot_Nghiep" Mode="In" Type="String" />
+      <Parameter Name="Noi_Cap" Mode="In" Type="String" />
+      <Parameter Name="Trang_Thai" Mode="In" Type="Boolean" />
     </FunctionImport>
     <FunctionImport Name="them_xeploai">
       <Parameter Name="Ma_XepLoai" Mode="In" Type="String" />
@@ -362,7 +351,10 @@
     <FunctionImport Name="xoa_xeploai">
       <Parameter Name="Id_XepLoai" Mode="In" Type="Int32" />
     </FunctionImport>
+    <FunctionImport Name="chon_sinhvien" ReturnType="Collection(QuanLyVanBangModel.chon_sinhvien_Result)" />
+    <FunctionImport Name="chon_vanbang" ReturnType="Collection(QuanLyVanBangModel.chon_vanbang_Result)" />
     <EntitySet Name="DotCapBangTNs" EntityType="QuanLyVanBangModel.DotCapBangTN" />
+    <FunctionImport Name="chon_dot_cap" ReturnType="Collection(QuanLyVanBangModel.chon_dot_cap_Result)" />
     <EntitySet Name="VanBangTNs" EntityType="QuanLyVanBangModel.VanBangTN" />
     <AssociationSet Name="FK_nv_VanBangTN_dm_SinhVien" Association="QuanLyVanBangModel.FK_nv_VanBangTN_dm_SinhVien">
       <End Role="dm_SinhVien" EntitySet="dm_SinhVien" />
@@ -372,8 +364,6 @@
       <End Role="DotCapBangTN" EntitySet="DotCapBangTNs" />
       <End Role="VanBangTN" EntitySet="VanBangTNs" />
     </AssociationSet>
-    <FunctionImport Name="chon_sinhvien" ReturnType="Collection(QuanLyVanBangModel.chon_sinhvien_Result)" />
-    <FunctionImport Name="chon_vanbang" ReturnType="Collection(QuanLyVanBangModel.chon_vanbang_Result)" />
   </EntityContainer>
   <ComplexType Name="chon_chuyennganh_Result">
     <Property Type="Int32" Name="Id_ChuyenNganh" Nullable="false" />
@@ -388,11 +378,6 @@
     <Property Type="String" Name="Ten_DonViQuanLy" Nullable="true" MaxLength="30" />
     <Property Type="String" Name="Ten_DonViQuanLy_Cha" Nullable="true" MaxLength="30" />
     <Property Type="Boolean" Name="Trang_Thai_Su_Dung" Nullable="true" />
-  </ComplexType>
-  <ComplexType Name="chon_dot_cap_Result">
-    <Property Type="Int32" Name="Id_Dot_Cap" Nullable="false" />
-    <Property Type="String" Name="Ten_Van_Bang" Nullable="true" MaxLength="50" />
-    <Property Type="String" Name="Ten_Dot_Cap" Nullable="true" MaxLength="50" />
   </ComplexType>
   <ComplexType Name="chon_khoahoc_Result">
     <Property Type="Int32" Name="Id_KhoaHoc" Nullable="false" />
@@ -422,15 +407,33 @@
     <Property Type="Decimal" Name="Diem_Toi_Da" Nullable="false" Precision="4" Scale="2" />
     <Property Type="Boolean" Name="Trang_Thai_Su_Dung" Nullable="false" />
   </ComplexType>
+  <ComplexType Name="chon_vanbang_Result">
+    <Property Type="Int32" Name="Id_VanBang" Nullable="false" />
+    <Property Type="String" Name="So_Hieu_Van_Bang" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Ten_Dot_Cap" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Ma_SinhVien" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Ho_Va_Ten" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Ngay_Sinh" Nullable="true" />
+    <Property Type="String" Name="Ten_Nganh" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Ten_ChuyenNganh" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Ma_KhoaHoc" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Ten_XepLoai" Nullable="true" MaxLength="25" />
+    <Property Type="DateTime" Name="Ngay_Cap" Nullable="false" />
+    <Property Type="String" Name="Noi_Cap" Nullable="false" />
+    <Property Type="Boolean" Name="Trang_Thai" Nullable="false" />
+  </ComplexType>
   <EntityType Name="DotCapBangTN">
     <Key>
       <PropertyRef Name="Id_Dot_Cap" />
     </Key>
     <Property Name="Id_Dot_Cap" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Ten_Van_Bang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Ten_Dot_Cap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ten_Dot_Cap" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="VanBangTNs" Relationship="QuanLyVanBangModel.FK_VanBangTN_DotCapBangTN" FromRole="DotCapBangTN" ToRole="VanBangTN" />
   </EntityType>
+  <ComplexType Name="chon_dot_cap_Result">
+    <Property Type="Int32" Name="Id_Dot_Cap" Nullable="false" />
+    <Property Type="String" Name="Ten_Dot_Cap" Nullable="false" MaxLength="50" />
+  </ComplexType>
   <EntityType Name="VanBangTN">
     <Key>
       <PropertyRef Name="Id_VanBang" />
@@ -440,6 +443,7 @@
     <Property Name="Id_DotCap" Type="Int32" Nullable="false" />
     <Property Name="Id_SinhVien" Type="Int32" Nullable="false" />
     <Property Name="Ngay_Cap" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Noi_Cap" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Trang_Thai" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="dm_SinhVien" Relationship="QuanLyVanBangModel.FK_nv_VanBangTN_dm_SinhVien" FromRole="VanBangTN" ToRole="dm_SinhVien" />
     <NavigationProperty Name="DotCapBangTN" Relationship="QuanLyVanBangModel.FK_VanBangTN_DotCapBangTN" FromRole="VanBangTN" ToRole="DotCapBangTN" />
@@ -482,18 +486,5 @@
     <Property Type="String" Name="Ten_DonViQuanLy" Nullable="true" MaxLength="30" />
     <Property Type="String" Name="Ten_XepLoai" Nullable="true" MaxLength="25" />
     <Property Type="String" Name="Trang_Thai" Nullable="false" MaxLength="15" />
-  </ComplexType>
-  <ComplexType Name="chon_vanbang_Result">
-    <Property Type="Int32" Name="Id_VanBang" Nullable="false" />
-    <Property Type="String" Name="So_Hieu_Van_Bang" Nullable="false" MaxLength="50" />
-    <Property Type="String" Name="Ten_Dot_Cap" Nullable="true" MaxLength="50" />
-    <Property Type="String" Name="Ma_SinhVien" Nullable="true" MaxLength="50" />
-    <Property Type="String" Name="Ho_Va_Ten" Nullable="true" MaxLength="50" />
-    <Property Type="String" Name="Ten_Nganh" Nullable="true" MaxLength="50" />
-    <Property Type="String" Name="Ten_ChuyenNganh" Nullable="true" MaxLength="50" />
-    <Property Type="String" Name="Ma_KhoaHoc" Nullable="true" MaxLength="10" />
-    <Property Type="DateTime" Name="Ngay_Cap" Nullable="false" />
-    <Property Type="String" Name="Noi_Cap" Nullable="false" />
-    <Property Type="Boolean" Name="Trang_Thai" Nullable="false" />
   </ComplexType>
 </Schema>

@@ -92,8 +92,7 @@
       <PropertyRef Name="Id_Dot_Cap" />
     </Key>
     <Property Name="Id_Dot_Cap" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Ten_Van_Bang" Type="nvarchar" MaxLength="50" />
-    <Property Name="Ten_Dot_Cap" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ten_Dot_Cap" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="VanBangTN">
     <Key>
@@ -104,6 +103,7 @@
     <Property Name="Id_DotCap" Type="int" Nullable="false" />
     <Property Name="Id_SinhVien" Type="int" Nullable="false" />
     <Property Name="Ngay_Cap" Type="date" Nullable="false" />
+    <Property Name="Noi_Cap" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Trang_Thai" Type="bit" Nullable="false" />
   </EntityType>
   <Association Name="FK_dm_ChuyenNganh_dm_NganhHoc">
@@ -215,7 +215,6 @@
   </Function>
   <Function Name="sua_dot_cap" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Id_Dot_Cap" Type="int" Mode="In" />
-    <Parameter Name="Ten_Van_Bang" Type="nvarchar" Mode="In" />
     <Parameter Name="Ten_Dot_Cap" Type="nvarchar" Mode="In" />
   </Function>
   <Function Name="sua_khoahoc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -256,15 +255,11 @@
   <Function Name="sua_vanbang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Id_VanBang" Type="int" Mode="In" />
     <Parameter Name="So_Hieu_Van_Bang" Type="nvarchar" Mode="In" />
-    <Parameter Name="Ma_SV" Type="nvarchar" Mode="In" />
-    <Parameter Name="Ho_Va_Ten" Type="nvarchar" Mode="In" />
-    <Parameter Name="Gioi_Tinh" Type="bit" Mode="In" />
-    <Parameter Name="Ngay_Sinh" Type="date" Mode="In" />
-    <Parameter Name="Noi_Sinh" Type="nvarchar" Mode="In" />
-    <Parameter Name="Nganh_Hoc" Type="nvarchar" Mode="In" />
-    <Parameter Name="Khoa_Hoc" Type="nvarchar" Mode="In" />
+    <Parameter Name="Id_DotCap" Type="int" Mode="In" />
+    <Parameter Name="Id_SinhVien" Type="int" Mode="In" />
     <Parameter Name="Ngay_Cap" Type="date" Mode="In" />
-    <Parameter Name="Xep_Loai_Tot_Nghiep" Type="nvarchar" Mode="In" />
+    <Parameter Name="Noi_Cap" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Trang_Thai" Type="bit" Mode="In" />
   </Function>
   <Function Name="sua_xeploai" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Id_XepLoai" Type="int" Mode="In" />
@@ -287,7 +282,6 @@
     <Parameter Name="Trang_Thai_Su_Dung" Type="bit" Mode="In" />
   </Function>
   <Function Name="them_dot_cap" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="Ten_Van_Bang" Type="nvarchar" Mode="In" />
     <Parameter Name="Ten_Dot_Cap" Type="nvarchar" Mode="In" />
   </Function>
   <Function Name="them_khoahoc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -323,15 +317,11 @@
   </Function>
   <Function Name="them_vanbang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="So_Hieu_Van_Bang" Type="nvarchar" Mode="In" />
-    <Parameter Name="Ma_SV" Type="nvarchar" Mode="In" />
-    <Parameter Name="Ho_Va_Ten" Type="nvarchar" Mode="In" />
-    <Parameter Name="Gioi_Tinh" Type="bit" Mode="In" />
-    <Parameter Name="Ngay_Sinh" Type="date" Mode="In" />
-    <Parameter Name="Noi_Sinh" Type="nvarchar" Mode="In" />
-    <Parameter Name="Nganh_Hoc" Type="nvarchar" Mode="In" />
-    <Parameter Name="Khoa_Hoc" Type="nvarchar" Mode="In" />
+    <Parameter Name="Id_DotCap" Type="int" Mode="In" />
+    <Parameter Name="Id_SinhVien" Type="int" Mode="In" />
     <Parameter Name="Ngay_Cap" Type="date" Mode="In" />
-    <Parameter Name="Xep_Loai_Tot_Nghiep" Type="nvarchar" Mode="In" />
+    <Parameter Name="Noi_Cap" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Trang_Thai" Type="bit" Mode="In" />
   </Function>
   <Function Name="them_xeploai" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Ma_XepLoai" Type="nvarchar" Mode="In" />

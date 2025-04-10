@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonThemMoi = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.buttonXoa = new System.Windows.Forms.Button();
@@ -40,7 +40,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.buttonThemMoi);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.buttonXoa);
@@ -50,14 +50,15 @@
             this.panel1.Size = new System.Drawing.Size(1040, 52);
             this.panel1.TabIndex = 0;
             // 
-            // button3
+            // buttonThemMoi
             // 
-            this.button3.Location = new System.Drawing.Point(689, 15);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(93, 34);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Thêm mới";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonThemMoi.Location = new System.Drawing.Point(689, 15);
+            this.buttonThemMoi.Name = "buttonThemMoi";
+            this.buttonThemMoi.Size = new System.Drawing.Size(93, 34);
+            this.buttonThemMoi.TabIndex = 3;
+            this.buttonThemMoi.Text = "Thêm mới";
+            this.buttonThemMoi.UseVisualStyleBackColor = true;
+            this.buttonThemMoi.Click += new System.EventHandler(this.buttonThemMoi_Click);
             // 
             // button1
             // 
@@ -89,12 +90,12 @@
             // dgVanBang
             // 
             this.dgVanBang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgVanBang.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgVanBang.Location = new System.Drawing.Point(0, 90);
+            this.dgVanBang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgVanBang.Location = new System.Drawing.Point(0, 52);
             this.dgVanBang.Name = "dgVanBang";
             this.dgVanBang.RowHeadersWidth = 62;
             this.dgVanBang.RowTemplate.Height = 28;
-            this.dgVanBang.Size = new System.Drawing.Size(1040, 455);
+            this.dgVanBang.Size = new System.Drawing.Size(1040, 493);
             this.dgVanBang.TabIndex = 1;
             // 
             // uc_NhapVanBang
@@ -117,7 +118,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button buttonXoa;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonThemMoi;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dgVanBang;
     }

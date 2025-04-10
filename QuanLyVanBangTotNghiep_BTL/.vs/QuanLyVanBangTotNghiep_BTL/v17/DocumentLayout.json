@@ -1,41 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\QuanLyVanBangTotNghiep_BTL\\",
+  "WorkspaceRootPath": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|d:\\ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\b\u00E0i t\u1EADp l\u1EDBn\\quanlyvanbangtotnghiep_btl\\qlvb.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
-      "RelativeMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|solutionrelative:qlvb.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|d:\\ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\b\u00E0i t\u1EADp l\u1EDBn\\quanlyvanbangtotnghiep_btl\\chon_sinhvien_result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|solutionrelative:chon_sinhvien_result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\QuanLyVanBangTotNghiep_BTL\\dal\\dm_sinhvien_dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|d:\\ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\b\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\quanlyvanbangtotnghiep_btl\\dal\\dm_sinhvien_dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|solutionrelative:dal\\dm_sinhvien_dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|d:\\ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\b\u00E0i t\u1EADp l\u1EDBn\\quanlyvanbangtotnghiep_btl\\bll\\dm_donviquanly_bll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|solutionrelative:bll\\dm_donviquanly_bll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\qlvb.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|solutionrelative:qlvb.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\QuanLyVanBangTotNghiep_BTL\\bll\\dm_sinhvien_bll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|solutionrelative:bll\\dm_sinhvien_bll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\QuanLyVanBangTotNghiep_BTL\\gui\\quantrivien\\ucsinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\gui\\quantrivien\\ucsinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|solutionrelative:gui\\quantrivien\\ucsinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|d:\\ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\b\u00E0i t\u1EADp l\u1EDBn\\quanlyvanbangtotnghiep_btl\\gui\\quantrivien\\ucsinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|solutionrelative:gui\\quantrivien\\ucsinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\dal\\dm_donviquanly_dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|solutionrelative:dal\\dm_donviquanly_dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|d:\\ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\b\u00E0i t\u1EADp l\u1EDBn\\quanlyvanbangtotnghiep_btl\\gui\\quantrivien\\ucdonviquanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\gui\\quantrivien\\ucdonviquanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|solutionrelative:gui\\quantrivien\\ucdonviquanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|d:\\ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\b\u00E0i t\u1EADp l\u1EDBn\\quanlyvanbangtotnghiep_btl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\bll\\dm_sinhvien_bll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|solutionrelative:bll\\dm_sinhvien_bll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\gui\\quantrivien\\ucsinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|solutionrelative:gui\\quantrivien\\ucsinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -46,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 117,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -55,114 +51,94 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "chon_sinhvien_Result.cs",
-              "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\QuanLyVanBangTotNghiep_BTL\\chon_sinhvien_Result.cs",
-              "RelativeDocumentMoniker": "chon_sinhvien_Result.cs",
-              "ToolTip": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\QuanLyVanBangTotNghiep_BTL\\chon_sinhvien_Result.cs",
-              "RelativeToolTip": "chon_sinhvien_Result.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T02:34:48.654Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "QLVB.edmx [Diagram1]",
-              "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\QuanLyVanBangTotNghiep_BTL\\QLVB.edmx",
+              "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\QLVB.edmx",
               "RelativeDocumentMoniker": "QLVB.edmx",
-              "ToolTip": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\QuanLyVanBangTotNghiep_BTL\\QLVB.edmx [Diagram1]",
+              "ToolTip": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\QLVB.edmx [Diagram1]",
               "RelativeToolTip": "QLVB.edmx [Diagram1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2025-04-10T01:55:13.288Z",
-              "EditorCaption": " [Diagram1]"
+              "WhenOpened": "2025-04-10T18:02:11.463Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "ucSinhVien.cs [Design]",
-              "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\QuanLyVanBangTotNghiep_BTL\\GUI\\QuanTriVien\\ucSinhVien.cs",
+              "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\GUI\\QuanTriVien\\ucSinhVien.cs",
               "RelativeDocumentMoniker": "GUI\\QuanTriVien\\ucSinhVien.cs",
-              "ToolTip": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\QuanLyVanBangTotNghiep_BTL\\GUI\\QuanTriVien\\ucSinhVien.cs [Design]",
+              "ToolTip": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\GUI\\QuanTriVien\\ucSinhVien.cs [Design]",
               "RelativeToolTip": "GUI\\QuanTriVien\\ucSinhVien.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T17:41:58.595Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-09T17:41:58.595Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "dm_DonViQuanLy_BLL.cs",
-              "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\QuanLyVanBangTotNghiep_BTL\\BLL\\dm_DonViQuanLy_BLL.cs",
-              "RelativeDocumentMoniker": "BLL\\dm_DonViQuanLy_BLL.cs",
-              "ToolTip": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\QuanLyVanBangTotNghiep_BTL\\BLL\\dm_DonViQuanLy_BLL.cs",
-              "RelativeToolTip": "BLL\\dm_DonViQuanLy_BLL.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAxwAAAAAAAAAAA",
+              "Title": "dm_DonViQuanLy_DAL.cs",
+              "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\DAL\\dm_DonViQuanLy_DAL.cs",
+              "RelativeDocumentMoniker": "DAL\\dm_DonViQuanLy_DAL.cs",
+              "ToolTip": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\DAL\\dm_DonViQuanLy_DAL.cs",
+              "RelativeToolTip": "DAL\\dm_DonViQuanLy_DAL.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T01:49:40.549Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T17:58:24.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ucDonViQuanLy.cs",
+              "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\GUI\\QuanTriVien\\ucDonViQuanLy.cs",
+              "RelativeDocumentMoniker": "GUI\\QuanTriVien\\ucDonViQuanLy.cs",
+              "ToolTip": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\GUI\\QuanTriVien\\ucDonViQuanLy.cs",
+              "RelativeToolTip": "GUI\\QuanTriVien\\ucDonViQuanLy.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T01:49:03.82Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "ucDonViQuanLy.cs",
-              "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\QuanLyVanBangTotNghiep_BTL\\GUI\\QuanTriVien\\ucDonViQuanLy.cs",
-              "RelativeDocumentMoniker": "GUI\\QuanTriVien\\ucDonViQuanLy.cs",
-              "ToolTip": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\QuanLyVanBangTotNghiep_BTL\\GUI\\QuanTriVien\\ucDonViQuanLy.cs",
-              "RelativeToolTip": "GUI\\QuanTriVien\\ucDonViQuanLy.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAAwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T01:49:03.82Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\QuanLyVanBangTotNghiep_BTL\\Program.cs",
+              "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\QuanLyVanBangTotNghiep_BTL\\Program.cs",
+              "ToolTip": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T01:46:35.61Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T01:46:35.61Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "ucSinhVien.cs",
-              "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\QuanLyVanBangTotNghiep_BTL\\GUI\\QuanTriVien\\ucSinhVien.cs",
+              "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\GUI\\QuanTriVien\\ucSinhVien.cs",
               "RelativeDocumentMoniker": "GUI\\QuanTriVien\\ucSinhVien.cs",
-              "ToolTip": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\QuanLyVanBangTotNghiep_BTL\\GUI\\QuanTriVien\\ucSinhVien.cs",
+              "ToolTip": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\GUI\\QuanTriVien\\ucSinhVien.cs",
               "RelativeToolTip": "GUI\\QuanTriVien\\ucSinhVien.cs",
               "ViewState": "AQIAABYAAAAAAAAAAAAqwCAAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T18:21:12.035Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-09T18:21:12.035Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "dm_SinhVien_BLL.cs",
-              "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\QuanLyVanBangTotNghiep_BTL\\BLL\\dm_SinhVien_BLL.cs",
+              "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\BLL\\dm_SinhVien_BLL.cs",
               "RelativeDocumentMoniker": "BLL\\dm_SinhVien_BLL.cs",
-              "ToolTip": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\QuanLyVanBangTotNghiep_BTL\\BLL\\dm_SinhVien_BLL.cs",
+              "ToolTip": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\BLL\\dm_SinhVien_BLL.cs",
               "RelativeToolTip": "BLL\\dm_SinhVien_BLL.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAjwA0AAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T18:02:45.056Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-09T18:02:45.056Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "dm_SinhVien_DAL.cs",
-              "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\QuanLyVanBangTotNghiep_BTL\\DAL\\dm_SinhVien_DAL.cs",
+              "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\DAL\\dm_SinhVien_DAL.cs",
               "RelativeDocumentMoniker": "DAL\\dm_SinhVien_DAL.cs",
-              "ToolTip": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\QuanLyVanBangTotNghiep_BTL\\DAL\\dm_SinhVien_DAL.cs",
+              "ToolTip": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\DAL\\dm_SinhVien_DAL.cs",
               "RelativeToolTip": "DAL\\dm_SinhVien_DAL.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAjwA4AAAAvAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAArwAsAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-09T17:57:24.063Z",
               "EditorCaption": ""

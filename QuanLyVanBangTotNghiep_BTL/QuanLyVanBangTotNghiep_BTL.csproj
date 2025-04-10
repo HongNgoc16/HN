@@ -59,6 +59,7 @@
     <Compile Include="BLL\dm_NguoiDung_BLL.cs" />
     <Compile Include="BLL\dm_SinhVien_BLL.cs" />
     <Compile Include="BLL\dm_XepLoaiTN_BLL.cs" />
+    <Compile Include="BLL\DotCap_BLL.cs" />
     <Compile Include="BLL\VanBang_BLL.cs" />
     <Compile Include="chon_chuyennganh_Result.cs">
       <DependentUpon>QLVB.tt</DependentUpon>
@@ -91,6 +92,7 @@
     <Compile Include="DAL\dm_NguoiDung_DAL.cs" />
     <Compile Include="DAL\dm_SinhVien_DAL.cs" />
     <Compile Include="DAL\dm_XepLoaiTN_DAL.cs" />
+    <Compile Include="DAL\DotCap_DAL.cs" />
     <Compile Include="DAL\VanBang_DAL.cs" />
     <Compile Include="dm_ChuyenNganh.cs">
       <DependentUpon>QLVB.tt</DependentUpon>
@@ -142,6 +144,12 @@
     </Compile>
     <Compile Include="GUI\BoPhanQuanLy\BPQuanLy.Designer.cs">
       <DependentUpon>BPQuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BoPhanQuanLy\formThemVanBang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BoPhanQuanLy\formThemVanBang.Designer.cs">
+      <DependentUpon>formThemVanBang.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\BoPhanQuanLy\uc_NhapVanBang.cs">
       <SubType>UserControl</SubType>
@@ -288,6 +296,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\BoPhanQuanLy\BPQuanLy.resx">
       <DependentUpon>BPQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BoPhanQuanLy\formThemVanBang.resx">
+      <DependentUpon>formThemVanBang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\BoPhanQuanLy\uc_NhapVanBang.resx">
       <DependentUpon>uc_NhapVanBang.cs</DependentUpon>

@@ -21,7 +21,6 @@ namespace QuanLyVanBangTotNghiep_BTL
         }
     
         public int Id_Dot_Cap { get; set; }
-        public string Ten_Van_Bang { get; set; }
         public string Ten_Dot_Cap { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -28,5 +28,15 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI.BoPhanQuanLy
         {
             HienThiDuLieu();
         }
+
+        private void buttonThemMoi_Click(object sender, EventArgs e)
+        {
+           formThemVanBang form = new formThemVanBang();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                // Sau khi thêm thành công → gọi lại Load DataGridView
+                HienThiDuLieu();
+            }
+        }
     }
 }
