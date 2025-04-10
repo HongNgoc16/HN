@@ -909,6 +909,7 @@
           <Property Type="String" Name="Ten_ChuyenNganh" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="Ma_KhoaHoc" Nullable="true" MaxLength="10" />
           <Property Type="DateTime" Name="Ngay_Cap" Nullable="false" />
+          <Property Type="String" Name="Noi_Cap" Nullable="false" />
           <Property Type="Boolean" Name="Trang_Thai" Nullable="false" />
         </ComplexType>
       </Schema>
@@ -1166,6 +1167,7 @@
                 <ScalarProperty Name="Ten_ChuyenNganh" ColumnName="Ten_ChuyenNganh" />
                 <ScalarProperty Name="Ma_KhoaHoc" ColumnName="Ma_KhoaHoc" />
                 <ScalarProperty Name="Ngay_Cap" ColumnName="Ngay_Cap" />
+                <ScalarProperty Name="Noi_Cap" ColumnName="Noi_Cap" />
                 <ScalarProperty Name="Trang_Thai" ColumnName="Trang_Thai" />
               </ComplexTypeMapping>
             </ResultMapping>
