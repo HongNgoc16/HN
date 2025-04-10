@@ -19,6 +19,7 @@ namespace QuanLyVanBangTotNghiep_BTL
         public int Id_DotCap { get; set; }
         public int Id_SinhVien { get; set; }
         public System.DateTime Ngay_Cap { get; set; }
+        public string Noi_Cap { get; set; }
         public bool Trang_Thai { get; set; }
     
         public virtual dm_SinhVien dm_SinhVien { get; set; }

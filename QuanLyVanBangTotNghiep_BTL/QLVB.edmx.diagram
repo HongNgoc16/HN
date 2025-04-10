@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="8653b323a551497e869d6cd9c4008b52" Name="Diagram1" ZoomLevel="66">
+      <Diagram DiagramId="8653b323a551497e869d6cd9c4008b52" Name="Diagram1" ZoomLevel="86">
         <EntityTypeShape EntityType="QuanLyVanBangModel.dm_ChuyenNganh" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyVanBangModel.dm_DonViQuanLy" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyVanBangModel.dm_KhoaHoc" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
@@ -18,8 +18,8 @@
         <AssociationConnector Association="QuanLyVanBangModel.FK_dm_SinhVien_dm_DonViQuanLy" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLyVanBangModel.FK_dm_SinhVien_dm_KhoaHoc" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLyVanBangModel.FK_dm_SinhVien_dm_XepLoai" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="QuanLyVanBangModel.DotCapBangTN" Width="1.5" PointX="8.25" PointY="11.375" />
-        <EntityTypeShape EntityType="QuanLyVanBangModel.VanBangTN" Width="1.5" PointX="10.5" PointY="2" />
+        <EntityTypeShape EntityType="QuanLyVanBangModel.DotCapBangTN" Width="1.5" PointX="7.375" PointY="3.875" />
+        <EntityTypeShape EntityType="QuanLyVanBangModel.VanBangTN" Width="1.5" PointX="10.625" PointY="1.875" />
         <AssociationConnector Association="QuanLyVanBangModel.FK_nv_VanBangTN_dm_SinhVien" />
         <AssociationConnector Association="QuanLyVanBangModel.FK_VanBangTN_DotCapBangTN" />
       </Diagram>
