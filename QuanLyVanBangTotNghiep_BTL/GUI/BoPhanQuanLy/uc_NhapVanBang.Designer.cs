@@ -33,9 +33,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.buttonXoa = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgVanBang = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgVanBang)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -86,27 +86,28 @@
             this.buttonXoa.Text = "Xóa";
             this.buttonXoa.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgVanBang
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 90);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1040, 455);
-            this.dataGridView1.TabIndex = 1;
+            this.dgVanBang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgVanBang.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgVanBang.Location = new System.Drawing.Point(0, 90);
+            this.dgVanBang.Name = "dgVanBang";
+            this.dgVanBang.RowHeadersWidth = 62;
+            this.dgVanBang.RowTemplate.Height = 28;
+            this.dgVanBang.Size = new System.Drawing.Size(1040, 455);
+            this.dgVanBang.TabIndex = 1;
             // 
-            // nv_NhapVanBang
+            // uc_NhapVanBang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgVanBang);
             this.Controls.Add(this.panel1);
-            this.Name = "nv_NhapVanBang";
+            this.Name = "uc_NhapVanBang";
             this.Size = new System.Drawing.Size(1040, 545);
+            this.Load += new System.EventHandler(this.uc_NhapVanBang_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgVanBang)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -118,6 +119,6 @@
         private System.Windows.Forms.Button buttonXoa;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgVanBang;
     }
 }

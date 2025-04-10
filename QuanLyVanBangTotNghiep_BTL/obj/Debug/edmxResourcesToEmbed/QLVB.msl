@@ -159,23 +159,6 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="chon_vanbang" FunctionName="QuanLyVanBangModel.Store.chon_vanbang">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="QuanLyVanBangModel.chon_vanbang_Result">
-          <ScalarProperty Name="Id_VanBang" ColumnName="Id_VanBang" />
-          <ScalarProperty Name="So_Hieu_Van_Bang" ColumnName="So_Hieu_Van_Bang" />
-          <ScalarProperty Name="Ma_SV" ColumnName="Ma_SV" />
-          <ScalarProperty Name="Ho_Va_Ten" ColumnName="Ho_Va_Ten" />
-          <ScalarProperty Name="Gioi_Tinh" ColumnName="Gioi_Tinh" />
-          <ScalarProperty Name="Ngay_Sinh" ColumnName="Ngay_Sinh" />
-          <ScalarProperty Name="Noi_Sinh" ColumnName="Noi_Sinh" />
-          <ScalarProperty Name="Nganh_Hoc" ColumnName="Nganh_Hoc" />
-          <ScalarProperty Name="Khoa_Hoc" ColumnName="Khoa_Hoc" />
-          <ScalarProperty Name="Ngay_Cap" ColumnName="Ngay_Cap" />
-          <ScalarProperty Name="Xep_Loai_Tot_Nghiep" ColumnName="Xep_Loai_Tot_Nghiep" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="chon_xeploai" FunctionName="QuanLyVanBangModel.Store.chon_xeploai">
       <ResultMapping>
         <ComplexTypeMapping TypeName="QuanLyVanBangModel.chon_xeploai_Result">
@@ -251,6 +234,23 @@
           <ScalarProperty Name="Ma_KhoaHoc" ColumnName="Ma_KhoaHoc" />
           <ScalarProperty Name="Ten_DonViQuanLy" ColumnName="Ten_DonViQuanLy" />
           <ScalarProperty Name="Ten_XepLoai" ColumnName="Ten_XepLoai" />
+          <ScalarProperty Name="Trang_Thai" ColumnName="Trang_Thai" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="chon_vanbang" FunctionName="QuanLyVanBangModel.Store.chon_vanbang">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QuanLyVanBangModel.chon_vanbang_Result">
+          <ScalarProperty Name="Id_VanBang" ColumnName="Id_VanBang" />
+          <ScalarProperty Name="So_Hieu_Van_Bang" ColumnName="So_Hieu_Van_Bang" />
+          <ScalarProperty Name="Ten_Dot_Cap" ColumnName="Ten_Dot_Cap" />
+          <ScalarProperty Name="Ma_SinhVien" ColumnName="Ma_SinhVien" />
+          <ScalarProperty Name="Ho_Va_Ten" ColumnName="Ho_Va_Ten" />
+          <ScalarProperty Name="Ten_Nganh" ColumnName="Ten_Nganh" />
+          <ScalarProperty Name="Ten_ChuyenNganh" ColumnName="Ten_ChuyenNganh" />
+          <ScalarProperty Name="Ma_KhoaHoc" ColumnName="Ma_KhoaHoc" />
+          <ScalarProperty Name="Ngay_Cap" ColumnName="Ngay_Cap" />
+          <ScalarProperty Name="Noi_Cap" ColumnName="Noi_Cap" />
           <ScalarProperty Name="Trang_Thai" ColumnName="Trang_Thai" />
         </ComplexTypeMapping>
       </ResultMapping>

@@ -59,6 +59,7 @@
     <Compile Include="BLL\dm_NguoiDung_BLL.cs" />
     <Compile Include="BLL\dm_SinhVien_BLL.cs" />
     <Compile Include="BLL\dm_XepLoaiTN_BLL.cs" />
+    <Compile Include="BLL\VanBang_BLL.cs" />
     <Compile Include="chon_chuyennganh_Result.cs">
       <DependentUpon>QLVB.tt</DependentUpon>
     </Compile>
@@ -90,6 +91,7 @@
     <Compile Include="DAL\dm_NguoiDung_DAL.cs" />
     <Compile Include="DAL\dm_SinhVien_DAL.cs" />
     <Compile Include="DAL\dm_XepLoaiTN_DAL.cs" />
+    <Compile Include="DAL\VanBang_DAL.cs" />
     <Compile Include="dm_ChuyenNganh.cs">
       <DependentUpon>QLVB.tt</DependentUpon>
     </Compile>
