@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QuanLyVanBangModelStoreContainer" CdmEntityContainer="QuanLyVanBangTotNghiepEntities">
+    <EntitySetMapping Name="dm_ChuyenNganh">
+      <EntityTypeMapping TypeName="QuanLyVanBangModel.dm_ChuyenNganh">
+        <MappingFragment StoreEntitySet="dm_ChuyenNganh">
+          <ScalarProperty Name="Id_ChuyenNganh" ColumnName="Id_ChuyenNganh" />
+          <ScalarProperty Name="Ma_ChuyenNganh" ColumnName="Ma_ChuyenNganh" />
+          <ScalarProperty Name="Ten_ChuyenNganh" ColumnName="Ten_ChuyenNganh" />
+          <ScalarProperty Name="Id_NganhHoc" ColumnName="Id_NganhHoc" />
+          <ScalarProperty Name="Trang_Thai_Su_Dung" ColumnName="Trang_Thai_Su_Dung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_DonViQuanLy">
+      <EntityTypeMapping TypeName="QuanLyVanBangModel.dm_DonViQuanLy">
+        <MappingFragment StoreEntitySet="dm_DonViQuanLy">
+          <ScalarProperty Name="Id_DonViQuanLy" ColumnName="Id_DonViQuanLy" />
+          <ScalarProperty Name="Ma_DonViQuanLy" ColumnName="Ma_DonViQuanLy" />
+          <ScalarProperty Name="Ten_DonViQuanLy" ColumnName="Ten_DonViQuanLy" />
+          <ScalarProperty Name="Ten_DonViQuanLy_Cha" ColumnName="Ten_DonViQuanLy_Cha" />
+          <ScalarProperty Name="Trang_Thai_Su_Dung" ColumnName="Trang_Thai_Su_Dung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_KhoaHoc">
+      <EntityTypeMapping TypeName="QuanLyVanBangModel.dm_KhoaHoc">
+        <MappingFragment StoreEntitySet="dm_KhoaHoc">
+          <ScalarProperty Name="Id_KhoaHoc" ColumnName="Id_KhoaHoc" />
+          <ScalarProperty Name="Ma_KhoaHoc" ColumnName="Ma_KhoaHoc" />
+          <ScalarProperty Name="Nam_Bat_Dau" ColumnName="Nam_Bat_Dau" />
+          <ScalarProperty Name="Nam_Ket_Thuc" ColumnName="Nam_Ket_Thuc" />
+          <ScalarProperty Name="Trang_Thai" ColumnName="Trang_Thai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_NganhHoc">
+      <EntityTypeMapping TypeName="QuanLyVanBangModel.dm_NganhHoc">
+        <MappingFragment StoreEntitySet="dm_NganhHoc">
+          <ScalarProperty Name="Id_NganhHoc" ColumnName="Id_NganhHoc" />
+          <ScalarProperty Name="Ma_NganhHoc" ColumnName="Ma_NganhHoc" />
+          <ScalarProperty Name="Ten_Nganh" ColumnName="Ten_Nganh" />
+          <ScalarProperty Name="Trang_Thai_Su_Dung" ColumnName="Trang_Thai_Su_Dung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_NguoiDung">
+      <EntityTypeMapping TypeName="QuanLyVanBangModel.dm_NguoiDung">
+        <MappingFragment StoreEntitySet="dm_NguoiDung">
+          <ScalarProperty Name="Id_NguoiDung" ColumnName="Id_NguoiDung" />
+          <ScalarProperty Name="Ma_NguoiDung" ColumnName="Ma_NguoiDung" />
+          <ScalarProperty Name="Ten_Dang_Nhap" ColumnName="Ten_Dang_Nhap" />
+          <ScalarProperty Name="Mat_Khau" ColumnName="Mat_Khau" />
+          <ScalarProperty Name="Loai_NguoiDung" ColumnName="Loai_NguoiDung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_PhanQuyenNguoiDung">
+      <EntityTypeMapping TypeName="QuanLyVanBangModel.dm_PhanQuyenNguoiDung">
+        <MappingFragment StoreEntitySet="dm_PhanQuyenNguoiDung">
+          <ScalarProperty Name="Id_LoaiNguoiDung" ColumnName="Id_LoaiNguoiDung" />
+          <ScalarProperty Name="Ma_LoaiNguoiDung" ColumnName="Ma_LoaiNguoiDung" />
+          <ScalarProperty Name="Ten_LoaiNguoiDung" ColumnName="Ten_LoaiNguoiDung" />
+          <ScalarProperty Name="Trang_Thai_Su_Dung" ColumnName="Trang_Thai_Su_Dung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_SinhVien">
+      <EntityTypeMapping TypeName="QuanLyVanBangModel.dm_SinhVien">
+        <MappingFragment StoreEntitySet="dm_SinhVien">
+          <ScalarProperty Name="Id_SinhVien" ColumnName="Id_SinhVien" />
+          <ScalarProperty Name="Ma_SinhVien" ColumnName="Ma_SinhVien" />
+          <ScalarProperty Name="Ho_Va_Ten" ColumnName="Ho_Va_Ten" />
+          <ScalarProperty Name="Gioi_Tinh" ColumnName="Gioi_Tinh" />
+          <ScalarProperty Name="Ngay_Sinh" ColumnName="Ngay_Sinh" />
+          <ScalarProperty Name="Id_ChuyenNganh" ColumnName="Id_ChuyenNganh" />
+          <ScalarProperty Name="Id_KhoaHoc" ColumnName="Id_KhoaHoc" />
+          <ScalarProperty Name="So_Dien_Thoai" ColumnName="So_Dien_Thoai" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Diem_Trung_Binh_Tich_Luy" ColumnName="Diem_Trung_Binh_Tich_Luy" />
+          <ScalarProperty Name="Id_XepLoai" ColumnName="Id_XepLoai" />
+          <ScalarProperty Name="Id_DonViQuanLy" ColumnName="Id_DonViQuanLy" />
+          <ScalarProperty Name="Trang_Thai" ColumnName="Trang_Thai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dm_XepLoai">
+      <EntityTypeMapping TypeName="QuanLyVanBangModel.dm_XepLoai">
+        <MappingFragment StoreEntitySet="dm_XepLoai">
+          <ScalarProperty Name="Id_XepLoai" ColumnName="Id_XepLoai" />
+          <ScalarProperty Name="Ma_XepLoai" ColumnName="Ma_XepLoai" />
+          <ScalarProperty Name="Ten_XepLoai" ColumnName="Ten_XepLoai" />
+          <ScalarProperty Name="Diem_Toi_Thieu" ColumnName="Diem_Toi_Thieu" />
+          <ScalarProperty Name="Diem_Toi_Da" ColumnName="Diem_Toi_Da" />
+          <ScalarProperty Name="Trang_Thai_Su_Dung" ColumnName="Trang_Thai_Su_Dung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nv_DotCapBangTN">
+      <EntityTypeMapping TypeName="QuanLyVanBangModel.nv_DotCapBangTN">
+        <MappingFragment StoreEntitySet="nv_DotCapBangTN">
+          <ScalarProperty Name="Id_Dot_Cap" ColumnName="Id_Dot_Cap" />
+          <ScalarProperty Name="Ten_Van_Bang" ColumnName="Ten_Van_Bang" />
+          <ScalarProperty Name="Ten_Dot_Cap" ColumnName="Ten_Dot_Cap" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nv_VanBangTN">
+      <EntityTypeMapping TypeName="QuanLyVanBangModel.nv_VanBangTN">
+        <MappingFragment StoreEntitySet="nv_VanBangTN">
+          <ScalarProperty Name="Id_VanBang" ColumnName="Id_VanBang" />
+          <ScalarProperty Name="So_Hieu_Van_Bang" ColumnName="So_Hieu_Van_Bang" />
+          <ScalarProperty Name="Ma_SV" ColumnName="Ma_SV" />
+          <ScalarProperty Name="Ho_Va_Ten" ColumnName="Ho_Va_Ten" />
+          <ScalarProperty Name="Gioi_Tinh" ColumnName="Gioi_Tinh" />
+          <ScalarProperty Name="Ngay_Sinh" ColumnName="Ngay_Sinh" />
+          <ScalarProperty Name="Noi_Sinh" ColumnName="Noi_Sinh" />
+          <ScalarProperty Name="Nganh_Hoc" ColumnName="Nganh_Hoc" />
+          <ScalarProperty Name="Khoa_Hoc" ColumnName="Khoa_Hoc" />
+          <ScalarProperty Name="Ngay_Cap" ColumnName="Ngay_Cap" />
+          <ScalarProperty Name="Xep_Loai_Tot_Nghiep" ColumnName="Xep_Loai_Tot_Nghiep" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="chon_chuyennganh" FunctionName="QuanLyVanBangModel.Store.chon_chuyennganh" />
+    <FunctionImportMapping FunctionImportName="chon_donviquanly" FunctionName="QuanLyVanBangModel.Store.chon_donviquanly" />
+    <FunctionImportMapping FunctionImportName="chon_dot_cap" FunctionName="QuanLyVanBangModel.Store.chon_dot_cap" />
+    <FunctionImportMapping FunctionImportName="chon_khoahoc" FunctionName="QuanLyVanBangModel.Store.chon_khoahoc" />
+    <FunctionImportMapping FunctionImportName="chon_nganhhoc" FunctionName="QuanLyVanBangModel.Store.chon_nganhhoc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QuanLyVanBangModel.chon_nganhhoc_Result">
+          <ScalarProperty Name="Id_NganhHoc" ColumnName="Id_NganhHoc" />
+          <ScalarProperty Name="Ma_NganhHoc" ColumnName="Ma_NganhHoc" />
+          <ScalarProperty Name="Ten_Nganh" ColumnName="Ten_Nganh" />
+          <ScalarProperty Name="Trang_Thai_Su_Dung" ColumnName="Trang_Thai_Su_Dung" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="chon_nguoidung" FunctionName="QuanLyVanBangModel.Store.chon_nguoidung" />
+    <FunctionImportMapping FunctionImportName="chon_sinhvien" FunctionName="QuanLyVanBangModel.Store.chon_sinhvien" />
+    <FunctionImportMapping FunctionImportName="chon_vanbang" FunctionName="QuanLyVanBangModel.Store.chon_vanbang" />
+    <FunctionImportMapping FunctionImportName="chon_xeploai" FunctionName="QuanLyVanBangModel.Store.chon_xeploai" />
+    <FunctionImportMapping FunctionImportName="sua_chuyennganh" FunctionName="QuanLyVanBangModel.Store.sua_chuyennganh" />
+    <FunctionImportMapping FunctionImportName="sua_donviquanly" FunctionName="QuanLyVanBangModel.Store.sua_donviquanly" />
+    <FunctionImportMapping FunctionImportName="sua_dot_cap" FunctionName="QuanLyVanBangModel.Store.sua_dot_cap" />
+    <FunctionImportMapping FunctionImportName="sua_khoahoc" FunctionName="QuanLyVanBangModel.Store.sua_khoahoc" />
+    <FunctionImportMapping FunctionImportName="sua_nganhhoc" FunctionName="QuanLyVanBangModel.Store.sua_nganhhoc" />
+    <FunctionImportMapping FunctionImportName="sua_nguoidung" FunctionName="QuanLyVanBangModel.Store.sua_nguoidung" />
+    <FunctionImportMapping FunctionImportName="sua_sinhvien" FunctionName="QuanLyVanBangModel.Store.sua_sinhvien" />
+    <FunctionImportMapping FunctionImportName="sua_vanbang" FunctionName="QuanLyVanBangModel.Store.sua_vanbang" />
+    <FunctionImportMapping FunctionImportName="sua_xeploai" FunctionName="QuanLyVanBangModel.Store.sua_xeploai" />
+    <FunctionImportMapping FunctionImportName="them_chuyennganh" FunctionName="QuanLyVanBangModel.Store.them_chuyennganh" />
+    <FunctionImportMapping FunctionImportName="them_donviquanly" FunctionName="QuanLyVanBangModel.Store.them_donviquanly" />
+    <FunctionImportMapping FunctionImportName="them_dot_cap" FunctionName="QuanLyVanBangModel.Store.them_dot_cap" />
+    <FunctionImportMapping FunctionImportName="them_khoahoc" FunctionName="QuanLyVanBangModel.Store.them_khoahoc" />
+    <FunctionImportMapping FunctionImportName="them_nganhhoc" FunctionName="QuanLyVanBangModel.Store.them_nganhhoc" />
+    <FunctionImportMapping FunctionImportName="them_nguoidung" FunctionName="QuanLyVanBangModel.Store.them_nguoidung" />
+    <FunctionImportMapping FunctionImportName="them_sinhvien" FunctionName="QuanLyVanBangModel.Store.them_sinhvien" />
+    <FunctionImportMapping FunctionImportName="them_vanbang" FunctionName="QuanLyVanBangModel.Store.them_vanbang" />
+    <FunctionImportMapping FunctionImportName="them_xeploai" FunctionName="QuanLyVanBangModel.Store.them_xeploai" />
+    <FunctionImportMapping FunctionImportName="xoa_chuyennganh" FunctionName="QuanLyVanBangModel.Store.xoa_chuyennganh" />
+    <FunctionImportMapping FunctionImportName="xoa_donviquanly" FunctionName="QuanLyVanBangModel.Store.xoa_donviquanly" />
+    <FunctionImportMapping FunctionImportName="xoa_dot_cap" FunctionName="QuanLyVanBangModel.Store.xoa_dot_cap" />
+    <FunctionImportMapping FunctionImportName="xoa_khoahoc" FunctionName="QuanLyVanBangModel.Store.xoa_khoahoc" />
+    <FunctionImportMapping FunctionImportName="xoa_nganhhoc" FunctionName="QuanLyVanBangModel.Store.xoa_nganhhoc" />
+    <FunctionImportMapping FunctionImportName="xoa_nguoidung" FunctionName="QuanLyVanBangModel.Store.xoa_nguoidung" />
+    <FunctionImportMapping FunctionImportName="xoa_sinhvien" FunctionName="QuanLyVanBangModel.Store.xoa_sinhvien" />
+    <FunctionImportMapping FunctionImportName="xoa_vanbang" FunctionName="QuanLyVanBangModel.Store.xoa_vanbang" />
+    <FunctionImportMapping FunctionImportName="xoa_xeploai" FunctionName="QuanLyVanBangModel.Store.xoa_xeploai" />
+  </EntityContainerMapping>
+</Mapping>

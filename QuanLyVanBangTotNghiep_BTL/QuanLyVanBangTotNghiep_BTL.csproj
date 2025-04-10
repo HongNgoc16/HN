@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD9A9C41-3FC5-428B-A961-1BCE484683D7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyVanBangTotNghiep_BTL</RootNamespace>
+    <AssemblyName>QuanLyVanBangTotNghiep_BTL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\dm_DonViQuanLy_BLL.cs" />
+    <Compile Include="BLL\dm_NguoiDung_BLL.cs" />
+    <Compile Include="BLL\dm_SinhVien_BLL.cs" />
+    <Compile Include="BLL\dm_XepLoaiTN_BLL.cs" />
+    <Compile Include="chon_chuyennganh_Result.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chon_donviquanly_Result.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chon_dot_cap_Result.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chon_khoahoc_Result.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chon_nganhhoc_Result.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chon_nguoidung_Result.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chon_sinhvien_Result.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chon_vanbang_Result.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chon_xeploai_Result.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dm_DonViQuanLy_DAL.cs" />
+    <Compile Include="DAL\dm_NguoiDung_DAL.cs" />
+    <Compile Include="DAL\dm_SinhVien_DAL.cs" />
+    <Compile Include="DAL\dm_XepLoaiTN_DAL.cs" />
+    <Compile Include="dm_ChuyenNganh.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dm_DonViQuanLy.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dm_KhoaHoc.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dm_NganhHoc.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dm_NguoiDung.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dm_PhanQuyenNguoiDung.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dm_SinhVien.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dm_XepLoai.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DotCapBangTN.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BoPhanDuyet\BPDuyet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BoPhanDuyet\BPDuyet.Designer.cs">
+      <DependentUpon>BPDuyet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BoPhanDuyet\uc_DuyetVanBang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\BoPhanDuyet\uc_DuyetVanBang.Designer.cs">
+      <DependentUpon>uc_DuyetVanBang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BoPhanDuyet\uc_DuyetYCChinhSua.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\BoPhanDuyet\uc_DuyetYCChinhSua.Designer.cs">
+      <DependentUpon>uc_DuyetYCChinhSua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BoPhanQuanLy\BPQuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BoPhanQuanLy\BPQuanLy.Designer.cs">
+      <DependentUpon>BPQuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BoPhanQuanLy\uc_NhapVanBang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\BoPhanQuanLy\uc_NhapVanBang.Designer.cs">
+      <DependentUpon>uc_NhapVanBang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BoPhanQuanLy\uc_BienBanHuyBang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\BoPhanQuanLy\uc_BienBanHuyBang.Designer.cs">
+      <DependentUpon>uc_BienBanHuyBang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BoPhanQuanLy\uc_CapBanSao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\BoPhanQuanLy\uc_CapBanSao.Designer.cs">
+      <DependentUpon>uc_CapBanSao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BoPhanQuanLy\uc_ChinhSuaVanBang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\BoPhanQuanLy\uc_ChinhSuaVanBang.Designer.cs">
+      <DependentUpon>uc_ChinhSuaVanBang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BoPhanQuanLy\uc_DotCapVanBang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\BoPhanQuanLy\uc_DotCapVanBang.Designer.cs">
+      <DependentUpon>uc_DotCapVanBang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BoPhanQuanLy\uc_ThemVanBang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\BoPhanQuanLy\uc_ThemVanBang.Designer.cs">
+      <DependentUpon>uc_ThemVanBang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainFunction\DangKyCapBanSao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MainFunction\DangKyCapBanSao.Designer.cs">
+      <DependentUpon>DangKyCapBanSao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainFunction\DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MainFunction\DangNhap.Designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainFunction\GuiYeuCauChinhSua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MainFunction\GuiYeuCauChinhSua.Designer.cs">
+      <DependentUpon>GuiYeuCauChinhSua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanTriVien\QuanTriVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanTriVien\QuanTriVien.Designer.cs">
+      <DependentUpon>QuanTriVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainFunction\TrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MainFunction\TrangChu.Designer.cs">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanTriVien\ucChuyenNganh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanTriVien\ucChuyenNganh.Designer.cs">
+      <DependentUpon>ucChuyenNganh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanTriVien\ucDonViQuanLy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanTriVien\ucDonViQuanLy.Designer.cs">
+      <DependentUpon>ucDonViQuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanTriVien\ucKhoaHoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanTriVien\ucKhoaHoc.Designer.cs">
+      <DependentUpon>ucKhoaHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanTriVien\ucNganhHoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanTriVien\ucNganhHoc.Designer.cs">
+      <DependentUpon>ucNganhHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanTriVien\ucNguoiDung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanTriVien\ucNguoiDung.Designer.cs">
+      <DependentUpon>ucNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanTriVien\ucSinhVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanTriVien\ucSinhVien.Designer.cs">
+      <DependentUpon>ucSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuanTriVien\ucXepLoaiTotNghiep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanTriVien\ucXepLoaiTotNghiep.Designer.cs">
+      <DependentUpon>ucXepLoaiTotNghiep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainFunction\TraCuuVanBang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MainFunction\TraCuuVanBang.Designer.cs">
+      <DependentUpon>TraCuuVanBang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLVB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLVB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLVB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLVB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLVB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="VanBangTN.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GUI\BoPhanDuyet\BPDuyet.resx">
+      <DependentUpon>BPDuyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BoPhanDuyet\uc_DuyetVanBang.resx">
+      <DependentUpon>uc_DuyetVanBang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BoPhanDuyet\uc_DuyetYCChinhSua.resx">
+      <DependentUpon>uc_DuyetYCChinhSua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BoPhanQuanLy\BPQuanLy.resx">
+      <DependentUpon>BPQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BoPhanQuanLy\uc_NhapVanBang.resx">
+      <DependentUpon>uc_NhapVanBang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BoPhanQuanLy\uc_DotCapVanBang.resx">
+      <DependentUpon>uc_DotCapVanBang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BoPhanQuanLy\uc_ThemVanBang.resx">
+      <DependentUpon>uc_ThemVanBang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainFunction\DangKyCapBanSao.resx">
+      <DependentUpon>DangKyCapBanSao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainFunction\DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainFunction\GuiYeuCauChinhSua.resx">
+      <DependentUpon>GuiYeuCauChinhSua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanTriVien\QuanTriVien.resx">
+      <DependentUpon>QuanTriVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainFunction\TrangChu.resx">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanTriVien\ucChuyenNganh.resx">
+      <DependentUpon>ucChuyenNganh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanTriVien\ucDonViQuanLy.resx">
+      <DependentUpon>ucDonViQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanTriVien\ucKhoaHoc.resx">
+      <DependentUpon>ucKhoaHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanTriVien\ucNganhHoc.resx">
+      <DependentUpon>ucNganhHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanTriVien\ucNguoiDung.resx">
+      <DependentUpon>ucNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanTriVien\ucSinhVien.resx">
+      <DependentUpon>ucSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanTriVien\ucXepLoaiTotNghiep.resx">
+      <DependentUpon>ucXepLoaiTotNghiep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainFunction\TraCuuVanBang.resx">
+      <DependentUpon>TraCuuVanBang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="QLVB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLVB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="QLVB.edmx.diagram">
+      <DependentUpon>QLVB.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
+    <Folder Include="Entity\" />
+    <Folder Include="Resource\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="QLVB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLVB.edmx</DependentUpon>
+      <LastGenOutput>QLVB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="QLVB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLVB.edmx</DependentUpon>
+      <LastGenOutput>QLVB.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

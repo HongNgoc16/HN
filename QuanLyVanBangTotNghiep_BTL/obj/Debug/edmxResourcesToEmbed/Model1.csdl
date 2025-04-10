@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyVanBangModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="dm_ChuyenNganh">
+    <Key>
+      <PropertyRef Name="Id_ChuyenNganh" />
+    </Key>
+    <Property Name="Id_ChuyenNganh" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ma_ChuyenNganh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ten_ChuyenNganh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Id_NganhHoc" Type="Int32" />
+    <Property Name="Trang_Thai_Su_Dung" Type="Boolean" />
+    <NavigationProperty Name="dm_NganhHoc" Relationship="Self.FK_dm_ChuyenNganh_dm_NganhHoc" FromRole="dm_ChuyenNganh" ToRole="dm_NganhHoc" />
+    <NavigationProperty Name="dm_SinhVien" Relationship="Self.FK_dm_SinhVien_dm_ChuyenNganh" FromRole="dm_ChuyenNganh" ToRole="dm_SinhVien" />
+  </EntityType>
+  <EntityType Name="dm_DonViQuanLy">
+    <Key>
+      <PropertyRef Name="Id_DonViQuanLy" />
+    </Key>
+    <Property Name="Id_DonViQuanLy" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ma_DonViQuanLy" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ten_DonViQuanLy" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Ten_DonViQuanLy_Cha" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Trang_Thai_Su_Dung" Type="Boolean" />
+    <NavigationProperty Name="dm_SinhVien" Relationship="Self.FK_dm_SinhVien_dm_DonViQuanLy" FromRole="dm_DonViQuanLy" ToRole="dm_SinhVien" />
+  </EntityType>
+  <EntityType Name="dm_KhoaHoc">
+    <Key>
+      <PropertyRef Name="Id_KhoaHoc" />
+    </Key>
+    <Property Name="Id_KhoaHoc" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ma_KhoaHoc" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Nam_Bat_Dau" Type="Int32" />
+    <Property Name="Nam_Ket_Thuc" Type="Int32" />
+    <Property Name="Trang_Thai" Type="Boolean" />
+    <NavigationProperty Name="dm_SinhVien" Relationship="Self.FK_dm_SinhVien_dm_KhoaHoc" FromRole="dm_KhoaHoc" ToRole="dm_SinhVien" />
+  </EntityType>
+  <EntityType Name="dm_NganhHoc">
+    <Key>
+      <PropertyRef Name="Id_NganhHoc" />
+    </Key>
+    <Property Name="Id_NganhHoc" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ma_NganhHoc" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Ten_Nganh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Trang_Thai_Su_Dung" Type="Boolean" />
+    <NavigationProperty Name="dm_ChuyenNganh" Relationship="Self.FK_dm_ChuyenNganh_dm_NganhHoc" FromRole="dm_NganhHoc" ToRole="dm_ChuyenNganh" />
+  </EntityType>
+  <EntityType Name="dm_NguoiDung">
+    <Key>
+      <PropertyRef Name="Id_NguoiDung" />
+    </Key>
+    <Property Name="Id_NguoiDung" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ma_NguoiDung" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ten_Dang_Nhap" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Mat_Khau" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Loai_NguoiDung" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="dm_PhanQuyenNguoiDung">
+    <Key>
+      <PropertyRef Name="Id_LoaiNguoiDung" />
+    </Key>
+    <Property Name="Id_LoaiNguoiDung" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ma_LoaiNguoiDung" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ten_LoaiNguoiDung" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Trang_Thai_Su_Dung" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="dm_SinhVien">
+    <Key>
+      <PropertyRef Name="Id_SinhVien" />
+    </Key>
+    <Property Name="Id_SinhVien" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ma_SinhVien" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ho_Va_Ten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Gioi_Tinh" Type="Boolean" />
+    <Property Name="Ngay_Sinh" Type="DateTime" Precision="0" />
+    <Property Name="Id_ChuyenNganh" Type="Int32" />
+    <Property Name="Id_KhoaHoc" Type="Int32" />
+    <Property Name="So_Dien_Thoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Diem_Trung_Binh_Tich_Luy" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="Id_XepLoai" Type="Int32" />
+    <Property Name="Id_DonViQuanLy" Type="Int32" />
+    <Property Name="Trang_Thai" Type="Boolean" />
+    <NavigationProperty Name="dm_ChuyenNganh" Relationship="Self.FK_dm_SinhVien_dm_ChuyenNganh" FromRole="dm_SinhVien" ToRole="dm_ChuyenNganh" />
+    <NavigationProperty Name="dm_DonViQuanLy" Relationship="Self.FK_dm_SinhVien_dm_DonViQuanLy" FromRole="dm_SinhVien" ToRole="dm_DonViQuanLy" />
+    <NavigationProperty Name="dm_KhoaHoc" Relationship="Self.FK_dm_SinhVien_dm_KhoaHoc" FromRole="dm_SinhVien" ToRole="dm_KhoaHoc" />
+    <NavigationProperty Name="dm_XepLoai" Relationship="Self.FK_dm_SinhVien_dm_XepLoai" FromRole="dm_SinhVien" ToRole="dm_XepLoai" />
+  </EntityType>
+  <EntityType Name="dm_XepLoai">
+    <Key>
+      <PropertyRef Name="Id_XepLoai" />
+    </Key>
+    <Property Name="Id_XepLoai" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ma_XepLoai" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ten_XepLoai" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Diem_Toi_Thieu" Type="Decimal" Precision="4" Scale="2" Nullable="false" />
+    <Property Name="Diem_Toi_Da" Type="Decimal" Precision="4" Scale="2" Nullable="false" />
+    <Property Name="Trang_Thai_Su_Dung" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="dm_SinhVien" Relationship="Self.FK_dm_SinhVien_dm_XepLoai" FromRole="dm_XepLoai" ToRole="dm_SinhVien" />
+  </EntityType>
+  <EntityType Name="nv_DotCapBangTN">
+    <Key>
+      <PropertyRef Name="Id_Dot_Cap" />
+    </Key>
+    <Property Name="Id_Dot_Cap" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ten_Van_Bang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ten_Dot_Cap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="nv_VanBangTN">
+    <Key>
+      <PropertyRef Name="Id_VanBang" />
+    </Key>
+    <Property Name="Id_VanBang" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="So_Hieu_Van_Bang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ma_SV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ho_Va_Ten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Gioi_Tinh" Type="Boolean" Nullable="false" />
+    <Property Name="Ngay_Sinh" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Noi_Sinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Nganh_Hoc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Khoa_Hoc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ngay_Cap" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Xep_Loai_Tot_Nghiep" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_dm_ChuyenNganh_dm_NganhHoc">
+    <End Role="dm_NganhHoc" Type="Self.dm_NganhHoc" Multiplicity="0..1" />
+    <End Role="dm_ChuyenNganh" Type="Self.dm_ChuyenNganh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_NganhHoc">
+        <PropertyRef Name="Id_NganhHoc" />
+      </Principal>
+      <Dependent Role="dm_ChuyenNganh">
+        <PropertyRef Name="Id_NganhHoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_SinhVien_dm_ChuyenNganh">
+    <End Role="dm_ChuyenNganh" Type="Self.dm_ChuyenNganh" Multiplicity="0..1" />
+    <End Role="dm_SinhVien" Type="Self.dm_SinhVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_ChuyenNganh">
+        <PropertyRef Name="Id_ChuyenNganh" />
+      </Principal>
+      <Dependent Role="dm_SinhVien">
+        <PropertyRef Name="Id_ChuyenNganh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_SinhVien_dm_DonViQuanLy">
+    <End Role="dm_DonViQuanLy" Type="Self.dm_DonViQuanLy" Multiplicity="0..1" />
+    <End Role="dm_SinhVien" Type="Self.dm_SinhVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_DonViQuanLy">
+        <PropertyRef Name="Id_DonViQuanLy" />
+      </Principal>
+      <Dependent Role="dm_SinhVien">
+        <PropertyRef Name="Id_DonViQuanLy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_SinhVien_dm_KhoaHoc">
+    <End Role="dm_KhoaHoc" Type="Self.dm_KhoaHoc" Multiplicity="0..1" />
+    <End Role="dm_SinhVien" Type="Self.dm_SinhVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_KhoaHoc">
+        <PropertyRef Name="Id_KhoaHoc" />
+      </Principal>
+      <Dependent Role="dm_SinhVien">
+        <PropertyRef Name="Id_KhoaHoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dm_SinhVien_dm_XepLoai">
+    <End Role="dm_XepLoai" Type="Self.dm_XepLoai" Multiplicity="0..1" />
+    <End Role="dm_SinhVien" Type="Self.dm_SinhVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_XepLoai">
+        <PropertyRef Name="Id_XepLoai" />
+      </Principal>
+      <Dependent Role="dm_SinhVien">
+        <PropertyRef Name="Id_XepLoai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QuanLyVanBangTotNghiepEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="dm_ChuyenNganh" EntityType="Self.dm_ChuyenNganh" />
+    <EntitySet Name="dm_DonViQuanLy" EntityType="Self.dm_DonViQuanLy" />
+    <EntitySet Name="dm_KhoaHoc" EntityType="Self.dm_KhoaHoc" />
+    <EntitySet Name="dm_NganhHoc" EntityType="Self.dm_NganhHoc" />
+    <EntitySet Name="dm_NguoiDung" EntityType="Self.dm_NguoiDung" />
+    <EntitySet Name="dm_PhanQuyenNguoiDung" EntityType="Self.dm_PhanQuyenNguoiDung" />
+    <EntitySet Name="dm_SinhVien" EntityType="Self.dm_SinhVien" />
+    <EntitySet Name="dm_XepLoai" EntityType="Self.dm_XepLoai" />
+    <EntitySet Name="nv_DotCapBangTN" EntityType="Self.nv_DotCapBangTN" />
+    <EntitySet Name="nv_VanBangTN" EntityType="Self.nv_VanBangTN" />
+    <AssociationSet Name="FK_dm_ChuyenNganh_dm_NganhHoc" Association="Self.FK_dm_ChuyenNganh_dm_NganhHoc">
+      <End Role="dm_NganhHoc" EntitySet="dm_NganhHoc" />
+      <End Role="dm_ChuyenNganh" EntitySet="dm_ChuyenNganh" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_SinhVien_dm_ChuyenNganh" Association="Self.FK_dm_SinhVien_dm_ChuyenNganh">
+      <End Role="dm_ChuyenNganh" EntitySet="dm_ChuyenNganh" />
+      <End Role="dm_SinhVien" EntitySet="dm_SinhVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_SinhVien_dm_DonViQuanLy" Association="Self.FK_dm_SinhVien_dm_DonViQuanLy">
+      <End Role="dm_DonViQuanLy" EntitySet="dm_DonViQuanLy" />
+      <End Role="dm_SinhVien" EntitySet="dm_SinhVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_SinhVien_dm_KhoaHoc" Association="Self.FK_dm_SinhVien_dm_KhoaHoc">
+      <End Role="dm_KhoaHoc" EntitySet="dm_KhoaHoc" />
+      <End Role="dm_SinhVien" EntitySet="dm_SinhVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dm_SinhVien_dm_XepLoai" Association="Self.FK_dm_SinhVien_dm_XepLoai">
+      <End Role="dm_XepLoai" EntitySet="dm_XepLoai" />
+      <End Role="dm_SinhVien" EntitySet="dm_SinhVien" />
+    </AssociationSet>
+    <FunctionImport Name="chon_chuyennganh" />
+    <FunctionImport Name="chon_donviquanly" />
+    <FunctionImport Name="chon_dot_cap" />
+    <FunctionImport Name="chon_khoahoc" />
+    <FunctionImport Name="chon_nganhhoc" ReturnType="Collection(QuanLyVanBangModel.chon_nganhhoc_Result)" />
+    <FunctionImport Name="chon_nguoidung" />
+    <FunctionImport Name="chon_sinhvien" />
+    <FunctionImport Name="chon_vanbang" />
+    <FunctionImport Name="chon_xeploai" />
+    <FunctionImport Name="sua_chuyennganh">
+      <Parameter Name="Id_ChuyenNganh" Mode="In" Type="Int32" />
+      <Parameter Name="Ma_ChuyenNganh" Mode="In" Type="String" />
+      <Parameter Name="Ten_ChuyenNganh" Mode="In" Type="String" />
+      <Parameter Name="Id_NganhHoc" Mode="In" Type="Int32" />
+      <Parameter Name="Trang_Thai_Su_Dung" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="sua_donviquanly">
+      <Parameter Name="Id_DonViQuanLy" Mode="In" Type="Int32" />
+      <Parameter Name="Ma_DonViQuanLy" Mode="In" Type="String" />
+      <Parameter Name="Ten_DonViQuanLy" Mode="In" Type="String" />
+      <Parameter Name="Ten_DonViQuanLy_Cha" Mode="In" Type="String" />
+      <Parameter Name="Trang_Thai_Su_Dung" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="sua_dot_cap">
+      <Parameter Name="Id_Dot_Cap" Mode="In" Type="Int32" />
+      <Parameter Name="Ten_Van_Bang" Mode="In" Type="String" />
+      <Parameter Name="Ten_Dot_Cap" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sua_khoahoc">
+      <Parameter Name="Id_KhoaHoc" Mode="In" Type="Int32" />
+      <Parameter Name="Ma_KhoaHoc" Mode="In" Type="String" />
+      <Parameter Name="Nam_Bat_Dau" Mode="In" Type="Int32" />
+      <Parameter Name="Nam_Ket_Thuc" Mode="In" Type="Int32" />
+      <Parameter Name="Trang_Thai" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="sua_nganhhoc">
+      <Parameter Name="Id_NganhHoc" Mode="In" Type="Int32" />
+      <Parameter Name="Ma_NganhHoc" Mode="In" Type="String" />
+      <Parameter Name="Ten_Nganh" Mode="In" Type="String" />
+      <Parameter Name="Trang_Thai_Su_Dung" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="sua_nguoidung">
+      <Parameter Name="Id_NguoiDung" Mode="In" Type="Int32" />
+      <Parameter Name="Ma_NguoiDung" Mode="In" Type="String" />
+      <Parameter Name="Ten_Dang_Nhap" Mode="In" Type="String" />
+      <Parameter Name="Mat_Khau" Mode="In" Type="String" />
+      <Parameter Name="Loai_NguoiDung" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sua_sinhvien">
+      <Parameter Name="Id_SinhVien" Mode="In" Type="Int32" />
+      <Parameter Name="Ma_SinhVien" Mode="In" Type="String" />
+      <Parameter Name="Ho_Va_Ten" Mode="In" Type="String" />
+      <Parameter Name="Gioi_Tinh" Mode="In" Type="Boolean" />
+      <Parameter Name="Ngay_Sinh" Mode="In" Type="DateTime" />
+      <Parameter Name="Id_ChuyenNganh" Mode="In" Type="Int32" />
+      <Parameter Name="Id_KhoaHoc" Mode="In" Type="Int32" />
+      <Parameter Name="So_Dien_Thoai" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Diem_Trung_Binh_Tich_Luy" Mode="In" Type="Decimal" />
+      <Parameter Name="Id_XepLoai" Mode="In" Type="Int32" />
+      <Parameter Name="Id_DonViQuanLy" Mode="In" Type="Int32" />
+      <Parameter Name="Trang_Thai" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="sua_vanbang">
+      <Parameter Name="Id_VanBang" Mode="In" Type="Int32" />
+      <Parameter Name="So_Hieu_Van_Bang" Mode="In" Type="String" />
+      <Parameter Name="Ma_SV" Mode="In" Type="String" />
+      <Parameter Name="Ho_Va_Ten" Mode="In" Type="String" />
+      <Parameter Name="Gioi_Tinh" Mode="In" Type="Boolean" />
+      <Parameter Name="Ngay_Sinh" Mode="In" Type="DateTime" />
+      <Parameter Name="Noi_Sinh" Mode="In" Type="String" />
+      <Parameter Name="Nganh_Hoc" Mode="In" Type="String" />
+      <Parameter Name="Khoa_Hoc" Mode="In" Type="String" />
+      <Parameter Name="Ngay_Cap" Mode="In" Type="DateTime" />
+      <Parameter Name="Xep_Loai_Tot_Nghiep" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sua_xeploai">
+      <Parameter Name="Id_XepLoai" Mode="In" Type="Int32" />
+      <Parameter Name="Ma_XepLoai" Mode="In" Type="String" />
+      <Parameter Name="Ten_XepLoai" Mode="In" Type="String" />
+      <Parameter Name="Diem_Toi_Thieu" Mode="In" Type="Decimal" />
+      <Parameter Name="Diem_Toi_Da" Mode="In" Type="Decimal" />
+      <Parameter Name="Trang_Thai_Su_Dung" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="them_chuyennganh">
+      <Parameter Name="Ma_ChuyenNganh" Mode="In" Type="String" />
+      <Parameter Name="Ten_ChuyenNganh" Mode="In" Type="String" />
+      <Parameter Name="Id_NganhHoc" Mode="In" Type="Int32" />
+      <Parameter Name="Trang_Thai_Su_Dung" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="them_donviquanly">
+      <Parameter Name="Ma_DonViQuanLy" Mode="In" Type="String" />
+      <Parameter Name="Ten_DonViQuanLy" Mode="In" Type="String" />
+      <Parameter Name="Ten_DonViQuanLy_Cha" Mode="In" Type="String" />
+      <Parameter Name="Trang_Thai_Su_Dung" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="them_dot_cap">
+      <Parameter Name="Ten_Van_Bang" Mode="In" Type="String" />
+      <Parameter Name="Ten_Dot_Cap" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="them_khoahoc">
+      <Parameter Name="Ma_KhoaHoc" Mode="In" Type="String" />
+      <Parameter Name="Nam_Bat_Dau" Mode="In" Type="Int32" />
+      <Parameter Name="Nam_Ket_Thuc" Mode="In" Type="Int32" />
+      <Parameter Name="Trang_Thai" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="them_nganhhoc">
+      <Parameter Name="Ma_NganhHoc" Mode="In" Type="String" />
+      <Parameter Name="Ten_Nganh" Mode="In" Type="String" />
+      <Parameter Name="Trang_Thai_Su_Dung" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="them_nguoidung">
+      <Parameter Name="Ma_NguoiDung" Mode="In" Type="String" />
+      <Parameter Name="Ten_Dang_Nhap" Mode="In" Type="String" />
+      <Parameter Name="Mat_Khau" Mode="In" Type="String" />
+      <Parameter Name="Loai_NguoiDung" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="them_sinhvien">
+      <Parameter Name="Ma_SinhVien" Mode="In" Type="String" />
+      <Parameter Name="Ho_Va_Ten" Mode="In" Type="String" />
+      <Parameter Name="Gioi_Tinh" Mode="In" Type="Boolean" />
+      <Parameter Name="Ngay_Sinh" Mode="In" Type="DateTime" />
+      <Parameter Name="Id_ChuyenNganh" Mode="In" Type="Int32" />
+      <Parameter Name="Id_KhoaHoc" Mode="In" Type="Int32" />
+      <Parameter Name="So_Dien_Thoai" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Diem_Trung_Binh_Tich_Luy" Mode="In" Type="Decimal" />
+      <Parameter Name="Id_XepLoai" Mode="In" Type="Int32" />
+      <Parameter Name="Id_DonViQuanLy" Mode="In" Type="Int32" />
+      <Parameter Name="Trang_Thai" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="them_vanbang">
+      <Parameter Name="So_Hieu_Van_Bang" Mode="In" Type="String" />
+      <Parameter Name="Ma_SV" Mode="In" Type="String" />
+      <Parameter Name="Ho_Va_Ten" Mode="In" Type="String" />
+      <Parameter Name="Gioi_Tinh" Mode="In" Type="Boolean" />
+      <Parameter Name="Ngay_Sinh" Mode="In" Type="DateTime" />
+      <Parameter Name="Noi_Sinh" Mode="In" Type="String" />
+      <Parameter Name="Nganh_Hoc" Mode="In" Type="String" />
+      <Parameter Name="Khoa_Hoc" Mode="In" Type="String" />
+      <Parameter Name="Ngay_Cap" Mode="In" Type="DateTime" />
+      <Parameter Name="Xep_Loai_Tot_Nghiep" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="them_xeploai">
+      <Parameter Name="Ma_XepLoai" Mode="In" Type="String" />
+      <Parameter Name="Ten_XepLoai" Mode="In" Type="String" />
+      <Parameter Name="Diem_Toi_Thieu" Mode="In" Type="Decimal" />
+      <Parameter Name="Diem_Toi_Da" Mode="In" Type="Decimal" />
+      <Parameter Name="Trang_Thai_Su_Dung" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="xoa_chuyennganh">
+      <Parameter Name="Id_ChuyenNganh" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="xoa_donviquanly">
+      <Parameter Name="Id_DonViQuanLy" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="xoa_dot_cap">
+      <Parameter Name="Id_Dot_Cap" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="xoa_khoahoc">
+      <Parameter Name="Id_KhoaHoc" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="xoa_nganhhoc">
+      <Parameter Name="Id_NganhHoc" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="xoa_nguoidung">
+      <Parameter Name="Id_NguoiDung" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="xoa_sinhvien">
+      <Parameter Name="Id_SinhVien" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="xoa_vanbang">
+      <Parameter Name="Id_VanBang" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="xoa_xeploai">
+      <Parameter Name="Id_XepLoai" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="chon_nganhhoc_Result">
+    <Property Type="Int32" Name="Id_NganhHoc" Nullable="false" />
+    <Property Type="String" Name="Ma_NganhHoc" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Ten_Nganh" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="Trang_Thai_Su_Dung" Nullable="true" />
+  </ComplexType>
+</Schema>
