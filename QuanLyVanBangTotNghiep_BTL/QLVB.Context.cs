@@ -633,5 +633,14 @@ namespace QuanLyVanBangTotNghiep_BTL
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<chon_dot_cap_Result>("chon_dot_cap");
         }
+    
+        public virtual ObjectResult<lay_thong_tin_sinhvien_Result> lay_thong_tin_sinhvien(string ma_SinhVien)
+        {
+            var ma_SinhVienParameter = ma_SinhVien != null ?
+                new ObjectParameter("Ma_SinhVien", ma_SinhVien) :
+                new ObjectParameter("Ma_SinhVien", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<lay_thong_tin_sinhvien_Result>("lay_thong_tin_sinhvien", ma_SinhVienParameter);
+        }
     }
 }

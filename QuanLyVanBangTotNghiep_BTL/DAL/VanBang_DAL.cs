@@ -16,6 +16,16 @@ namespace QuanLyVanBangTotNghiep_BTL.DAL
             {
                 return db.chon_vanbang().ToList();
             }
+
+            public void ThemVanBang(string soHieu, int idDotCap, int idSinhVien, DateTime ngayCap, string noiCap, bool trangThai = false)
+            {
+                db.them_vanbang(soHieu, idDotCap, idSinhVien, ngayCap, noiCap, trangThai);
+            }
+            public void XoaVanBang(int idVanBang)
+            {
+                db.xoa_vanbang(idVanBang);
+            }
+
         }
     }
 }

@@ -15,5 +15,10 @@ namespace QuanLyVanBangTotNghiep_BTL.BLL
         {
             return dal.GetChon_Vanbang_Results();
         }
+        public void ThemVanBang(string soHieu, int idDotCap, int idSinhVien, DateTime ngayCap, string noiCap, bool trangThai = false)
+        {
+            dal.ThemVanBang(soHieu, idDotCap, idSinhVien, ngayCap, noiCap, trangThai);
+        }
     }
+
 }

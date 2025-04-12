@@ -102,7 +102,7 @@
           <ScalarProperty Name="Id_ChuyenNganh" ColumnName="Id_ChuyenNganh" />
           <ScalarProperty Name="Ma_ChuyenNganh" ColumnName="Ma_ChuyenNganh" />
           <ScalarProperty Name="Ten_ChuyenNganh" ColumnName="Ten_ChuyenNganh" />
-          <ScalarProperty Name="Id_NganhHoc" ColumnName="Id_NganhHoc" />
+          <ScalarProperty Name="Ten_Nganh" ColumnName="Ten_Nganh" />
           <ScalarProperty Name="Trang_Thai_Su_Dung" ColumnName="Trang_Thai_Su_Dung" />
         </ComplexTypeMapping>
       </ResultMapping>
@@ -256,5 +256,18 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="lay_thong_tin_sinhvien" FunctionName="QuanLyVanBangModel.Store.lay_thong_tin_sinhvien">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QuanLyVanBangModel.lay_thong_tin_sinhvien_Result">
+          <ScalarProperty Name="Id_SinhVien" ColumnName="Id_SinhVien" />
+          <ScalarProperty Name="Ho_Va_Ten" ColumnName="Ho_Va_Ten" />
+          <ScalarProperty Name="Ngay_Sinh" ColumnName="Ngay_Sinh" />
+          <ScalarProperty Name="Ten_Nganh" ColumnName="Ten_Nganh" />
+          <ScalarProperty Name="Ten_ChuyenNganh" ColumnName="Ten_ChuyenNganh" />
+          <ScalarProperty Name="Ma_KhoaHoc" ColumnName="Ma_KhoaHoc" />
+          <ScalarProperty Name="Ten_XepLoai" ColumnName="Ten_XepLoai" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

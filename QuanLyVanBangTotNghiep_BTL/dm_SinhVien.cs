@@ -31,7 +31,7 @@ namespace QuanLyVanBangTotNghiep_BTL
         public string Email { get; set; }
         public Nullable<decimal> Diem_Trung_Binh_Tich_Luy { get; set; }
         public Nullable<int> Id_XepLoai { get; set; }
-        public Nullable<int> Id_DonViQuanLy { get; set; }
+        public int Id_DonViQuanLy { get; set; }
         public bool Trang_Thai { get; set; }
     
         public virtual dm_ChuyenNganh dm_ChuyenNganh { get; set; }
