@@ -5,9 +5,9 @@
       <PropertyRef Name="Id_ChuyenNganh" />
     </Key>
     <Property Name="Id_ChuyenNganh" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Ma_ChuyenNganh" Type="nvarchar" MaxLength="50" />
-    <Property Name="Ten_ChuyenNganh" Type="nvarchar" MaxLength="50" />
-    <Property Name="Id_NganhHoc" Type="int" />
+    <Property Name="Ma_ChuyenNganh" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Ten_ChuyenNganh" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Id_NganhHoc" Type="int" Nullable="false" />
     <Property Name="Trang_Thai_Su_Dung" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="dm_DonViQuanLy">
@@ -15,9 +15,9 @@
       <PropertyRef Name="Id_DonViQuanLy" />
     </Key>
     <Property Name="Id_DonViQuanLy" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Ma_DonViQuanLy" Type="nvarchar" MaxLength="10" />
-    <Property Name="Ten_DonViQuanLy" Type="nvarchar" MaxLength="30" />
-    <Property Name="Ten_DonViQuanLy_Cha" Type="nvarchar" MaxLength="30" />
+    <Property Name="Ma_DonViQuanLy" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Ten_DonViQuanLy" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Ten_DonViQuanLy_Cha" Type="nvarchar" MaxLength="30" Nullable="false" />
     <Property Name="Trang_Thai_Su_Dung" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="dm_KhoaHoc">
@@ -25,9 +25,9 @@
       <PropertyRef Name="Id_KhoaHoc" />
     </Key>
     <Property Name="Id_KhoaHoc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Ma_KhoaHoc" Type="nvarchar" MaxLength="10" />
-    <Property Name="Nam_Bat_Dau" Type="int" />
-    <Property Name="Nam_Ket_Thuc" Type="int" />
+    <Property Name="Ma_KhoaHoc" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Nam_Bat_Dau" Type="int" Nullable="false" />
+    <Property Name="Nam_Ket_Thuc" Type="int" Nullable="false" />
     <Property Name="Trang_Thai" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="dm_NganhHoc">
@@ -35,8 +35,8 @@
       <PropertyRef Name="Id_NganhHoc" />
     </Key>
     <Property Name="Id_NganhHoc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Ma_NganhHoc" Type="nvarchar" MaxLength="10" />
-    <Property Name="Ten_Nganh" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ma_NganhHoc" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Ten_Nganh" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Trang_Thai_Su_Dung" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="dm_NguoiDung">
@@ -44,10 +44,10 @@
       <PropertyRef Name="Id_NguoiDung" />
     </Key>
     <Property Name="Id_NguoiDung" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Ma_NguoiDung" Type="nvarchar" MaxLength="20" />
-    <Property Name="Ten_Dang_Nhap" Type="nvarchar" MaxLength="30" />
-    <Property Name="Mat_Khau" Type="varchar" MaxLength="30" />
-    <Property Name="Loai_NguoiDung" Type="nvarchar" MaxLength="20" />
+    <Property Name="Ma_NguoiDung" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Ten_Dang_Nhap" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Mat_Khau" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Loai_NguoiDung" Type="nvarchar" MaxLength="20" Nullable="false" />
   </EntityType>
   <EntityType Name="dm_PhanQuyenNguoiDung">
     <Key>
@@ -63,16 +63,16 @@
       <PropertyRef Name="Id_SinhVien" />
     </Key>
     <Property Name="Id_SinhVien" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Ma_SinhVien" Type="nvarchar" MaxLength="50" />
-    <Property Name="Ho_Va_Ten" Type="nvarchar" MaxLength="50" />
-    <Property Name="Gioi_Tinh" Type="bit" />
-    <Property Name="Ngay_Sinh" Type="date" />
-    <Property Name="Id_ChuyenNganh" Type="int" />
-    <Property Name="Id_KhoaHoc" Type="int" />
-    <Property Name="So_Dien_Thoai" Type="nvarchar" MaxLength="50" />
-    <Property Name="Email" Type="nvarchar" MaxLength="50" />
-    <Property Name="Diem_Trung_Binh_Tich_Luy" Type="decimal" Precision="4" Scale="2" />
-    <Property Name="Id_XepLoai" Type="int" />
+    <Property Name="Ma_SinhVien" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Ho_Va_Ten" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Gioi_Tinh" Type="bit" Nullable="false" />
+    <Property Name="Ngay_Sinh" Type="date" Nullable="false" />
+    <Property Name="Id_ChuyenNganh" Type="int" Nullable="false" />
+    <Property Name="Id_KhoaHoc" Type="int" Nullable="false" />
+    <Property Name="So_Dien_Thoai" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Diem_Trung_Binh_Tich_Luy" Type="decimal" Precision="4" Scale="2" Nullable="false" />
+    <Property Name="Id_XepLoai" Type="int" Nullable="false" />
     <Property Name="Id_DonViQuanLy" Type="int" Nullable="false" />
     <Property Name="Trang_Thai" Type="bit" Nullable="false" />
   </EntityType>
@@ -81,10 +81,10 @@
       <PropertyRef Name="Id_XepLoai" />
     </Key>
     <Property Name="Id_XepLoai" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Ma_XepLoai" Type="nvarchar" MaxLength="10" />
-    <Property Name="Ten_XepLoai" Type="nvarchar" MaxLength="25" />
-    <Property Name="Diem_Toi_Thieu" Type="decimal" Precision="4" Scale="2" />
-    <Property Name="Diem_Toi_Da" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="Ma_XepLoai" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Ten_XepLoai" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Diem_Toi_Thieu" Type="decimal" Precision="4" Scale="2" Nullable="false" />
+    <Property Name="Diem_Toi_Da" Type="decimal" Precision="4" Scale="2" Nullable="false" />
     <Property Name="Trang_Thai_Su_Dung" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="DotCapBangTN">
@@ -94,7 +94,7 @@
     <Property Name="Id_Dot_Cap" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Ten_Dot_Cap" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
-  <EntityType Name="VanBangTN">
+  <EntityType Name="VanBangTam">
     <Key>
       <PropertyRef Name="Id_VanBang" />
     </Key>
@@ -104,10 +104,10 @@
     <Property Name="Id_SinhVien" Type="int" Nullable="false" />
     <Property Name="Ngay_Cap" Type="date" Nullable="false" />
     <Property Name="Noi_Cap" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Trang_Thai" Type="bit" Nullable="false" />
+    <Property Name="Trang_Thai" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK_dm_ChuyenNganh_dm_NganhHoc">
-    <End Role="dm_NganhHoc" Type="Self.dm_NganhHoc" Multiplicity="0..1" />
+    <End Role="dm_NganhHoc" Type="Self.dm_NganhHoc" Multiplicity="1" />
     <End Role="dm_ChuyenNganh" Type="Self.dm_ChuyenNganh" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="dm_NganhHoc">
@@ -119,7 +119,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_dm_SinhVien_dm_ChuyenNganh">
-    <End Role="dm_ChuyenNganh" Type="Self.dm_ChuyenNganh" Multiplicity="0..1" />
+    <End Role="dm_ChuyenNganh" Type="Self.dm_ChuyenNganh" Multiplicity="1" />
     <End Role="dm_SinhVien" Type="Self.dm_SinhVien" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="dm_ChuyenNganh">
@@ -143,7 +143,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_dm_SinhVien_dm_KhoaHoc">
-    <End Role="dm_KhoaHoc" Type="Self.dm_KhoaHoc" Multiplicity="0..1" />
+    <End Role="dm_KhoaHoc" Type="Self.dm_KhoaHoc" Multiplicity="1" />
     <End Role="dm_SinhVien" Type="Self.dm_SinhVien" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="dm_KhoaHoc">
@@ -155,7 +155,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_dm_SinhVien_dm_XepLoai">
-    <End Role="dm_XepLoai" Type="Self.dm_XepLoai" Multiplicity="0..1" />
+    <End Role="dm_XepLoai" Type="Self.dm_XepLoai" Multiplicity="1" />
     <End Role="dm_SinhVien" Type="Self.dm_SinhVien" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="dm_XepLoai">
@@ -168,24 +168,24 @@
   </Association>
   <Association Name="FK_nv_VanBangTN_dm_SinhVien">
     <End Role="dm_SinhVien" Type="Self.dm_SinhVien" Multiplicity="1" />
-    <End Role="VanBangTN" Type="Self.VanBangTN" Multiplicity="*" />
+    <End Role="VanBangTam" Type="Self.VanBangTam" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="dm_SinhVien">
         <PropertyRef Name="Id_SinhVien" />
       </Principal>
-      <Dependent Role="VanBangTN">
+      <Dependent Role="VanBangTam">
         <PropertyRef Name="Id_SinhVien" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_VanBangTN_DotCapBangTN">
     <End Role="DotCapBangTN" Type="Self.DotCapBangTN" Multiplicity="1" />
-    <End Role="VanBangTN" Type="Self.VanBangTN" Multiplicity="*" />
+    <End Role="VanBangTam" Type="Self.VanBangTam" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DotCapBangTN">
         <PropertyRef Name="Id_Dot_Cap" />
       </Principal>
-      <Dependent Role="VanBangTN">
+      <Dependent Role="VanBangTam">
         <PropertyRef Name="Id_DotCap" />
       </Dependent>
     </ReferentialConstraint>
@@ -197,7 +197,7 @@
   <Function Name="chon_nganhhoc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="chon_nguoidung" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="chon_sinhvien" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-  <Function Name="chon_vanbang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="chon_vanbangtam" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="chon_xeploai" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="lay_thong_tin_sinhvien" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Ma_SinhVien" Type="nvarchar" Mode="In" />
@@ -255,14 +255,14 @@
     <Parameter Name="Id_DonViQuanLy" Type="int" Mode="In" />
     <Parameter Name="Trang_Thai" Type="bit" Mode="In" />
   </Function>
-  <Function Name="sua_vanbang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+  <Function Name="sua_vanbangtam" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Id_VanBang" Type="int" Mode="In" />
     <Parameter Name="So_Hieu_Van_Bang" Type="nvarchar" Mode="In" />
     <Parameter Name="Id_DotCap" Type="int" Mode="In" />
     <Parameter Name="Id_SinhVien" Type="int" Mode="In" />
     <Parameter Name="Ngay_Cap" Type="date" Mode="In" />
     <Parameter Name="Noi_Cap" Type="nvarchar(max)" Mode="In" />
-    <Parameter Name="Trang_Thai" Type="bit" Mode="In" />
+    <Parameter Name="Trang_Thai" Type="int" Mode="In" />
   </Function>
   <Function Name="sua_xeploai" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Id_XepLoai" Type="int" Mode="In" />
@@ -318,13 +318,13 @@
     <Parameter Name="Id_DonViQuanLy" Type="int" Mode="In" />
     <Parameter Name="Trang_Thai" Type="bit" Mode="In" />
   </Function>
-  <Function Name="them_vanbang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+  <Function Name="them_vanbangtam" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="So_Hieu_Van_Bang" Type="nvarchar" Mode="In" />
     <Parameter Name="Id_DotCap" Type="int" Mode="In" />
     <Parameter Name="Id_SinhVien" Type="int" Mode="In" />
     <Parameter Name="Ngay_Cap" Type="date" Mode="In" />
     <Parameter Name="Noi_Cap" Type="nvarchar(max)" Mode="In" />
-    <Parameter Name="Trang_Thai" Type="bit" Mode="In" />
+    <Parameter Name="Trang_Thai" Type="int" Mode="In" />
   </Function>
   <Function Name="them_xeploai" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Ma_XepLoai" Type="nvarchar" Mode="In" />
@@ -357,6 +357,9 @@
   <Function Name="xoa_vanbang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Id_VanBang" Type="int" Mode="In" />
   </Function>
+  <Function Name="xoa_vanbangtam" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id_VanBang" Type="int" Mode="In" />
+  </Function>
   <Function Name="xoa_xeploai" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Id_XepLoai" Type="int" Mode="In" />
   </Function>
@@ -370,7 +373,7 @@
     <EntitySet Name="dm_SinhVien" EntityType="Self.dm_SinhVien" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="dm_XepLoai" EntityType="Self.dm_XepLoai" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DotCapBangTN" EntityType="Self.DotCapBangTN" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="VanBangTN" EntityType="Self.VanBangTN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VanBangTam" EntityType="Self.VanBangTam" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_dm_ChuyenNganh_dm_NganhHoc" Association="Self.FK_dm_ChuyenNganh_dm_NganhHoc">
       <End Role="dm_NganhHoc" EntitySet="dm_NganhHoc" />
       <End Role="dm_ChuyenNganh" EntitySet="dm_ChuyenNganh" />
@@ -393,11 +396,11 @@
     </AssociationSet>
     <AssociationSet Name="FK_nv_VanBangTN_dm_SinhVien" Association="Self.FK_nv_VanBangTN_dm_SinhVien">
       <End Role="dm_SinhVien" EntitySet="dm_SinhVien" />
-      <End Role="VanBangTN" EntitySet="VanBangTN" />
+      <End Role="VanBangTam" EntitySet="VanBangTam" />
     </AssociationSet>
     <AssociationSet Name="FK_VanBangTN_DotCapBangTN" Association="Self.FK_VanBangTN_DotCapBangTN">
       <End Role="DotCapBangTN" EntitySet="DotCapBangTN" />
-      <End Role="VanBangTN" EntitySet="VanBangTN" />
+      <End Role="VanBangTam" EntitySet="VanBangTam" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

@@ -1,4 +1,4 @@
-﻿namespace QuanLyVanBangTotNghiep_BTL.GUI.BoPhanQuanLy
+﻿namespace QuanLyVanBangTotNghiep_BTL.GUI
 {
     partial class formThemVanBang
     {

@@ -17,13 +17,13 @@ namespace QuanLyVanBangTotNghiep_BTL
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DotCapBangTN()
         {
-            this.VanBangTNs = new HashSet<VanBangTN>();
+            this.VanBangTams = new HashSet<VanBangTam>();
         }
     
         public int Id_Dot_Cap { get; set; }
         public string Ten_Dot_Cap { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<VanBangTN> VanBangTNs { get; set; }
+        public virtual ICollection<VanBangTam> VanBangTams { get; set; }
     }
 }

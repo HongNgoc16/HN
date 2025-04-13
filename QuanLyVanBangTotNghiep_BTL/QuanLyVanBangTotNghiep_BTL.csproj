@@ -61,7 +61,7 @@
     <Compile Include="BLL\dm_XepLoaiTN_BLL.cs" />
     <Compile Include="BLL\DotCap_BLL.cs" />
     <Compile Include="BLL\LayThongTin_BLL.cs" />
-    <Compile Include="BLL\VanBang_BLL.cs" />
+    <Compile Include="BLL\VanBangTam_BLL.cs" />
     <Compile Include="chon_chuyennganh_Result.cs">
       <DependentUpon>QLVB.tt</DependentUpon>
     </Compile>
@@ -83,7 +83,7 @@
     <Compile Include="chon_sinhvien_Result.cs">
       <DependentUpon>QLVB.tt</DependentUpon>
     </Compile>
-    <Compile Include="chon_vanbang_Result.cs">
+    <Compile Include="chon_vanbangtam_Result.cs">
       <DependentUpon>QLVB.tt</DependentUpon>
     </Compile>
     <Compile Include="chon_xeploai_Result.cs">
@@ -95,7 +95,7 @@
     <Compile Include="DAL\dm_XepLoaiTN_DAL.cs" />
     <Compile Include="DAL\DotCap_DAL.cs" />
     <Compile Include="DAL\LayThongTin_DAL.cs" />
-    <Compile Include="DAL\VanBang_DAL.cs" />
+    <Compile Include="DAL\VanBangTam_DAL.cs" />
     <Compile Include="dm_ChuyenNganh.cs">
       <DependentUpon>QLVB.tt</DependentUpon>
     </Compile>
@@ -287,7 +287,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLVB.edmx</DependentUpon>
     </Compile>
-    <Compile Include="VanBangTN.cs">
+    <Compile Include="VanBangTam.cs">
       <DependentUpon>QLVB.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="GUI\BoPhanDuyet\BPDuyet.resx">

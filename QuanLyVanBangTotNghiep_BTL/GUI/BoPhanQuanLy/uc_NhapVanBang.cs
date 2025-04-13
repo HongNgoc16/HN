@@ -8,12 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyVanBangTotNghiep_BTL.BLL;
-using static QuanLyVanBangTotNghiep_BTL.DAL.VanBang_DAL;
+using static QuanLyVanBangTotNghiep_BTL.DAL.VanBangTam_DAL;
 namespace QuanLyVanBangTotNghiep_BTL.GUI.BoPhanQuanLy
 {
     public partial class uc_NhapVanBang : UserControl
     {
-        private VanBang_BLL bll = new VanBang_BLL();
+        private VanBangTam_BLL bll = new VanBangTam_BLL();
         private int opt = -1;
         public uc_NhapVanBang()
         {
@@ -21,7 +21,7 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI.BoPhanQuanLy
         }
         private void HienThiDuLieu()
         {
-            dgVanBang.DataSource = bll.GetChon_Vanbang_Results();
+            dgVanBang.DataSource = bll.GetChon_Vanbangtam_Results();
         }
 
         private void uc_NhapVanBang_Load(object sender, EventArgs e)
