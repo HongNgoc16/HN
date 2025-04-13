@@ -16,7 +16,7 @@ namespace QuanLyVanBangTotNghiep_BTL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BPQuanLy());
+            Application.Run(new TrangChu());
         }
     }
 }

@@ -23,7 +23,7 @@ namespace QuanLyVanBangTotNghiep_BTL
         public int Id_ChuyenNganh { get; set; }
         public string Ma_ChuyenNganh { get; set; }
         public string Ten_ChuyenNganh { get; set; }
-        public Nullable<int> Id_NganhHoc { get; set; }
+        public int Id_NganhHoc { get; set; }
         public bool Trang_Thai_Su_Dung { get; set; }
     
         public virtual dm_NganhHoc dm_NganhHoc { get; set; }

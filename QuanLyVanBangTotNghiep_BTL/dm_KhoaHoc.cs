@@ -22,8 +22,8 @@ namespace QuanLyVanBangTotNghiep_BTL
     
         public int Id_KhoaHoc { get; set; }
         public string Ma_KhoaHoc { get; set; }
-        public Nullable<int> Nam_Bat_Dau { get; set; }
-        public Nullable<int> Nam_Ket_Thuc { get; set; }
+        public int Nam_Bat_Dau { get; set; }
+        public int Nam_Ket_Thuc { get; set; }
         public bool Trang_Thai { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

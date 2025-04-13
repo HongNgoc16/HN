@@ -23,8 +23,8 @@ namespace QuanLyVanBangTotNghiep_BTL
         public int Id_XepLoai { get; set; }
         public string Ma_XepLoai { get; set; }
         public string Ten_XepLoai { get; set; }
-        public Nullable<decimal> Diem_Toi_Thieu { get; set; }
-        public Nullable<decimal> Diem_Toi_Da { get; set; }
+        public decimal Diem_Toi_Thieu { get; set; }
+        public decimal Diem_Toi_Da { get; set; }
         public bool Trang_Thai_Su_Dung { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

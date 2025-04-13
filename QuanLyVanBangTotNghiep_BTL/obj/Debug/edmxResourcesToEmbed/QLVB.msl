@@ -169,7 +169,6 @@
     <FunctionImportMapping FunctionImportName="sua_nganhhoc" FunctionName="QuanLyVanBangModel.Store.sua_nganhhoc" />
     <FunctionImportMapping FunctionImportName="sua_nguoidung" FunctionName="QuanLyVanBangModel.Store.sua_nguoidung" />
     <FunctionImportMapping FunctionImportName="sua_sinhvien" FunctionName="QuanLyVanBangModel.Store.sua_sinhvien" />
-    <FunctionImportMapping FunctionImportName="sua_vanbang" FunctionName="QuanLyVanBangModel.Store.sua_vanbang" />
     <FunctionImportMapping FunctionImportName="sua_xeploai" FunctionName="QuanLyVanBangModel.Store.sua_xeploai" />
     <FunctionImportMapping FunctionImportName="them_chuyennganh" FunctionName="QuanLyVanBangModel.Store.them_chuyennganh" />
     <FunctionImportMapping FunctionImportName="them_donviquanly" FunctionName="QuanLyVanBangModel.Store.them_donviquanly" />
@@ -178,7 +177,6 @@
     <FunctionImportMapping FunctionImportName="them_nganhhoc" FunctionName="QuanLyVanBangModel.Store.them_nganhhoc" />
     <FunctionImportMapping FunctionImportName="them_nguoidung" FunctionName="QuanLyVanBangModel.Store.them_nguoidung" />
     <FunctionImportMapping FunctionImportName="them_sinhvien" FunctionName="QuanLyVanBangModel.Store.them_sinhvien" />
-    <FunctionImportMapping FunctionImportName="them_vanbang" FunctionName="QuanLyVanBangModel.Store.them_vanbang" />
     <FunctionImportMapping FunctionImportName="them_xeploai" FunctionName="QuanLyVanBangModel.Store.them_xeploai" />
     <FunctionImportMapping FunctionImportName="xoa_chuyennganh" FunctionName="QuanLyVanBangModel.Store.xoa_chuyennganh" />
     <FunctionImportMapping FunctionImportName="xoa_donviquanly" FunctionName="QuanLyVanBangModel.Store.xoa_donviquanly" />
@@ -187,7 +185,6 @@
     <FunctionImportMapping FunctionImportName="xoa_nganhhoc" FunctionName="QuanLyVanBangModel.Store.xoa_nganhhoc" />
     <FunctionImportMapping FunctionImportName="xoa_nguoidung" FunctionName="QuanLyVanBangModel.Store.xoa_nguoidung" />
     <FunctionImportMapping FunctionImportName="xoa_sinhvien" FunctionName="QuanLyVanBangModel.Store.xoa_sinhvien" />
-    <FunctionImportMapping FunctionImportName="xoa_vanbang" FunctionName="QuanLyVanBangModel.Store.xoa_vanbang" />
     <FunctionImportMapping FunctionImportName="xoa_xeploai" FunctionName="QuanLyVanBangModel.Store.xoa_xeploai" />
     <FunctionImportMapping FunctionImportName="chon_sinhvien" FunctionName="QuanLyVanBangModel.Store.chon_sinhvien">
       <ResultMapping>
@@ -208,25 +205,6 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="chon_vanbang" FunctionName="QuanLyVanBangModel.Store.chon_vanbang">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="QuanLyVanBangModel.chon_vanbang_Result">
-          <ScalarProperty Name="Id_VanBang" ColumnName="Id_VanBang" />
-          <ScalarProperty Name="So_Hieu_Van_Bang" ColumnName="So_Hieu_Van_Bang" />
-          <ScalarProperty Name="Ten_Dot_Cap" ColumnName="Ten_Dot_Cap" />
-          <ScalarProperty Name="Ma_SinhVien" ColumnName="Ma_SinhVien" />
-          <ScalarProperty Name="Ho_Va_Ten" ColumnName="Ho_Va_Ten" />
-          <ScalarProperty Name="Ngay_Sinh" ColumnName="Ngay_Sinh" />
-          <ScalarProperty Name="Ten_Nganh" ColumnName="Ten_Nganh" />
-          <ScalarProperty Name="Ten_ChuyenNganh" ColumnName="Ten_ChuyenNganh" />
-          <ScalarProperty Name="Ma_KhoaHoc" ColumnName="Ma_KhoaHoc" />
-          <ScalarProperty Name="Ten_XepLoai" ColumnName="Ten_XepLoai" />
-          <ScalarProperty Name="Ngay_Cap" ColumnName="Ngay_Cap" />
-          <ScalarProperty Name="Noi_Cap" ColumnName="Noi_Cap" />
-          <ScalarProperty Name="Trang_Thai" ColumnName="Trang_Thai" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
     <EntitySetMapping Name="DotCapBangTNs">
       <EntityTypeMapping TypeName="QuanLyVanBangModel.DotCapBangTN">
         <MappingFragment StoreEntitySet="DotCapBangTN">
@@ -243,19 +221,6 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <EntitySetMapping Name="VanBangTNs">
-      <EntityTypeMapping TypeName="QuanLyVanBangModel.VanBangTN">
-        <MappingFragment StoreEntitySet="VanBangTN">
-          <ScalarProperty Name="Trang_Thai" ColumnName="Trang_Thai" />
-          <ScalarProperty Name="Noi_Cap" ColumnName="Noi_Cap" />
-          <ScalarProperty Name="Ngay_Cap" ColumnName="Ngay_Cap" />
-          <ScalarProperty Name="Id_SinhVien" ColumnName="Id_SinhVien" />
-          <ScalarProperty Name="Id_DotCap" ColumnName="Id_DotCap" />
-          <ScalarProperty Name="So_Hieu_Van_Bang" ColumnName="So_Hieu_Van_Bang" />
-          <ScalarProperty Name="Id_VanBang" ColumnName="Id_VanBang" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="lay_thong_tin_sinhvien" FunctionName="QuanLyVanBangModel.Store.lay_thong_tin_sinhvien">
       <ResultMapping>
         <ComplexTypeMapping TypeName="QuanLyVanBangModel.lay_thong_tin_sinhvien_Result">
@@ -269,5 +234,41 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <EntitySetMapping Name="VanBangTams">
+      <EntityTypeMapping TypeName="QuanLyVanBangModel.VanBangTam">
+        <MappingFragment StoreEntitySet="VanBangTam">
+          <ScalarProperty Name="Trang_Thai" ColumnName="Trang_Thai" />
+          <ScalarProperty Name="Noi_Cap" ColumnName="Noi_Cap" />
+          <ScalarProperty Name="Ngay_Cap" ColumnName="Ngay_Cap" />
+          <ScalarProperty Name="Id_SinhVien" ColumnName="Id_SinhVien" />
+          <ScalarProperty Name="Id_DotCap" ColumnName="Id_DotCap" />
+          <ScalarProperty Name="So_Hieu_Van_Bang" ColumnName="So_Hieu_Van_Bang" />
+          <ScalarProperty Name="Id_VanBang" ColumnName="Id_VanBang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="chon_vanbangtam" FunctionName="QuanLyVanBangModel.Store.chon_vanbangtam">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QuanLyVanBangModel.chon_vanbangtam_Result">
+          <ScalarProperty Name="Id_VanBang" ColumnName="Id_VanBang" />
+          <ScalarProperty Name="So_Hieu_Van_Bang" ColumnName="So_Hieu_Van_Bang" />
+          <ScalarProperty Name="Ten_Dot_Cap" ColumnName="Ten_Dot_Cap" />
+          <ScalarProperty Name="Ma_SinhVien" ColumnName="Ma_SinhVien" />
+          <ScalarProperty Name="Ho_Va_Ten" ColumnName="Ho_Va_Ten" />
+          <ScalarProperty Name="Ngay_Sinh" ColumnName="Ngay_Sinh" />
+          <ScalarProperty Name="Ten_Nganh" ColumnName="Ten_Nganh" />
+          <ScalarProperty Name="Ten_ChuyenNganh" ColumnName="Ten_ChuyenNganh" />
+          <ScalarProperty Name="Ma_KhoaHoc" ColumnName="Ma_KhoaHoc" />
+          <ScalarProperty Name="Ten_XepLoai" ColumnName="Ten_XepLoai" />
+          <ScalarProperty Name="Ngay_Cap" ColumnName="Ngay_Cap" />
+          <ScalarProperty Name="Noi_Cap" ColumnName="Noi_Cap" />
+          <ScalarProperty Name="Trang_Thai" ColumnName="Trang_Thai" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sua_vanbangtam" FunctionName="QuanLyVanBangModel.Store.sua_vanbangtam" />
+    <FunctionImportMapping FunctionImportName="them_vanbangtam" FunctionName="QuanLyVanBangModel.Store.them_vanbangtam" />
+    <FunctionImportMapping FunctionImportName="xoa_vanbang" FunctionName="QuanLyVanBangModel.Store.xoa_vanbang" />
+    <FunctionImportMapping FunctionImportName="xoa_vanbangtam" FunctionName="QuanLyVanBangModel.Store.xoa_vanbangtam" />
   </EntityContainerMapping>
 </Mapping>
