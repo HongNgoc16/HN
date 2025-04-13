@@ -60,6 +60,7 @@
     <Compile Include="BLL\dm_SinhVien_BLL.cs" />
     <Compile Include="BLL\dm_XepLoaiTN_BLL.cs" />
     <Compile Include="BLL\DotCap_BLL.cs" />
+    <Compile Include="BLL\LayThongTin_BLL.cs" />
     <Compile Include="BLL\VanBang_BLL.cs" />
     <Compile Include="chon_chuyennganh_Result.cs">
       <DependentUpon>QLVB.tt</DependentUpon>
@@ -93,6 +94,7 @@
     <Compile Include="DAL\dm_SinhVien_DAL.cs" />
     <Compile Include="DAL\dm_XepLoaiTN_DAL.cs" />
     <Compile Include="DAL\DotCap_DAL.cs" />
+    <Compile Include="DAL\LayThongTin_DAL.cs" />
     <Compile Include="DAL\VanBang_DAL.cs" />
     <Compile Include="dm_ChuyenNganh.cs">
       <DependentUpon>QLVB.tt</DependentUpon>
@@ -126,6 +128,12 @@
     </Compile>
     <Compile Include="GUI\BoPhanDuyet\BPDuyet.Designer.cs">
       <DependentUpon>BPDuyet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BoPhanDuyet\formDuyetVanBang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BoPhanDuyet\formDuyetVanBang.Designer.cs">
+      <DependentUpon>formDuyetVanBang.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\BoPhanDuyet\uc_DuyetVanBang.cs">
       <SubType>UserControl</SubType>
@@ -180,12 +188,6 @@
     </Compile>
     <Compile Include="GUI\BoPhanQuanLy\uc_DotCapVanBang.Designer.cs">
       <DependentUpon>uc_DotCapVanBang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\BoPhanQuanLy\uc_ThemVanBang.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\BoPhanQuanLy\uc_ThemVanBang.Designer.cs">
-      <DependentUpon>uc_ThemVanBang.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\MainFunction\DangKyCapBanSao.cs">
       <SubType>Form</SubType>
@@ -265,6 +267,9 @@
     <Compile Include="GUI\MainFunction\TraCuuVanBang.Designer.cs">
       <DependentUpon>TraCuuVanBang.cs</DependentUpon>
     </Compile>
+    <Compile Include="lay_thong_tin_sinhvien_Result.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLVB.Context.cs">
@@ -288,6 +293,9 @@
     <EmbeddedResource Include="GUI\BoPhanDuyet\BPDuyet.resx">
       <DependentUpon>BPDuyet.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BoPhanDuyet\formDuyetVanBang.resx">
+      <DependentUpon>formDuyetVanBang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\BoPhanDuyet\uc_DuyetVanBang.resx">
       <DependentUpon>uc_DuyetVanBang.cs</DependentUpon>
     </EmbeddedResource>
@@ -305,9 +313,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\BoPhanQuanLy\uc_DotCapVanBang.resx">
       <DependentUpon>uc_DotCapVanBang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\BoPhanQuanLy\uc_ThemVanBang.resx">
-      <DependentUpon>uc_ThemVanBang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MainFunction\DangKyCapBanSao.resx">
       <DependentUpon>DangKyCapBanSao.cs</DependentUpon>

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyVanBangTotNghiep_BTL.GUI.BoPhanQuanLy
+namespace QuanLyVanBangTotNghiep_BTL.GUI.BoPhanDuyet
 {
-    public partial class uc_ThemVanBang : UserControl
+    public partial class formDuyetVanBang : Form
     {
-        public uc_ThemVanBang()
+        public formDuyetVanBang()
         {
             InitializeComponent();
         }

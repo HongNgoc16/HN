@@ -73,7 +73,7 @@
     <Property Name="Email" Type="nvarchar" MaxLength="50" />
     <Property Name="Diem_Trung_Binh_Tich_Luy" Type="decimal" Precision="4" Scale="2" />
     <Property Name="Id_XepLoai" Type="int" />
-    <Property Name="Id_DonViQuanLy" Type="int" />
+    <Property Name="Id_DonViQuanLy" Type="int" Nullable="false" />
     <Property Name="Trang_Thai" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="dm_XepLoai">
@@ -131,7 +131,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_dm_SinhVien_dm_DonViQuanLy">
-    <End Role="dm_DonViQuanLy" Type="Self.dm_DonViQuanLy" Multiplicity="0..1" />
+    <End Role="dm_DonViQuanLy" Type="Self.dm_DonViQuanLy" Multiplicity="1" />
     <End Role="dm_SinhVien" Type="Self.dm_SinhVien" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="dm_DonViQuanLy">
@@ -199,6 +199,9 @@
   <Function Name="chon_sinhvien" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="chon_vanbang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="chon_xeploai" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="lay_thong_tin_sinhvien" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Ma_SinhVien" Type="nvarchar" Mode="In" />
+  </Function>
   <Function Name="sua_chuyennganh" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Id_ChuyenNganh" Type="int" Mode="In" />
     <Parameter Name="Ma_ChuyenNganh" Type="nvarchar" Mode="In" />

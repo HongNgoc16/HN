@@ -28,18 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.buttonThemMoi = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rdbKhongSd = new System.Windows.Forms.RadioButton();
+            this.rdbDangSd = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
-            this.textTenNganh = new System.Windows.Forms.TextBox();
             this.textTenChuyenNganh = new System.Windows.Forms.TextBox();
             this.textMaChuyenNganh = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,91 +41,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgChuyenNganh = new System.Windows.Forms.DataGridView();
-            this.panel2.SuspendLayout();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonLuu = new System.Windows.Forms.Button();
+            this.buttonNganhHoc = new System.Windows.Forms.Button();
+            this.buttonXoa = new System.Windows.Forms.Button();
+            this.buttonSua = new System.Windows.Forms.Button();
+            this.buttonThemMoi = new System.Windows.Forms.Button();
+            this.comboBoxTenNganh = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgChuyenNganh)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.buttonThemMoi);
-            this.panel2.Location = new System.Drawing.Point(3, 279);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(852, 45);
-            this.panel2.TabIndex = 18;
-            // 
-            // button3
-            // 
-            this.button3.AutoSize = true;
-            this.button3.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.HotPink;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightPink;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(635, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 35);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Tìm kiếm";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.AutoSize = true;
-            this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.HotPink;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightPink;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(456, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 35);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Xóa";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.HotPink;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightPink;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(277, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 35);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Sửa";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // buttonThemMoi
-            // 
-            this.buttonThemMoi.AutoSize = true;
-            this.buttonThemMoi.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.buttonThemMoi.FlatAppearance.BorderSize = 0;
-            this.buttonThemMoi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.HotPink;
-            this.buttonThemMoi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightPink;
-            this.buttonThemMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonThemMoi.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.buttonThemMoi.ForeColor = System.Drawing.Color.White;
-            this.buttonThemMoi.Location = new System.Drawing.Point(96, 3);
-            this.buttonThemMoi.Name = "buttonThemMoi";
-            this.buttonThemMoi.Size = new System.Drawing.Size(107, 35);
-            this.buttonThemMoi.TabIndex = 1;
-            this.buttonThemMoi.Text = "Thêm mới";
-            this.buttonThemMoi.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -156,10 +78,10 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Controls.Add(this.comboBoxTenNganh);
+            this.groupBox2.Controls.Add(this.rdbKhongSd);
+            this.groupBox2.Controls.Add(this.rdbDangSd);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.textTenNganh);
             this.groupBox2.Controls.Add(this.textTenChuyenNganh);
             this.groupBox2.Controls.Add(this.textMaChuyenNganh);
             this.groupBox2.Controls.Add(this.label4);
@@ -174,29 +96,29 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Nhập thông tin";
             // 
-            // radioButton2
+            // rdbKhongSd
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.ForeColor = System.Drawing.Color.Black;
-            this.radioButton2.Location = new System.Drawing.Point(385, 174);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(155, 29);
-            this.radioButton2.TabIndex = 10;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Không sử dụng";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdbKhongSd.AutoSize = true;
+            this.rdbKhongSd.ForeColor = System.Drawing.Color.Black;
+            this.rdbKhongSd.Location = new System.Drawing.Point(385, 174);
+            this.rdbKhongSd.Name = "rdbKhongSd";
+            this.rdbKhongSd.Size = new System.Drawing.Size(155, 29);
+            this.rdbKhongSd.TabIndex = 10;
+            this.rdbKhongSd.TabStop = true;
+            this.rdbKhongSd.Text = "Không sử dụng";
+            this.rdbKhongSd.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rdbDangSd
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.ForeColor = System.Drawing.Color.Black;
-            this.radioButton1.Location = new System.Drawing.Point(218, 172);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(147, 29);
-            this.radioButton1.TabIndex = 9;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Đang sử dụng";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdbDangSd.AutoSize = true;
+            this.rdbDangSd.ForeColor = System.Drawing.Color.Black;
+            this.rdbDangSd.Location = new System.Drawing.Point(218, 172);
+            this.rdbDangSd.Name = "rdbDangSd";
+            this.rdbDangSd.Size = new System.Drawing.Size(147, 29);
+            this.rdbDangSd.TabIndex = 9;
+            this.rdbDangSd.TabStop = true;
+            this.rdbDangSd.Text = "Đang sử dụng";
+            this.rdbDangSd.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -209,15 +131,6 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Trạng thái sử dụng:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textTenNganh
-            // 
-            this.textTenNganh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textTenNganh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textTenNganh.Location = new System.Drawing.Point(218, 128);
-            this.textTenNganh.Name = "textTenNganh";
-            this.textTenNganh.Size = new System.Drawing.Size(322, 31);
-            this.textTenNganh.TabIndex = 6;
             // 
             // textTenChuyenNganh
             // 
@@ -297,6 +210,117 @@
             this.dgChuyenNganh.RowTemplate.Height = 28;
             this.dgChuyenNganh.Size = new System.Drawing.Size(889, 247);
             this.dgChuyenNganh.TabIndex = 0;
+            this.dgChuyenNganh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgChuyenNganh_CellClick);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.buttonLuu);
+            this.panel2.Controls.Add(this.buttonNganhHoc);
+            this.panel2.Controls.Add(this.buttonXoa);
+            this.panel2.Controls.Add(this.buttonSua);
+            this.panel2.Controls.Add(this.buttonThemMoi);
+            this.panel2.Location = new System.Drawing.Point(21, 286);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(852, 45);
+            this.panel2.TabIndex = 24;
+            // 
+            // buttonLuu
+            // 
+            this.buttonLuu.AutoSize = true;
+            this.buttonLuu.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.buttonLuu.FlatAppearance.BorderSize = 0;
+            this.buttonLuu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.HotPink;
+            this.buttonLuu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightPink;
+            this.buttonLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLuu.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.buttonLuu.ForeColor = System.Drawing.Color.White;
+            this.buttonLuu.Location = new System.Drawing.Point(602, 3);
+            this.buttonLuu.Name = "buttonLuu";
+            this.buttonLuu.Size = new System.Drawing.Size(107, 35);
+            this.buttonLuu.TabIndex = 6;
+            this.buttonLuu.Text = "Lưu";
+            this.buttonLuu.UseVisualStyleBackColor = false;
+            this.buttonLuu.Click += new System.EventHandler(this.buttonLuu_Click);
+            // 
+            // buttonNganhHoc
+            // 
+            this.buttonNganhHoc.AutoSize = true;
+            this.buttonNganhHoc.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.buttonNganhHoc.FlatAppearance.BorderSize = 0;
+            this.buttonNganhHoc.FlatAppearance.MouseDownBackColor = System.Drawing.Color.HotPink;
+            this.buttonNganhHoc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightPink;
+            this.buttonNganhHoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNganhHoc.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.buttonNganhHoc.ForeColor = System.Drawing.Color.White;
+            this.buttonNganhHoc.Location = new System.Drawing.Point(474, 3);
+            this.buttonNganhHoc.Name = "buttonNganhHoc";
+            this.buttonNganhHoc.Size = new System.Drawing.Size(107, 35);
+            this.buttonNganhHoc.TabIndex = 4;
+            this.buttonNganhHoc.Text = "Tìm kiếm";
+            this.buttonNganhHoc.UseVisualStyleBackColor = false;
+            // 
+            // buttonXoa
+            // 
+            this.buttonXoa.AutoSize = true;
+            this.buttonXoa.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.buttonXoa.FlatAppearance.BorderSize = 0;
+            this.buttonXoa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.HotPink;
+            this.buttonXoa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightPink;
+            this.buttonXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonXoa.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.buttonXoa.ForeColor = System.Drawing.Color.White;
+            this.buttonXoa.Location = new System.Drawing.Point(346, 3);
+            this.buttonXoa.Name = "buttonXoa";
+            this.buttonXoa.Size = new System.Drawing.Size(107, 35);
+            this.buttonXoa.TabIndex = 3;
+            this.buttonXoa.Text = "Xóa";
+            this.buttonXoa.UseVisualStyleBackColor = false;
+            // 
+            // buttonSua
+            // 
+            this.buttonSua.AutoSize = true;
+            this.buttonSua.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.buttonSua.FlatAppearance.BorderSize = 0;
+            this.buttonSua.FlatAppearance.MouseDownBackColor = System.Drawing.Color.HotPink;
+            this.buttonSua.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightPink;
+            this.buttonSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSua.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.buttonSua.ForeColor = System.Drawing.Color.White;
+            this.buttonSua.Location = new System.Drawing.Point(218, 3);
+            this.buttonSua.Name = "buttonSua";
+            this.buttonSua.Size = new System.Drawing.Size(107, 35);
+            this.buttonSua.TabIndex = 2;
+            this.buttonSua.Text = "Sửa";
+            this.buttonSua.UseVisualStyleBackColor = false;
+            this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
+            // 
+            // buttonThemMoi
+            // 
+            this.buttonThemMoi.AutoSize = true;
+            this.buttonThemMoi.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.buttonThemMoi.FlatAppearance.BorderSize = 0;
+            this.buttonThemMoi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.HotPink;
+            this.buttonThemMoi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightPink;
+            this.buttonThemMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonThemMoi.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.buttonThemMoi.ForeColor = System.Drawing.Color.White;
+            this.buttonThemMoi.Location = new System.Drawing.Point(96, 3);
+            this.buttonThemMoi.Name = "buttonThemMoi";
+            this.buttonThemMoi.Size = new System.Drawing.Size(107, 35);
+            this.buttonThemMoi.TabIndex = 1;
+            this.buttonThemMoi.Text = "Thêm mới";
+            this.buttonThemMoi.UseVisualStyleBackColor = false;
+            this.buttonThemMoi.Click += new System.EventHandler(this.buttonThemMoi_Click);
+            // 
+            // comboBoxTenNganh
+            // 
+            this.comboBoxTenNganh.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxTenNganh.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxTenNganh.FormattingEnabled = true;
+            this.comboBoxTenNganh.Location = new System.Drawing.Point(218, 124);
+            this.comboBoxTenNganh.Name = "comboBoxTenNganh";
+            this.comboBoxTenNganh.Size = new System.Drawing.Size(322, 33);
+            this.comboBoxTenNganh.TabIndex = 11;
             // 
             // ucChuyenNganh
             // 
@@ -309,32 +333,25 @@
             this.Name = "ucChuyenNganh";
             this.Size = new System.Drawing.Size(895, 616);
             this.Load += new System.EventHandler(this.ucChuyenNganh_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgChuyenNganh)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button buttonThemMoi;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rdbKhongSd;
+        private System.Windows.Forms.RadioButton rdbDangSd;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textTenNganh;
         private System.Windows.Forms.TextBox textTenChuyenNganh;
         private System.Windows.Forms.TextBox textMaChuyenNganh;
         private System.Windows.Forms.Label label4;
@@ -342,5 +359,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgChuyenNganh;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button buttonLuu;
+        private System.Windows.Forms.Button buttonNganhHoc;
+        private System.Windows.Forms.Button buttonXoa;
+        private System.Windows.Forms.Button buttonSua;
+        private System.Windows.Forms.Button buttonThemMoi;
+        private System.Windows.Forms.ComboBox comboBoxTenNganh;
     }
 }
