@@ -38,5 +38,10 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI.BoPhanQuanLy
                 HienThiDuLieu();
             }
         }
+
+        private void dgVanBang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

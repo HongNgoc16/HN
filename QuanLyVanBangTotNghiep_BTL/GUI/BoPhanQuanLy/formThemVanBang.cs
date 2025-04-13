@@ -64,6 +64,11 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI.BoPhanQuanLy
 
         private void buttonLuu_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void buttonGuiDuyet_Click(object sender, EventArgs e)
+        {
             if (hidden_IdSinhVien == -1)
             {
                 MessageBox.Show("Chưa có sinh viên hợp lệ.");
@@ -88,24 +93,7 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI.BoPhanQuanLy
                 MessageBox.Show("Vui lòng nhập nơi cấp.");
                 return;
             }
-
-            try
-            {
-                // Gọi BLL để thêm
-                VanBang_BLL vbBLL = new VanBang_BLL();
-                vbBLL.ThemVanBang(soHieu, idDotCap, hidden_IdSinhVien, ngayCap, noiCap);
-
-
-                MessageBox.Show("Thêm văn bằng thành công!");
-
-                this.DialogResult = DialogResult.OK; // <-- QUAN TRỌNG
-               
-                this.Close(); // Hoặc gọi hàm refresh danh sách nếu bạn muốn
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi khi thêm văn bằng: " + ex.Message);
-            }
         }
     }
+
 }

@@ -129,6 +129,12 @@
     <Compile Include="GUI\BoPhanDuyet\BPDuyet.Designer.cs">
       <DependentUpon>BPDuyet.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\BoPhanDuyet\formDuyetVanBang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BoPhanDuyet\formDuyetVanBang.Designer.cs">
+      <DependentUpon>formDuyetVanBang.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\BoPhanDuyet\uc_DuyetVanBang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -286,6 +292,9 @@
     </Compile>
     <EmbeddedResource Include="GUI\BoPhanDuyet\BPDuyet.resx">
       <DependentUpon>BPDuyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BoPhanDuyet\formDuyetVanBang.resx">
+      <DependentUpon>formDuyetVanBang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\BoPhanDuyet\uc_DuyetVanBang.resx">
       <DependentUpon>uc_DuyetVanBang.cs</DependentUpon>
