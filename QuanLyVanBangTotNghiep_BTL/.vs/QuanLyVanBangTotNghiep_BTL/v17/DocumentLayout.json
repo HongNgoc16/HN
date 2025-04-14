@@ -3,32 +3,24 @@
   "WorkspaceRootPath": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\gui\\bophanduyet\\uc_duyetvanbang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|solutionrelative:gui\\bophanduyet\\uc_duyetvanbang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\gui\\bophanduyet\\uc_duyetvanbang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|solutionrelative:gui\\bophanduyet\\uc_duyetvanbang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\gui\\bophanduyet\\formduyetvanbang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|solutionrelative:gui\\bophanduyet\\formduyetvanbang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|d:\\ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\b\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\quanlyvanbangtotnghiep_btl\\gui\\bophanduyet\\formduyetvanbang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|solutionrelative:gui\\bophanduyet\\formduyetvanbang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|d:\\ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\b\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\quanlyvanbangtotnghiep_btl\\gui\\bophanduyet\\uc_duyetvanbang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|solutionrelative:gui\\bophanduyet\\uc_duyetvanbang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\qlvb.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
       "RelativeMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|solutionrelative:qlvb.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|d:\\ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\b\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\quanlyvanbangtotnghiep_btl\\gui\\bophanduyet\\uc_duyetvanbang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|solutionrelative:gui\\bophanduyet\\uc_duyetvanbang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\gui\\quantrivien\\ucsinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|solutionrelative:gui\\quantrivien\\ucsinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\bll\\vanbangtam_bll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|solutionrelative:bll\\vanbangtam_bll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\dal\\vanbangtam_dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|solutionrelative:dal\\vanbangtam_dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD9A9C41-3FC5-428B-A961-1BCE484683D7}|QuanLyVanBangTotNghiep_BTL.csproj|D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\gui\\bophanquanly\\formthemvanbang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 117,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -67,31 +59,30 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "formDuyetVanBang.cs",
+              "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\GUI\\BoPhanDuyet\\formDuyetVanBang.cs",
+              "RelativeDocumentMoniker": "GUI\\BoPhanDuyet\\formDuyetVanBang.cs",
+              "ToolTip": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\GUI\\BoPhanDuyet\\formDuyetVanBang.cs",
+              "RelativeToolTip": "GUI\\BoPhanDuyet\\formDuyetVanBang.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAawBUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T15:36:10.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "QLVB.edmx [Diagram1]",
               "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\QLVB.edmx",
               "RelativeDocumentMoniker": "QLVB.edmx",
               "ToolTip": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\QLVB.edmx [Diagram1]",
               "RelativeToolTip": "QLVB.edmx [Diagram1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2025-04-13T05:40:16.68Z",
-              "EditorCaption": " [Diagram1]"
+              "WhenOpened": "2025-04-13T05:40:16.68Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ucSinhVien.cs",
-              "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\GUI\\QuanTriVien\\ucSinhVien.cs",
-              "RelativeDocumentMoniker": "GUI\\QuanTriVien\\ucSinhVien.cs",
-              "ToolTip": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\GUI\\QuanTriVien\\ucSinhVien.cs",
-              "RelativeToolTip": "GUI\\QuanTriVien\\ucSinhVien.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAgwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T05:19:07.173Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -103,20 +94,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "uc_DuyetVanBang.cs",
               "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\GUI\\BoPhanDuyet\\uc_DuyetVanBang.cs",
               "RelativeDocumentMoniker": "GUI\\BoPhanDuyet\\uc_DuyetVanBang.cs",
               "ToolTip": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\GUI\\BoPhanDuyet\\uc_DuyetVanBang.cs",
               "RelativeToolTip": "GUI\\BoPhanDuyet\\uc_DuyetVanBang.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAmwD0AAAATAAAA",
+              "ViewState": "AQIAADkAAAAAAAAAAAASwEUAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-13T03:58:21.829Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "formThemVanBang.cs",
               "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\GUI\\BoPhanQuanLy\\formThemVanBang.cs",
               "RelativeDocumentMoniker": "GUI\\BoPhanQuanLy\\formThemVanBang.cs",
@@ -128,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 9,
               "Title": "uc_NhapVanBang.cs",
               "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\GUI\\BoPhanQuanLy\\uc_NhapVanBang.cs",
               "RelativeDocumentMoniker": "GUI\\BoPhanQuanLy\\uc_NhapVanBang.cs",
@@ -136,34 +127,7 @@
               "RelativeToolTip": "GUI\\BoPhanQuanLy\\uc_NhapVanBang.cs",
               "ViewState": "AQIAABoAAAAAAAAAAAD4vxcAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T03:43:30.359Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "VanBangTam_DAL.cs",
-              "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\DAL\\VanBangTam_DAL.cs",
-              "RelativeDocumentMoniker": "DAL\\VanBangTam_DAL.cs",
-              "ToolTip": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\DAL\\VanBangTam_DAL.cs",
-              "RelativeToolTip": "DAL\\VanBangTam_DAL.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAgwCMAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T03:35:50.952Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "VanBangTam_BLL.cs",
-              "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\BLL\\VanBangTam_BLL.cs",
-              "RelativeDocumentMoniker": "BLL\\VanBangTam_BLL.cs",
-              "ToolTip": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\BLL\\VanBangTam_BLL.cs",
-              "RelativeToolTip": "BLL\\VanBangTam_BLL.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAowDUAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T03:32:36.832Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-13T03:43:30.359Z"
             },
             {
               "$type": "Document",
@@ -179,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "uc_DuyetVanBang.cs [Design]",
               "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\GUI\\BoPhanDuyet\\uc_DuyetVanBang.cs",
               "RelativeDocumentMoniker": "GUI\\BoPhanDuyet\\uc_DuyetVanBang.cs",
@@ -191,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "formThemVanBang.cs [Design]",
               "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\GUI\\BoPhanQuanLy\\formThemVanBang.cs",
               "RelativeDocumentMoniker": "GUI\\BoPhanQuanLy\\formThemVanBang.cs",
@@ -202,15 +166,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "uc_NhapVanBang.cs [Design]",
               "DocumentMoniker": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\GUI\\BoPhanQuanLy\\uc_NhapVanBang.cs",
               "RelativeDocumentMoniker": "GUI\\BoPhanQuanLy\\uc_NhapVanBang.cs",
               "ToolTip": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\GUI\\BoPhanQuanLy\\uc_NhapVanBang.cs [Design]",
               "RelativeToolTip": "GUI\\BoPhanQuanLy\\uc_NhapVanBang.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T07:18:23.616Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-11T07:18:23.616Z"
             }
           ]
         },

@@ -291,6 +291,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "formDuyetVanBang";
             this.Text = "formDuyetVanBang";
+            this.Load += new System.EventHandler(this.formDuyetVanBang_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

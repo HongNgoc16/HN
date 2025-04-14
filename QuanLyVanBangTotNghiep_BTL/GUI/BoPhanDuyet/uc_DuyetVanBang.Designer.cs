@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dgDuyet = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.buttonTimKiem = new System.Windows.Forms.Button();
             this.cboBoxTrangThai = new System.Windows.Forms.ComboBox();
@@ -43,9 +42,10 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.dgDuyet = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgDuyet)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgDuyet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,19 +65,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(916, 537);
             this.panel2.TabIndex = 1;
-            // 
-            // dgDuyet
-            // 
-            this.dgDuyet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgDuyet.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgDuyet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgDuyet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgDuyet.Location = new System.Drawing.Point(0, 0);
-            this.dgDuyet.Name = "dgDuyet";
-            this.dgDuyet.RowHeadersWidth = 62;
-            this.dgDuyet.RowTemplate.Height = 28;
-            this.dgDuyet.Size = new System.Drawing.Size(916, 537);
-            this.dgDuyet.TabIndex = 1;
             // 
             // panel3
             // 
@@ -189,6 +176,20 @@
             this.label16.TabIndex = 0;
             this.label16.Text = "Mã sinh viên";
             // 
+            // dgDuyet
+            // 
+            this.dgDuyet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgDuyet.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgDuyet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgDuyet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgDuyet.Location = new System.Drawing.Point(0, 0);
+            this.dgDuyet.Name = "dgDuyet";
+            this.dgDuyet.RowHeadersWidth = 62;
+            this.dgDuyet.RowTemplate.Height = 28;
+            this.dgDuyet.Size = new System.Drawing.Size(916, 537);
+            this.dgDuyet.TabIndex = 1;
+            this.dgDuyet.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDuyet_CellDoubleClick);
+            // 
             // uc_DuyetVanBang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -199,9 +200,9 @@
             this.Size = new System.Drawing.Size(916, 589);
             this.Load += new System.EventHandler(this.uc_DuyetVanBang_Load);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgDuyet)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgDuyet)).EndInit();
             this.ResumeLayout(false);
 
         }
