@@ -333,6 +333,12 @@
     <Parameter Name="Diem_Toi_Da" Type="decimal" Mode="In" />
     <Parameter Name="Trang_Thai_Su_Dung" Type="bit" Mode="In" />
   </Function>
+  <Function Name="timkiem_vanbangtam" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaSinhVien" Type="nvarchar" Mode="In" />
+    <Parameter Name="TenNganh" Type="nvarchar" Mode="In" />
+    <Parameter Name="TenChuyenNganh" Type="nvarchar" Mode="In" />
+    <Parameter Name="TrangThai" Type="int" Mode="In" />
+  </Function>
   <Function Name="xoa_chuyennganh" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Id_ChuyenNganh" Type="int" Mode="In" />
   </Function>

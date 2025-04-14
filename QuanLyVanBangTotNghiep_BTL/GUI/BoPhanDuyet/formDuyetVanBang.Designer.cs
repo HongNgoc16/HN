@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonTuChoi = new System.Windows.Forms.Button();
+            this.buttonDuyet = new System.Windows.Forms.Button();
             this.comboBoxDotCap = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.textChuyenNganh = new System.Windows.Forms.TextBox();
@@ -51,8 +53,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.buttonDuyet = new System.Windows.Forms.Button();
-            this.buttonTuChoi = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,6 +87,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(675, 553);
             this.panel1.TabIndex = 0;
+            // 
+            // buttonTuChoi
+            // 
+            this.buttonTuChoi.Location = new System.Drawing.Point(407, 507);
+            this.buttonTuChoi.Name = "buttonTuChoi";
+            this.buttonTuChoi.Size = new System.Drawing.Size(94, 29);
+            this.buttonTuChoi.TabIndex = 49;
+            this.buttonTuChoi.Text = "Từ chối";
+            this.buttonTuChoi.UseVisualStyleBackColor = true;
+            // 
+            // buttonDuyet
+            // 
+            this.buttonDuyet.Location = new System.Drawing.Point(161, 507);
+            this.buttonDuyet.Name = "buttonDuyet";
+            this.buttonDuyet.Size = new System.Drawing.Size(94, 29);
+            this.buttonDuyet.TabIndex = 48;
+            this.buttonDuyet.Text = "Duyệt";
+            this.buttonDuyet.UseVisualStyleBackColor = true;
             // 
             // comboBoxDotCap
             // 
@@ -264,24 +282,6 @@
             this.label2.Size = new System.Drawing.Size(96, 20);
             this.label2.TabIndex = 26;
             this.label2.Text = "Mã sinh viên";
-            // 
-            // buttonDuyet
-            // 
-            this.buttonDuyet.Location = new System.Drawing.Point(161, 507);
-            this.buttonDuyet.Name = "buttonDuyet";
-            this.buttonDuyet.Size = new System.Drawing.Size(94, 29);
-            this.buttonDuyet.TabIndex = 48;
-            this.buttonDuyet.Text = "Duyệt";
-            this.buttonDuyet.UseVisualStyleBackColor = true;
-            // 
-            // buttonTuChoi
-            // 
-            this.buttonTuChoi.Location = new System.Drawing.Point(407, 507);
-            this.buttonTuChoi.Name = "buttonTuChoi";
-            this.buttonTuChoi.Size = new System.Drawing.Size(94, 29);
-            this.buttonTuChoi.TabIndex = 49;
-            this.buttonTuChoi.Text = "Từ chối";
-            this.buttonTuChoi.UseVisualStyleBackColor = true;
             // 
             // formDuyetVanBang
             // 

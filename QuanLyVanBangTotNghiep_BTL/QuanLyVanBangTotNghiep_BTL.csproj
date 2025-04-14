@@ -287,6 +287,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLVB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="timkiem_vanbangtam_Result.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
     <Compile Include="VanBangTam.cs">
       <DependentUpon>QLVB.tt</DependentUpon>
     </Compile>

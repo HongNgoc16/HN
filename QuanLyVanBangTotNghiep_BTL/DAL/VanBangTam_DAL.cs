@@ -33,7 +33,10 @@ namespace QuanLyVanBangTotNghiep_BTL.DAL
         {
             db.xoa_vanbangtam(idVanBang);
         }
-
+        public List<timkiem_vanbangtam_Result> TimKiem(string maSV, string tenNganh, string tenChuyenNganh, int? trangThai)
+        {
+            return db.timkiem_vanbangtam(maSV, tenNganh, tenChuyenNganh, trangThai).ToList();
+        }
 
     }
 }

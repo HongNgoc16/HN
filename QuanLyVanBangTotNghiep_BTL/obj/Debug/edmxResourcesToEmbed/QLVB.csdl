@@ -370,6 +370,12 @@
     <FunctionImport Name="xoa_vanbangtam">
       <Parameter Name="Id_VanBang" Mode="In" Type="Int32" />
     </FunctionImport>
+    <FunctionImport Name="timkiem_vanbangtam" ReturnType="Collection(QuanLyVanBangModel.timkiem_vanbangtam_Result)">
+      <Parameter Name="MaSinhVien" Mode="In" Type="String" />
+      <Parameter Name="TenNganh" Mode="In" Type="String" />
+      <Parameter Name="TenChuyenNganh" Mode="In" Type="String" />
+      <Parameter Name="TrangThai" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="chon_donviquanly_Result">
     <Property Type="Int32" Name="Id_DonViQuanLy" Nullable="false" />
@@ -488,6 +494,21 @@
     </ReferentialConstraint>
   </Association>
   <ComplexType Name="chon_vanbangtam_Result">
+    <Property Type="Int32" Name="Id_VanBang" Nullable="false" />
+    <Property Type="String" Name="So_Hieu_Van_Bang" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Ten_Dot_Cap" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Ma_SinhVien" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Ho_Va_Ten" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="Ngay_Sinh" Nullable="false" />
+    <Property Type="String" Name="Ten_Nganh" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Ten_ChuyenNganh" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Ma_KhoaHoc" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Ten_XepLoai" Nullable="false" MaxLength="25" />
+    <Property Type="DateTime" Name="Ngay_Cap" Nullable="false" />
+    <Property Type="String" Name="Noi_Cap" Nullable="false" />
+    <Property Type="String" Name="Trang_Thai" Nullable="false" MaxLength="14" />
+  </ComplexType>
+  <ComplexType Name="timkiem_vanbangtam_Result">
     <Property Type="Int32" Name="Id_VanBang" Nullable="false" />
     <Property Type="String" Name="So_Hieu_Van_Bang" Nullable="false" MaxLength="50" />
     <Property Type="String" Name="Ten_Dot_Cap" Nullable="false" MaxLength="50" />
