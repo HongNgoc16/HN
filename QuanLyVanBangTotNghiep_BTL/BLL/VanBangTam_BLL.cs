@@ -46,6 +46,11 @@ namespace QuanLyVanBangTotNghiep_BTL.BLL
                 case 2: return "Từ chối";
                 default: return "Không xác định";
             }
+
+        }
+        public List<timkiem_vanbangtam_Result> TimKiem(string maSV, string tenNganh, string tenChuyenNganh, int? trangThai)
+        {
+            return dal.TimKiem(maSV, tenNganh, tenChuyenNganh, trangThai);
         }
     }
 

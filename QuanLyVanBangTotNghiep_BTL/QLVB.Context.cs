@@ -651,5 +651,26 @@ namespace QuanLyVanBangTotNghiep_BTL
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("xoa_vanbangtam", id_VanBangParameter);
         }
+    
+        public virtual ObjectResult<timkiem_vanbangtam_Result> timkiem_vanbangtam(string maSinhVien, string tenNganh, string tenChuyenNganh, Nullable<int> trangThai)
+        {
+            var maSinhVienParameter = maSinhVien != null ?
+                new ObjectParameter("MaSinhVien", maSinhVien) :
+                new ObjectParameter("MaSinhVien", typeof(string));
+    
+            var tenNganhParameter = tenNganh != null ?
+                new ObjectParameter("TenNganh", tenNganh) :
+                new ObjectParameter("TenNganh", typeof(string));
+    
+            var tenChuyenNganhParameter = tenChuyenNganh != null ?
+                new ObjectParameter("TenChuyenNganh", tenChuyenNganh) :
+                new ObjectParameter("TenChuyenNganh", typeof(string));
+    
+            var trangThaiParameter = trangThai.HasValue ?
+                new ObjectParameter("TrangThai", trangThai) :
+                new ObjectParameter("TrangThai", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<timkiem_vanbangtam_Result>("timkiem_vanbangtam", maSinhVienParameter, tenNganhParameter, tenChuyenNganhParameter, trangThaiParameter);
+        }
     }
 }
