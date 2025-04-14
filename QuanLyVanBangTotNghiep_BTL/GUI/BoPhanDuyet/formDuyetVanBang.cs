@@ -16,5 +16,10 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI.BoPhanDuyet
         {
             InitializeComponent();
         }
+
+        private void formDuyetVanBang_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

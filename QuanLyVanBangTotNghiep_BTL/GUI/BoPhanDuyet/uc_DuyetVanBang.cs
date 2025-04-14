@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyVanBangTotNghiep_BTL.BLL;
 using QuanLyVanBangTotNghiep_BTL.DAL;
+using QuanLyVanBangTotNghiep_BTL.GUI.BoPhanDuyet;
 namespace QuanLyVanBangTotNghiep_BTL.GUI
 {
     public partial class uc_DuyetVanBang : UserControl
@@ -60,6 +61,14 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
 
             // Hiển thị lên DataGridView
             dgDuyet.DataSource = ketQua;
+        }
+
+        private void dgDuyet_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+              
+            }
         }
     }
 }
