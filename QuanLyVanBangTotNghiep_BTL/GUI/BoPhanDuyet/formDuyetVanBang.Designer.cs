@@ -96,6 +96,7 @@
             this.buttonTuChoi.TabIndex = 49;
             this.buttonTuChoi.Text = "Từ chối";
             this.buttonTuChoi.UseVisualStyleBackColor = true;
+            this.buttonTuChoi.Click += new System.EventHandler(this.buttonTuChoi_Click);
             // 
             // buttonDuyet
             // 
@@ -105,6 +106,7 @@
             this.buttonDuyet.TabIndex = 48;
             this.buttonDuyet.Text = "Duyệt";
             this.buttonDuyet.UseVisualStyleBackColor = true;
+            this.buttonDuyet.Click += new System.EventHandler(this.buttonDuyet_Click);
             // 
             // comboBoxDotCap
             // 
