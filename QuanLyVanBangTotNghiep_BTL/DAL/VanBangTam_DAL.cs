@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +39,20 @@ namespace QuanLyVanBangTotNghiep_BTL.DAL
             return db.timkiem_vanbangtam(maSV, tenNganh, tenChuyenNganh, trangThai).ToList();
         }
 
+        public void CapNhatTrangThai(int idVanBang, int trangThai)
+        {
+            var vanbang = db.VanBangTams.FirstOrDefault(v => v.Id_VanBang == idVanBang);
+            if (vanbang != null)
+            {
+                vanbang.Trang_Thai = trangThai;
+                db.SaveChanges();
+            }
+        }
+        public void ChuyenDuyetVanBang(int idVanBangTam)
+        {
+            db.Database.ExecuteSqlCommand("EXEC chuyenduyet_vanbang @IdVanBangTam",
+                new SqlParameter("@IdVanBangTam", idVanBangTam));
+        }
     }
 }
 

@@ -77,5 +77,10 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
         {
 
         }
+
+        private void buttonPhoiBang_Click(object sender, EventArgs e)
+        {
+            LoadUserControl(new uc_PhoiBang());
+        }
     }
 }

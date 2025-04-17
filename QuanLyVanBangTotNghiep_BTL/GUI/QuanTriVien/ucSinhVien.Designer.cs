@@ -41,10 +41,7 @@
             this.comboBoxKhoaHoc = new System.Windows.Forms.ComboBox();
             this.comboBoxChuyenNganh = new System.Windows.Forms.ComboBox();
             this.dateNgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.radioButtonNu = new System.Windows.Forms.RadioButton();
-            this.radioButtonNam = new System.Windows.Forms.RadioButton();
             this.textHoVaTen = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -55,7 +52,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.textMaSV = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -66,11 +62,19 @@
             this.buttonXoa = new System.Windows.Forms.Button();
             this.buttonSua = new System.Windows.Forms.Button();
             this.buttonThemMoi = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.radioButtonNam = new System.Windows.Forms.RadioButton();
+            this.radioButtonNu = new System.Windows.Forms.RadioButton();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgSinhVien)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -96,8 +100,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButtonChuaTN);
-            this.groupBox2.Controls.Add(this.radioButtonDaTN);
+            this.groupBox2.Controls.Add(this.panel4);
+            this.groupBox2.Controls.Add(this.panel3);
             this.groupBox2.Controls.Add(this.comboBoxDVQL);
             this.groupBox2.Controls.Add(this.comboBoxXepLoai);
             this.groupBox2.Controls.Add(this.textDiemTB);
@@ -106,10 +110,7 @@
             this.groupBox2.Controls.Add(this.comboBoxKhoaHoc);
             this.groupBox2.Controls.Add(this.comboBoxChuyenNganh);
             this.groupBox2.Controls.Add(this.dateNgaySinh);
-            this.groupBox2.Controls.Add(this.radioButtonNu);
-            this.groupBox2.Controls.Add(this.radioButtonNam);
             this.groupBox2.Controls.Add(this.textHoVaTen);
-            this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label11);
@@ -120,7 +121,6 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.textMaSV);
-            this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -136,7 +136,7 @@
             // 
             this.radioButtonChuaTN.AutoSize = true;
             this.radioButtonChuaTN.ForeColor = System.Drawing.Color.Black;
-            this.radioButtonChuaTN.Location = new System.Drawing.Point(907, 278);
+            this.radioButtonChuaTN.Location = new System.Drawing.Point(256, 12);
             this.radioButtonChuaTN.Name = "radioButtonChuaTN";
             this.radioButtonChuaTN.Size = new System.Drawing.Size(165, 29);
             this.radioButtonChuaTN.TabIndex = 25;
@@ -148,7 +148,7 @@
             // 
             this.radioButtonDaTN.AutoSize = true;
             this.radioButtonDaTN.ForeColor = System.Drawing.Color.Black;
-            this.radioButtonDaTN.Location = new System.Drawing.Point(755, 278);
+            this.radioButtonDaTN.Location = new System.Drawing.Point(104, 12);
             this.radioButtonDaTN.Name = "radioButtonDaTN";
             this.radioButtonDaTN.Size = new System.Drawing.Size(146, 29);
             this.radioButtonDaTN.TabIndex = 24;
@@ -222,30 +222,6 @@
             this.dateNgaySinh.Size = new System.Drawing.Size(322, 31);
             this.dateNgaySinh.TabIndex = 16;
             // 
-            // radioButtonNu
-            // 
-            this.radioButtonNu.AutoSize = true;
-            this.radioButtonNu.ForeColor = System.Drawing.Color.Black;
-            this.radioButtonNu.Location = new System.Drawing.Point(363, 89);
-            this.radioButtonNu.Name = "radioButtonNu";
-            this.radioButtonNu.Size = new System.Drawing.Size(61, 29);
-            this.radioButtonNu.TabIndex = 15;
-            this.radioButtonNu.TabStop = true;
-            this.radioButtonNu.Text = "Nữ";
-            this.radioButtonNu.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonNam
-            // 
-            this.radioButtonNam.AutoSize = true;
-            this.radioButtonNam.ForeColor = System.Drawing.Color.Black;
-            this.radioButtonNam.Location = new System.Drawing.Point(223, 89);
-            this.radioButtonNam.Name = "radioButtonNam";
-            this.radioButtonNam.Size = new System.Drawing.Size(76, 29);
-            this.radioButtonNam.TabIndex = 14;
-            this.radioButtonNam.TabStop = true;
-            this.radioButtonNam.Text = "Nam";
-            this.radioButtonNam.UseVisualStyleBackColor = true;
-            // 
             // textHoVaTen
             // 
             this.textHoVaTen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -254,18 +230,6 @@
             this.textHoVaTen.Name = "textHoVaTen";
             this.textHoVaTen.Size = new System.Drawing.Size(322, 31);
             this.textHoVaTen.TabIndex = 13;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label14.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label14.Location = new System.Drawing.Point(653, 282);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(93, 25);
-            this.label14.TabIndex = 12;
-            this.label14.Text = "Trạng thái:";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label13
             // 
@@ -384,18 +348,6 @@
             this.textMaSV.Size = new System.Drawing.Size(322, 31);
             this.textMaSV.TabIndex = 5;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label4.Location = new System.Drawing.Point(102, 93);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 25);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Giới tính:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -443,6 +395,8 @@
             this.dgSinhVien.RowTemplate.Height = 28;
             this.dgSinhVien.Size = new System.Drawing.Size(1310, 182);
             this.dgSinhVien.TabIndex = 0;
+            this.dgSinhVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgSinhVien_CellClick_1);
+            this.dgSinhVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgSinhVien_CellContentClick);
             // 
             // panel2
             // 
@@ -490,6 +444,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "Tìm kiếm";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // buttonXoa
             // 
@@ -507,6 +462,7 @@
             this.buttonXoa.TabIndex = 3;
             this.buttonXoa.Text = "Xóa";
             this.buttonXoa.UseVisualStyleBackColor = false;
+            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
             // 
             // buttonSua
             // 
@@ -524,6 +480,7 @@
             this.buttonSua.TabIndex = 2;
             this.buttonSua.Text = "Sửa";
             this.buttonSua.UseVisualStyleBackColor = false;
+            this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
             // 
             // buttonThemMoi
             // 
@@ -542,6 +499,75 @@
             this.buttonThemMoi.Text = "Thêm mới";
             this.buttonThemMoi.UseVisualStyleBackColor = false;
             this.buttonThemMoi.Click += new System.EventHandler(this.buttonThemMoi_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.radioButtonNu);
+            this.panel3.Controls.Add(this.radioButtonNam);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Location = new System.Drawing.Point(92, 80);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(453, 45);
+            this.panel3.TabIndex = 26;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label4.Location = new System.Drawing.Point(11, 14);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(82, 25);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Giới tính:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // radioButtonNam
+            // 
+            this.radioButtonNam.AutoSize = true;
+            this.radioButtonNam.ForeColor = System.Drawing.Color.Black;
+            this.radioButtonNam.Location = new System.Drawing.Point(144, 10);
+            this.radioButtonNam.Name = "radioButtonNam";
+            this.radioButtonNam.Size = new System.Drawing.Size(76, 29);
+            this.radioButtonNam.TabIndex = 15;
+            this.radioButtonNam.TabStop = true;
+            this.radioButtonNam.Text = "Nam";
+            this.radioButtonNam.UseVisualStyleBackColor = true;
+            this.radioButtonNam.CheckedChanged += new System.EventHandler(this.radioButtonNam_CheckedChanged);
+            // 
+            // radioButtonNu
+            // 
+            this.radioButtonNu.AutoSize = true;
+            this.radioButtonNu.ForeColor = System.Drawing.Color.Black;
+            this.radioButtonNu.Location = new System.Drawing.Point(338, 9);
+            this.radioButtonNu.Name = "radioButtonNu";
+            this.radioButtonNu.Size = new System.Drawing.Size(61, 29);
+            this.radioButtonNu.TabIndex = 16;
+            this.radioButtonNu.TabStop = true;
+            this.radioButtonNu.Text = "Nữ";
+            this.radioButtonNu.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.label14.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label14.Location = new System.Drawing.Point(2, 16);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(93, 25);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "Trạng thái:";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.radioButtonChuaTN);
+            this.panel4.Controls.Add(this.radioButtonDaTN);
+            this.panel4.Controls.Add(this.label14);
+            this.panel4.Location = new System.Drawing.Point(651, 266);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(473, 63);
+            this.panel4.TabIndex = 27;
             // 
             // ucSinhVien
             // 
@@ -562,6 +588,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgSinhVien)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -580,10 +610,7 @@
         private System.Windows.Forms.ComboBox comboBoxKhoaHoc;
         private System.Windows.Forms.ComboBox comboBoxChuyenNganh;
         private System.Windows.Forms.DateTimePicker dateNgaySinh;
-        private System.Windows.Forms.RadioButton radioButtonNu;
-        private System.Windows.Forms.RadioButton radioButtonNam;
         private System.Windows.Forms.TextBox textHoVaTen;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -594,7 +621,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textMaSV;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -605,5 +631,11 @@
         private System.Windows.Forms.Button buttonXoa;
         private System.Windows.Forms.Button buttonSua;
         private System.Windows.Forms.Button buttonThemMoi;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.RadioButton radioButtonNu;
+        private System.Windows.Forms.RadioButton radioButtonNam;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label14;
     }
 }

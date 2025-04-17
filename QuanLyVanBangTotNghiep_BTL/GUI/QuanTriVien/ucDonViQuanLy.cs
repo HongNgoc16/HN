@@ -74,8 +74,8 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
             bool trang_Thai_Su_Dung = rdbDangSd.Checked;
             if (opt == 1)
             {
-                bll.ThemDonViQuanLy (textMaDVQL.Text, textTenDVQL.Text, textTenDVQLCha.Text, trang_Thai_Su_Dung);
-                HienThiDuLieu ();
+                bll.ThemDonViQuanLy(textMaDVQL.Text, textTenDVQL.Text, textTenDVQLCha.Text, trang_Thai_Su_Dung);
+                HienThiDuLieu();
                 MessageBox.Show("Thêm đơn vị quản lý thành công!");
                 opt = -1;
             }
@@ -93,7 +93,98 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
 
         private void buttonTimKiem_Click(object sender, EventArgs e)
         {
-            
+            string maDVQL = textMaDVQL.Text.Trim();
+            string tenDVQL = textTenDVQL.Text.Trim();
+            string tenDVQLCha = textTenDVQLCha.Text.Trim();
+
+            bool locTheoTrangThai = rdbDangSd.Checked || rdbKhongSd.Checked;
+            bool? trangThaiSuDung = null;
+
+            // Xác định trạng thái cần tìm
+            if (rdbDangSd.Checked)
+            {
+                trangThaiSuDung = true;
+            }
+            else if (rdbKhongSd.Checked)
+            {
+                trangThaiSuDung = false;
+            }
+
+            // Kiểm tra điều kiện rỗng
+            if (string.IsNullOrEmpty(maDVQL) &&
+                string.IsNullOrEmpty(tenDVQL) &&
+                string.IsNullOrEmpty(tenDVQLCha) &&
+                !locTheoTrangThai)
+            {
+                MessageBox.Show("Vui lòng nhập ít nhất một thông tin để tìm kiếm!",
+                              "Thông báo",
+                              MessageBoxButtons.OK,
+                              MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                // Lấy dữ liệu từ BLL
+                var danhSachDonVi = bll.GetChon_Donviquanly_Results();
+
+                // Thực hiện tìm kiếm
+                var ketQuaTimKiem = danhSachDonVi
+                    .Where(dv =>
+                        (string.IsNullOrEmpty(maDVQL) || dv.Ma_DonViQuanLy.Equals(maDVQL, StringComparison.OrdinalIgnoreCase)) &&
+                        (string.IsNullOrEmpty(tenDVQL) || (dv.Ten_DonViQuanLy != null &&
+                         dv.Ten_DonViQuanLy.IndexOf(tenDVQL, StringComparison.OrdinalIgnoreCase) >= 0)) &&
+                        (string.IsNullOrEmpty(tenDVQLCha) || (dv.Ten_DonViQuanLy_Cha != null &&
+                         dv.Ten_DonViQuanLy_Cha.IndexOf(tenDVQLCha, StringComparison.OrdinalIgnoreCase) >= 0)) &&
+                        (!locTheoTrangThai || (trangThaiSuDung.HasValue && dv.Trang_Thai_Su_Dung == trangThaiSuDung.Value))
+                    )
+                    .ToList();
+
+                // Hiển thị kết quả
+                if (ketQuaTimKiem.Any())
+                {
+                    // Tạo DataTable để định dạng đẹp hơn
+                    DataTable dt = new DataTable();
+                    dt.Columns.Add("Mã đơn vị", typeof(string));
+                    dt.Columns.Add("Tên đơn vị", typeof(string));
+                    dt.Columns.Add("Tên đơn vị cha", typeof(string));
+                    dt.Columns.Add("Trạng thái", typeof(string));
+
+                    foreach (var item in ketQuaTimKiem)
+                    {
+                        dt.Rows.Add(
+                            item.Ma_DonViQuanLy,
+                            item.Ten_DonViQuanLy,
+                            item.Ten_DonViQuanLy_Cha,
+                          item.Trang_Thai_Su_Dung.HasValue
+            ? (item.Trang_Thai_Su_Dung.Value ? "Đang sử dụng" : "Không sử dụng")
+            : "Không xác định"
+    );
+                    }
+
+                    dgDonViQuanLy.DataSource = dt;
+
+                    // Định dạng DataGridView
+                    dgDonViQuanLy.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dgDonViQuanLy.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
+                }
+                else
+                {
+                    dgDonViQuanLy.DataSource = null;
+                    MessageBox.Show("Không tìm thấy đơn vị quản lý nào phù hợp!",
+                                  "Thông báo",
+                                  MessageBoxButtons.OK,
+                                  MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi thực hiện tìm kiếm: " + ex.Message,
+                              "Lỗi",
+                              MessageBoxButtons.OK,
+                              MessageBoxIcon.Error);
+
+            }
         }
     }
 }

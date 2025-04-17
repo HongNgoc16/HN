@@ -44,6 +44,7 @@
             this.buttonNganhHoc = new System.Windows.Forms.Button();
             this.buttonDonViQuanLy = new System.Windows.Forms.Button();
             this.buttonNguoiDung = new System.Windows.Forms.Button();
+            this.buttonPhoiBang = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelMenu.SuspendLayout();
@@ -58,7 +59,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1120, 617);
+            this.panel2.Size = new System.Drawing.Size(1140, 699);
             this.panel2.TabIndex = 3;
             // 
             // panelChucNang
@@ -69,7 +70,7 @@
             this.panelChucNang.AutoScroll = true;
             this.panelChucNang.Location = new System.Drawing.Point(198, 82);
             this.panelChucNang.Name = "panelChucNang";
-            this.panelChucNang.Size = new System.Drawing.Size(922, 535);
+            this.panelChucNang.Size = new System.Drawing.Size(942, 617);
             this.panelChucNang.TabIndex = 2;
             // 
             // panel3
@@ -79,7 +80,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(198, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(922, 82);
+            this.panel3.Size = new System.Drawing.Size(942, 82);
             this.panel3.TabIndex = 1;
             // 
             // label1
@@ -97,6 +98,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panelMenu.Controls.Add(this.buttonPhoiBang);
             this.panelMenu.Controls.Add(this.buttonChuyenNganh);
             this.panelMenu.Controls.Add(this.buttonDangXuat);
             this.panelMenu.Controls.Add(this.buttonThoat);
@@ -110,7 +112,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(198, 617);
+            this.panelMenu.Size = new System.Drawing.Size(198, 699);
             this.panelMenu.TabIndex = 0;
             // 
             // buttonChuyenNganh
@@ -141,7 +143,7 @@
             this.buttonDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDangXuat.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDangXuat.ForeColor = System.Drawing.Color.White;
-            this.buttonDangXuat.Location = new System.Drawing.Point(0, 554);
+            this.buttonDangXuat.Location = new System.Drawing.Point(0, 594);
             this.buttonDangXuat.Name = "buttonDangXuat";
             this.buttonDangXuat.Size = new System.Drawing.Size(198, 42);
             this.buttonDangXuat.TabIndex = 9;
@@ -159,7 +161,7 @@
             this.buttonThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonThoat.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonThoat.ForeColor = System.Drawing.Color.White;
-            this.buttonThoat.Location = new System.Drawing.Point(0, 507);
+            this.buttonThoat.Location = new System.Drawing.Point(0, 546);
             this.buttonThoat.Name = "buttonThoat";
             this.buttonThoat.Size = new System.Drawing.Size(198, 42);
             this.buttonThoat.TabIndex = 8;
@@ -285,11 +287,29 @@
             this.buttonNguoiDung.UseVisualStyleBackColor = true;
             this.buttonNguoiDung.Click += new System.EventHandler(this.buttonNguoiDung_Click);
             // 
+            // buttonPhoiBang
+            // 
+            this.buttonPhoiBang.AutoSize = true;
+            this.buttonPhoiBang.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.buttonPhoiBang.FlatAppearance.BorderSize = 0;
+            this.buttonPhoiBang.FlatAppearance.MouseDownBackColor = System.Drawing.Color.HotPink;
+            this.buttonPhoiBang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.HotPink;
+            this.buttonPhoiBang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPhoiBang.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPhoiBang.ForeColor = System.Drawing.Color.White;
+            this.buttonPhoiBang.Location = new System.Drawing.Point(0, 508);
+            this.buttonPhoiBang.Name = "buttonPhoiBang";
+            this.buttonPhoiBang.Size = new System.Drawing.Size(198, 42);
+            this.buttonPhoiBang.TabIndex = 10;
+            this.buttonPhoiBang.Text = "Phôi bằng";
+            this.buttonPhoiBang.UseVisualStyleBackColor = true;
+            this.buttonPhoiBang.Click += new System.EventHandler(this.buttonPhoiBang_Click);
+            // 
             // QuanTriVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1120, 617);
+            this.ClientSize = new System.Drawing.Size(1140, 699);
             this.Controls.Add(this.panel2);
             this.Name = "QuanTriVien";
             this.Text = "QuanTriVien";
@@ -321,5 +341,6 @@
         private System.Windows.Forms.Button buttonNganhHoc;
         private System.Windows.Forms.Button buttonDonViQuanLy;
         private System.Windows.Forms.Button buttonNguoiDung;
+        private System.Windows.Forms.Button buttonPhoiBang;
     }
 }

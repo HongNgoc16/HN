@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using QuanLyVanBangTotNghiep_BTL.DAL;
 using static QuanLyVanBangTotNghiep_BTL.DAL.VanBangTam_DAL;
 namespace QuanLyVanBangTotNghiep_BTL.BLL
@@ -52,6 +53,17 @@ namespace QuanLyVanBangTotNghiep_BTL.BLL
         {
             return dal.TimKiem(maSV, tenNganh, tenChuyenNganh, trangThai);
         }
-    }
 
-}
+
+        // Cập nhật trạng thái văn bằng tạm
+
+        public void CapNhatTrangThai(int idVanBang, int trangThai)
+        {
+            dal.CapNhatTrangThai(idVanBang, trangThai);
+        }
+        public void ChuyenDuyetVanBang(int idVanBangTam)
+        {
+            dal.ChuyenDuyetVanBang(idVanBangTam);
+        }
+    }
+ }

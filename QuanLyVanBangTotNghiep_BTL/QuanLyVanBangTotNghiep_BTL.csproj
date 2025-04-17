@@ -33,6 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Data.Desktop.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Drawing.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v24.1.Core, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v24.1.Core, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -42,6 +49,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -61,6 +69,8 @@
     <Compile Include="BLL\dm_XepLoaiTN_BLL.cs" />
     <Compile Include="BLL\DotCap_BLL.cs" />
     <Compile Include="BLL\LayThongTin_BLL.cs" />
+    <Compile Include="BLL\PhoiBang_BLL.cs" />
+    <Compile Include="BLL\VanBangCT_BLL.cs" />
     <Compile Include="BLL\VanBangTam_BLL.cs" />
     <Compile Include="chon_chuyennganh_Result.cs">
       <DependentUpon>QLVB.tt</DependentUpon>
@@ -80,7 +90,13 @@
     <Compile Include="chon_nguoidung_Result.cs">
       <DependentUpon>QLVB.tt</DependentUpon>
     </Compile>
+    <Compile Include="chon_phoibang_Result.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
     <Compile Include="chon_sinhvien_Result.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chon_vanbangchinhthuc_Result.cs">
       <DependentUpon>QLVB.tt</DependentUpon>
     </Compile>
     <Compile Include="chon_vanbangtam_Result.cs">
@@ -95,7 +111,9 @@
     <Compile Include="DAL\dm_XepLoaiTN_DAL.cs" />
     <Compile Include="DAL\DotCap_DAL.cs" />
     <Compile Include="DAL\LayThongTin_DAL.cs" />
+    <Compile Include="DAL\PhoiBang_DAL.cs" />
     <Compile Include="DAL\VanBangTam_DAL.cs" />
+    <Compile Include="DAL\VanBangCT_DAL.cs" />
     <Compile Include="dm_ChuyenNganh.cs">
       <DependentUpon>QLVB.tt</DependentUpon>
     </Compile>
@@ -153,11 +171,23 @@
     <Compile Include="GUI\BoPhanQuanLy\BPQuanLy.Designer.cs">
       <DependentUpon>BPQuanLy.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\BoPhanQuanLy\formCapBang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BoPhanQuanLy\formCapBang.Designer.cs">
+      <DependentUpon>formCapBang.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\BoPhanQuanLy\formThemVanBang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\BoPhanQuanLy\formThemVanBang.Designer.cs">
       <DependentUpon>formThemVanBang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BoPhanQuanLy\formXemBang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BoPhanQuanLy\formXemBang.Designer.cs">
+      <DependentUpon>formXemBang.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\BoPhanQuanLy\uc_NhapVanBang.cs">
       <SubType>UserControl</SubType>
@@ -267,7 +297,16 @@
     <Compile Include="GUI\MainFunction\TraCuuVanBang.Designer.cs">
       <DependentUpon>TraCuuVanBang.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\QuanTriVien\uc_PhoiBang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\QuanTriVien\uc_PhoiBang.Designer.cs">
+      <DependentUpon>uc_PhoiBang.cs</DependentUpon>
+    </Compile>
     <Compile Include="lay_thong_tin_sinhvien_Result.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhoiBang.cs">
       <DependentUpon>QLVB.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -287,7 +326,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLVB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="timkiem_vanbangchinhthuc_Result.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
     <Compile Include="timkiem_vanbangtam_Result.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VanBangChinhThuc.cs">
       <DependentUpon>QLVB.tt</DependentUpon>
     </Compile>
     <Compile Include="VanBangTam.cs">
@@ -308,8 +353,17 @@
     <EmbeddedResource Include="GUI\BoPhanQuanLy\BPQuanLy.resx">
       <DependentUpon>BPQuanLy.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BoPhanQuanLy\formCapBang.resx">
+      <DependentUpon>formCapBang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\BoPhanQuanLy\formThemVanBang.resx">
       <DependentUpon>formThemVanBang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BoPhanQuanLy\formXemBang.resx">
+      <DependentUpon>formXemBang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BoPhanQuanLy\uc_BienBanHuyBang.resx">
+      <DependentUpon>uc_BienBanHuyBang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\BoPhanQuanLy\uc_NhapVanBang.resx">
       <DependentUpon>uc_NhapVanBang.cs</DependentUpon>
@@ -356,6 +410,9 @@
     <EmbeddedResource Include="GUI\MainFunction\TraCuuVanBang.resx">
       <DependentUpon>TraCuuVanBang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuanTriVien\uc_PhoiBang.resx">
+      <DependentUpon>uc_PhoiBang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -364,6 +421,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -405,6 +463,8 @@
       <DependentUpon>QLVB.edmx</DependentUpon>
       <LastGenOutput>QLVB.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\bang_dai_hoc.jpg" />
+    <None Include="Resources\Bằng TN.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

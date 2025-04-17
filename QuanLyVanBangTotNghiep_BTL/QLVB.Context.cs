@@ -37,6 +37,8 @@ namespace QuanLyVanBangTotNghiep_BTL
         public virtual DbSet<dm_XepLoai> dm_XepLoai { get; set; }
         public virtual DbSet<DotCapBangTN> DotCapBangTNs { get; set; }
         public virtual DbSet<VanBangTam> VanBangTams { get; set; }
+        public virtual DbSet<PhoiBang> PhoiBangs { get; set; }
+        public virtual DbSet<VanBangChinhThuc> VanBangChinhThucs { get; set; }
     
         public virtual ObjectResult<chon_chuyennganh_Result> chon_chuyennganh()
         {
@@ -671,6 +673,83 @@ namespace QuanLyVanBangTotNghiep_BTL
                 new ObjectParameter("TrangThai", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<timkiem_vanbangtam_Result>("timkiem_vanbangtam", maSinhVienParameter, tenNganhParameter, tenChuyenNganhParameter, trangThaiParameter);
+        }
+    
+        public virtual ObjectResult<chon_vanbangchinhthuc_Result> chon_vanbangchinhthuc()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<chon_vanbangchinhthuc_Result>("chon_vanbangchinhthuc");
+        }
+    
+        public virtual ObjectResult<chon_phoibang_Result> chon_phoibang()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<chon_phoibang_Result>("chon_phoibang");
+        }
+    
+        public virtual int them_phoibang(string soHieuPhoi, Nullable<System.DateTime> ngayNhap, string ghiChu, Nullable<int> trangThai)
+        {
+            var soHieuPhoiParameter = soHieuPhoi != null ?
+                new ObjectParameter("SoHieuPhoi", soHieuPhoi) :
+                new ObjectParameter("SoHieuPhoi", typeof(string));
+    
+            var ngayNhapParameter = ngayNhap.HasValue ?
+                new ObjectParameter("NgayNhap", ngayNhap) :
+                new ObjectParameter("NgayNhap", typeof(System.DateTime));
+    
+            var ghiChuParameter = ghiChu != null ?
+                new ObjectParameter("GhiChu", ghiChu) :
+                new ObjectParameter("GhiChu", typeof(string));
+    
+            var trangThaiParameter = trangThai.HasValue ?
+                new ObjectParameter("TrangThai", trangThai) :
+                new ObjectParameter("TrangThai", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("them_phoibang", soHieuPhoiParameter, ngayNhapParameter, ghiChuParameter, trangThaiParameter);
+        }
+    
+        public virtual int chuyenduyet_vanbang(Nullable<int> idVanBangTam)
+        {
+            var idVanBangTamParameter = idVanBangTam.HasValue ?
+                new ObjectParameter("IdVanBangTam", idVanBangTam) :
+                new ObjectParameter("IdVanBangTam", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("chuyenduyet_vanbang", idVanBangTamParameter);
+        }
+    
+        public virtual ObjectResult<timkiem_vanbangchinhthuc_Result> timkiem_vanbangchinhthuc(string maSinhVien, string tenNganh, string tenChuyenNganh, Nullable<int> trangThai, string hoVaTen, Nullable<System.DateTime> ngaySinh, string soHieu, string xepLoai)
+        {
+            var maSinhVienParameter = maSinhVien != null ?
+                new ObjectParameter("MaSinhVien", maSinhVien) :
+                new ObjectParameter("MaSinhVien", typeof(string));
+    
+            var tenNganhParameter = tenNganh != null ?
+                new ObjectParameter("TenNganh", tenNganh) :
+                new ObjectParameter("TenNganh", typeof(string));
+    
+            var tenChuyenNganhParameter = tenChuyenNganh != null ?
+                new ObjectParameter("TenChuyenNganh", tenChuyenNganh) :
+                new ObjectParameter("TenChuyenNganh", typeof(string));
+    
+            var trangThaiParameter = trangThai.HasValue ?
+                new ObjectParameter("TrangThai", trangThai) :
+                new ObjectParameter("TrangThai", typeof(int));
+    
+            var hoVaTenParameter = hoVaTen != null ?
+                new ObjectParameter("HoVaTen", hoVaTen) :
+                new ObjectParameter("HoVaTen", typeof(string));
+    
+            var ngaySinhParameter = ngaySinh.HasValue ?
+                new ObjectParameter("NgaySinh", ngaySinh) :
+                new ObjectParameter("NgaySinh", typeof(System.DateTime));
+    
+            var soHieuParameter = soHieu != null ?
+                new ObjectParameter("SoHieu", soHieu) :
+                new ObjectParameter("SoHieu", typeof(string));
+    
+            var xepLoaiParameter = xepLoai != null ?
+                new ObjectParameter("XepLoai", xepLoai) :
+                new ObjectParameter("XepLoai", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<timkiem_vanbangchinhthuc_Result>("timkiem_vanbangchinhthuc", maSinhVienParameter, tenNganhParameter, tenChuyenNganhParameter, trangThaiParameter, hoVaTenParameter, ngaySinhParameter, soHieuParameter, xepLoaiParameter);
         }
     }
 }

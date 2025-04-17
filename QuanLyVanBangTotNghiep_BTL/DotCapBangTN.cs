@@ -18,6 +18,7 @@ namespace QuanLyVanBangTotNghiep_BTL
         public DotCapBangTN()
         {
             this.VanBangTams = new HashSet<VanBangTam>();
+            this.VanBangChinhThucs = new HashSet<VanBangChinhThuc>();
         }
     
         public int Id_Dot_Cap { get; set; }
@@ -25,5 +26,7 @@ namespace QuanLyVanBangTotNghiep_BTL
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<VanBangTam> VanBangTams { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<VanBangChinhThuc> VanBangChinhThucs { get; set; }
     }
 }

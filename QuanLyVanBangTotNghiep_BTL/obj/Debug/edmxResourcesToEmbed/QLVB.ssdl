@@ -94,6 +94,29 @@
     <Property Name="Id_Dot_Cap" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Ten_Dot_Cap" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
+  <EntityType Name="PhoiBang">
+    <Key>
+      <PropertyRef Name="Id_PhoiBang" />
+    </Key>
+    <Property Name="Id_PhoiBang" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SoHieuPhoi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NgayNhap" Type="date" />
+    <Property Name="TrangThai" Type="int" Nullable="false" />
+    <Property Name="GhiChu" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="VanBangChinhThuc">
+    <Key>
+      <PropertyRef Name="Id_VanBang" />
+    </Key>
+    <Property Name="Id_VanBang" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SoHieu" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Id_DotCap" Type="int" Nullable="false" />
+    <Property Name="Id_SinhVien" Type="int" Nullable="false" />
+    <Property Name="Ngay_Cap" Type="date" Nullable="false" />
+    <Property Name="Noi_Cap" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Id_PhoiBang" Type="int" />
+    <Property Name="Trang_Thai" Type="int" Nullable="false" />
+  </EntityType>
   <EntityType Name="VanBangTam">
     <Key>
       <PropertyRef Name="Id_VanBang" />
@@ -178,6 +201,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_VanBangChinhThuc_dm_SinhVien">
+    <End Role="dm_SinhVien" Type="Self.dm_SinhVien" Multiplicity="1" />
+    <End Role="VanBangChinhThuc" Type="Self.VanBangChinhThuc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dm_SinhVien">
+        <PropertyRef Name="Id_SinhVien" />
+      </Principal>
+      <Dependent Role="VanBangChinhThuc">
+        <PropertyRef Name="Id_SinhVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VanBangChinhThuc_DotCapBangTN">
+    <End Role="DotCapBangTN" Type="Self.DotCapBangTN" Multiplicity="1" />
+    <End Role="VanBangChinhThuc" Type="Self.VanBangChinhThuc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DotCapBangTN">
+        <PropertyRef Name="Id_Dot_Cap" />
+      </Principal>
+      <Dependent Role="VanBangChinhThuc">
+        <PropertyRef Name="Id_DotCap" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_VanBangTN_DotCapBangTN">
     <End Role="DotCapBangTN" Type="Self.DotCapBangTN" Multiplicity="1" />
     <End Role="VanBangTam" Type="Self.VanBangTam" Multiplicity="*" />
@@ -190,15 +237,32 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_VanBangTN_PhoiBang">
+    <End Role="PhoiBang" Type="Self.PhoiBang" Multiplicity="0..1" />
+    <End Role="VanBangChinhThuc" Type="Self.VanBangChinhThuc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhoiBang">
+        <PropertyRef Name="Id_PhoiBang" />
+      </Principal>
+      <Dependent Role="VanBangChinhThuc">
+        <PropertyRef Name="Id_PhoiBang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Function Name="chon_chuyennganh" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="chon_donviquanly" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="chon_dot_cap" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="chon_khoahoc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="chon_nganhhoc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="chon_nguoidung" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="chon_phoibang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="chon_sinhvien" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="chon_vanbangchinhthuc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="chon_vanbangtam" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="chon_xeploai" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="chuyenduyet_vanbang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdVanBangTam" Type="int" Mode="In" />
+  </Function>
   <Function Name="lay_thong_tin_sinhvien" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Ma_SinhVien" Type="nvarchar" Mode="In" />
   </Function>
@@ -304,6 +368,12 @@
     <Parameter Name="Mat_Khau" Type="varchar" Mode="In" />
     <Parameter Name="Loai_NguoiDung" Type="nvarchar" Mode="In" />
   </Function>
+  <Function Name="them_phoibang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SoHieuPhoi" Type="nvarchar" Mode="In" />
+    <Parameter Name="NgayNhap" Type="date" Mode="In" />
+    <Parameter Name="GhiChu" Type="nvarchar" Mode="In" />
+    <Parameter Name="TrangThai" Type="int" Mode="In" />
+  </Function>
   <Function Name="them_sinhvien" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Ma_SinhVien" Type="nvarchar" Mode="In" />
     <Parameter Name="Ho_Va_Ten" Type="nvarchar" Mode="In" />
@@ -332,6 +402,16 @@
     <Parameter Name="Diem_Toi_Thieu" Type="decimal" Mode="In" />
     <Parameter Name="Diem_Toi_Da" Type="decimal" Mode="In" />
     <Parameter Name="Trang_Thai_Su_Dung" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="timkiem_vanbangchinhthuc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaSinhVien" Type="nvarchar" Mode="In" />
+    <Parameter Name="TenNganh" Type="nvarchar" Mode="In" />
+    <Parameter Name="TenChuyenNganh" Type="nvarchar" Mode="In" />
+    <Parameter Name="TrangThai" Type="int" Mode="In" />
+    <Parameter Name="HoVaTen" Type="nvarchar" Mode="In" />
+    <Parameter Name="NgaySinh" Type="date" Mode="In" />
+    <Parameter Name="SoHieu" Type="nvarchar" Mode="In" />
+    <Parameter Name="XepLoai" Type="nvarchar" Mode="In" />
   </Function>
   <Function Name="timkiem_vanbangtam" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="MaSinhVien" Type="nvarchar" Mode="In" />
@@ -379,6 +459,8 @@
     <EntitySet Name="dm_SinhVien" EntityType="Self.dm_SinhVien" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="dm_XepLoai" EntityType="Self.dm_XepLoai" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DotCapBangTN" EntityType="Self.DotCapBangTN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PhoiBang" EntityType="Self.PhoiBang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VanBangChinhThuc" EntityType="Self.VanBangChinhThuc" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="VanBangTam" EntityType="Self.VanBangTam" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_dm_ChuyenNganh_dm_NganhHoc" Association="Self.FK_dm_ChuyenNganh_dm_NganhHoc">
       <End Role="dm_NganhHoc" EntitySet="dm_NganhHoc" />
@@ -404,9 +486,21 @@
       <End Role="dm_SinhVien" EntitySet="dm_SinhVien" />
       <End Role="VanBangTam" EntitySet="VanBangTam" />
     </AssociationSet>
+    <AssociationSet Name="FK_VanBangChinhThuc_dm_SinhVien" Association="Self.FK_VanBangChinhThuc_dm_SinhVien">
+      <End Role="dm_SinhVien" EntitySet="dm_SinhVien" />
+      <End Role="VanBangChinhThuc" EntitySet="VanBangChinhThuc" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VanBangChinhThuc_DotCapBangTN" Association="Self.FK_VanBangChinhThuc_DotCapBangTN">
+      <End Role="DotCapBangTN" EntitySet="DotCapBangTN" />
+      <End Role="VanBangChinhThuc" EntitySet="VanBangChinhThuc" />
+    </AssociationSet>
     <AssociationSet Name="FK_VanBangTN_DotCapBangTN" Association="Self.FK_VanBangTN_DotCapBangTN">
       <End Role="DotCapBangTN" EntitySet="DotCapBangTN" />
       <End Role="VanBangTam" EntitySet="VanBangTam" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VanBangTN_PhoiBang" Association="Self.FK_VanBangTN_PhoiBang">
+      <End Role="PhoiBang" EntitySet="PhoiBang" />
+      <End Role="VanBangChinhThuc" EntitySet="VanBangChinhThuc" />
     </AssociationSet>
   </EntityContainer>
 </Schema>
