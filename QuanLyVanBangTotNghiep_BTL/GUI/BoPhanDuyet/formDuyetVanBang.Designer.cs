@@ -1,4 +1,4 @@
-﻿namespace QuanLyVanBangTotNghiep_BTL.GUI.BoPhanDuyet
+﻿namespace QuanLyVanBangTotNghiep_BTL.GUI
 {
     partial class formDuyetVanBang
     {
@@ -90,7 +90,7 @@
             // 
             // buttonTuChoi
             // 
-            this.buttonTuChoi.Location = new System.Drawing.Point(407, 507);
+            this.buttonTuChoi.Location = new System.Drawing.Point(408, 509);
             this.buttonTuChoi.Name = "buttonTuChoi";
             this.buttonTuChoi.Size = new System.Drawing.Size(94, 29);
             this.buttonTuChoi.TabIndex = 49;
@@ -100,7 +100,7 @@
             // 
             // buttonDuyet
             // 
-            this.buttonDuyet.Location = new System.Drawing.Point(161, 507);
+            this.buttonDuyet.Location = new System.Drawing.Point(162, 509);
             this.buttonDuyet.Name = "buttonDuyet";
             this.buttonDuyet.Size = new System.Drawing.Size(94, 29);
             this.buttonDuyet.TabIndex = 48;
@@ -110,8 +110,9 @@
             // 
             // comboBoxDotCap
             // 
+            this.comboBoxDotCap.Enabled = false;
             this.comboBoxDotCap.FormattingEnabled = true;
-            this.comboBoxDotCap.Location = new System.Drawing.Point(261, 36);
+            this.comboBoxDotCap.Location = new System.Drawing.Point(262, 38);
             this.comboBoxDotCap.Name = "comboBoxDotCap";
             this.comboBoxDotCap.Size = new System.Drawing.Size(277, 28);
             this.comboBoxDotCap.TabIndex = 47;
@@ -119,7 +120,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(58, 44);
+            this.label12.Location = new System.Drawing.Point(59, 46);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(65, 20);
             this.label12.TabIndex = 46;
@@ -127,7 +128,8 @@
             // 
             // textChuyenNganh
             // 
-            this.textChuyenNganh.Location = new System.Drawing.Point(265, 240);
+            this.textChuyenNganh.Enabled = false;
+            this.textChuyenNganh.Location = new System.Drawing.Point(266, 242);
             this.textChuyenNganh.Name = "textChuyenNganh";
             this.textChuyenNganh.Size = new System.Drawing.Size(277, 26);
             this.textChuyenNganh.TabIndex = 45;
@@ -135,7 +137,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(62, 243);
+            this.label11.Location = new System.Drawing.Point(63, 245);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(112, 20);
             this.label11.TabIndex = 44;
@@ -143,21 +145,24 @@
             // 
             // dateTimeNgaySinh
             // 
-            this.dateTimeNgaySinh.Location = new System.Drawing.Point(261, 156);
+            this.dateTimeNgaySinh.Enabled = false;
+            this.dateTimeNgaySinh.Location = new System.Drawing.Point(262, 158);
             this.dateTimeNgaySinh.Name = "dateTimeNgaySinh";
             this.dateTimeNgaySinh.Size = new System.Drawing.Size(277, 26);
             this.dateTimeNgaySinh.TabIndex = 43;
             // 
             // dateTimeNgayCap
             // 
-            this.dateTimeNgayCap.Location = new System.Drawing.Point(265, 409);
+            this.dateTimeNgayCap.Enabled = false;
+            this.dateTimeNgayCap.Location = new System.Drawing.Point(266, 411);
             this.dateTimeNgayCap.Name = "dateTimeNgayCap";
             this.dateTimeNgayCap.Size = new System.Drawing.Size(277, 26);
             this.dateTimeNgayCap.TabIndex = 42;
             // 
             // textNoiCap
             // 
-            this.textNoiCap.Location = new System.Drawing.Point(265, 451);
+            this.textNoiCap.Enabled = false;
+            this.textNoiCap.Location = new System.Drawing.Point(266, 453);
             this.textNoiCap.Name = "textNoiCap";
             this.textNoiCap.Size = new System.Drawing.Size(277, 26);
             this.textNoiCap.TabIndex = 41;
@@ -165,7 +170,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(62, 162);
+            this.label10.Location = new System.Drawing.Point(63, 164);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(78, 20);
             this.label10.TabIndex = 40;
@@ -173,42 +178,48 @@
             // 
             // textXepLoai
             // 
-            this.textXepLoai.Location = new System.Drawing.Point(265, 329);
+            this.textXepLoai.Enabled = false;
+            this.textXepLoai.Location = new System.Drawing.Point(266, 331);
             this.textXepLoai.Name = "textXepLoai";
             this.textXepLoai.Size = new System.Drawing.Size(277, 26);
             this.textXepLoai.TabIndex = 39;
             // 
             // textKhoaHoc
             // 
-            this.textKhoaHoc.Location = new System.Drawing.Point(265, 287);
+            this.textKhoaHoc.Enabled = false;
+            this.textKhoaHoc.Location = new System.Drawing.Point(266, 289);
             this.textKhoaHoc.Name = "textKhoaHoc";
             this.textKhoaHoc.Size = new System.Drawing.Size(277, 26);
             this.textKhoaHoc.TabIndex = 38;
             // 
             // textNganhHoc
             // 
-            this.textNganhHoc.Location = new System.Drawing.Point(261, 198);
+            this.textNganhHoc.Enabled = false;
+            this.textNganhHoc.Location = new System.Drawing.Point(262, 200);
             this.textNganhHoc.Name = "textNganhHoc";
             this.textNganhHoc.Size = new System.Drawing.Size(277, 26);
             this.textNganhHoc.TabIndex = 37;
             // 
             // textSHVB
             // 
-            this.textSHVB.Location = new System.Drawing.Point(261, 377);
+            this.textSHVB.Enabled = false;
+            this.textSHVB.Location = new System.Drawing.Point(262, 379);
             this.textSHVB.Name = "textSHVB";
             this.textSHVB.Size = new System.Drawing.Size(277, 26);
             this.textSHVB.TabIndex = 36;
             // 
             // textHoVaTen
             // 
-            this.textHoVaTen.Location = new System.Drawing.Point(261, 115);
+            this.textHoVaTen.Enabled = false;
+            this.textHoVaTen.Location = new System.Drawing.Point(262, 117);
             this.textHoVaTen.Name = "textHoVaTen";
             this.textHoVaTen.Size = new System.Drawing.Size(277, 26);
             this.textHoVaTen.TabIndex = 35;
             // 
             // textMaSV
             // 
-            this.textMaSV.Location = new System.Drawing.Point(261, 73);
+            this.textMaSV.Enabled = false;
+            this.textMaSV.Location = new System.Drawing.Point(262, 75);
             this.textMaSV.Name = "textMaSV";
             this.textMaSV.Size = new System.Drawing.Size(277, 26);
             this.textMaSV.TabIndex = 34;
@@ -216,7 +227,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(62, 457);
+            this.label9.Location = new System.Drawing.Point(63, 459);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(62, 20);
             this.label9.TabIndex = 33;
@@ -225,7 +236,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(62, 414);
+            this.label8.Location = new System.Drawing.Point(63, 416);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(75, 20);
             this.label8.TabIndex = 32;
@@ -234,7 +245,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(62, 329);
+            this.label7.Location = new System.Drawing.Point(63, 331);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 20);
             this.label7.TabIndex = 31;
@@ -243,7 +254,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(62, 287);
+            this.label6.Location = new System.Drawing.Point(63, 289);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 20);
             this.label6.TabIndex = 30;
@@ -252,7 +263,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(62, 204);
+            this.label5.Location = new System.Drawing.Point(63, 206);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 20);
             this.label5.TabIndex = 29;
@@ -261,7 +272,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(58, 383);
+            this.label4.Location = new System.Drawing.Point(59, 385);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(132, 20);
             this.label4.TabIndex = 28;
@@ -270,7 +281,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(58, 121);
+            this.label3.Location = new System.Drawing.Point(59, 123);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 20);
             this.label3.TabIndex = 27;
@@ -279,7 +290,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(58, 79);
+            this.label2.Location = new System.Drawing.Point(59, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 20);
             this.label2.TabIndex = 26;

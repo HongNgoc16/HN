@@ -98,6 +98,59 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
                 rdbKhongSd.Checked = !trang_Thai_Su_Dung;
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+          /*  string maXL = textMaXL.Text.Trim().ToLower();
+            string tenXL = textTenXL.Text.Trim().ToLower();
+
+            decimal diemMin, diemMax;
+            bool isDiemMinValid = decimal.TryParse(textDiemToiThieu.Text.Trim(), out diemMin);
+            bool isDiemMaxValid = decimal.TryParse(textDiemToiDa.Text.Trim(), out diemMax);
+
+            bool? trangThai = null;
+            if (rdbDangSd.Checked)
+                trangThai = true;
+            else if (rdbKhongSd.Checked)
+                trangThai = false;
+
+            var danhSach = bll.GetChon_Xeploai_Results().AsQueryable();
+
+            if (!string.IsNullOrEmpty(maXL))
+                danhSach = danhSach.Where(x => x.Ma_XepLoai.ToLower().Contains(maXL));
+
+            if (!string.IsNullOrEmpty(tenXL))
+                danhSach = danhSach.Where(x => x.Ten_XepLoai.ToLower().Contains(tenXL));
+
+            if (isDiemMinValid)
+                danhSach = danhSach.Where(x => x.Diem_TN_ToiThieu >= diemMin);
+
+            if (isDiemMaxValid)
+                danhSach = danhSach.Where(x => x.Diem_TN_ToiDa <= diemMax);
+
+            if (trangThai.HasValue)
+                danhSach = danhSach.Where(x => x.Trang_Thai_Su_Dung == trangThai.Value);
+
+            var ketQua = danhSach.Select(x => new
+            {
+                ID = x.Id_XepLoai,
+                Mã_Xếp_Loại = x.Ma_XepLoai,
+                Tên_Xếp_Loại = x.Ten_XepLoai,
+                "Điểm Tối Thiểu" = x.Diem_TN_ToiThieu,
+                "Điểm Tối Đa" = x.Diem_TN_ToiDa,
+                "Trạng Thái" = x.Trang_Thai_Su_Dung == true ? "Đang sử dụng" : "Không sử dụng"
+            }).ToList();
+
+            dgXepLoai.DataSource = ketQua;
+
+            // Đặt font và style
+            dgXepLoai.Font = new Font("Times New Roman", 10, FontStyle.Regular);
+
+            if (ketQua.Count == 0)
+            {
+                MessageBox.Show("Không tìm thấy kết quả phù hợp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }*/
+        }
     }
 
 }

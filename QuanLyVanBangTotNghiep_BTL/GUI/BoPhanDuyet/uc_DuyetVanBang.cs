@@ -23,7 +23,7 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
        
         private void LoadDanhSachVanBang()
         {
-            var danhSach = vbtam.GetChon_Vanbangtam_Results(); // Viết hàm BLL gọi SP lấy vanbangtam
+            var danhSach = vbtam.GetChon_Vanbangtam_Results(); 
             dgDuyet.DataSource = danhSach;
         }
 
@@ -36,7 +36,7 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
             LoadDanhSachVanBang();
         }
 
-        private void buttonTimKiem_Click(object sender, EventArgs e)
+        private void buttonTimKiem_Click_1(object sender, EventArgs e)
         {
             string maSV = textMaSV.Text.Trim();
             string hoTen = textHoVaTen.Text.Trim(); // nếu cần lọc theo họ tên
@@ -46,29 +46,27 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
 
             if (cboBoxTrangThai.SelectedIndex > 0)
             {
-                trangThai = cboBoxTrangThai.SelectedIndex - 1; // Giả sử cboTrangThai: 0 - Tất cả, 1 - Chờ duyệt, 2 - Đã duyệt, 3 - Từ chối
+                trangThai = cboBoxTrangThai.SelectedIndex - 1;
             }
 
-            // Gọi hàm tìm kiếm
             var ketQua = vbtam.TimKiem(maSV, nganhHoc, "", trangThai);
 
-            // Nếu có lọc theo tên sinh viên hoặc khóa học, lọc thêm tại đây:
-            if (!string.IsNullOrEmpty(hoTen))
-                ketQua = ketQua.Where(x => x.Ho_Va_Ten.Contains(hoTen)).ToList();
-
-            if (!string.IsNullOrEmpty(khoaHoc))
-                ketQua = ketQua.Where(x => x.Ma_KhoaHoc.Contains(khoaHoc)).ToList();
-
-            // Hiển thị lên DataGridView
             dgDuyet.DataSource = ketQua;
         }
 
-        private void dgDuyet_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgDuyet_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-              
+                DataGridViewRow row = dgDuyet.Rows[e.RowIndex];
+                formDuyetVanBang frm = new formDuyetVanBang(row);
+                frm.OnCapNhatThanhCong = () =>
+                {
+                    LoadDanhSachVanBang();
+                };
+                frm.ShowDialog();
             }
+
         }
     }
 }

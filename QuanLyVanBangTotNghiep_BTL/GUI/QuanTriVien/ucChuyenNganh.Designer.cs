@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBoxTenNganh = new System.Windows.Forms.ComboBox();
             this.rdbKhongSd = new System.Windows.Forms.RadioButton();
             this.rdbDangSd = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.buttonXoa = new System.Windows.Forms.Button();
             this.buttonSua = new System.Windows.Forms.Button();
             this.buttonThemMoi = new System.Windows.Forms.Button();
-            this.comboBoxTenNganh = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -95,6 +95,16 @@
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Nhập thông tin";
+            // 
+            // comboBoxTenNganh
+            // 
+            this.comboBoxTenNganh.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxTenNganh.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxTenNganh.FormattingEnabled = true;
+            this.comboBoxTenNganh.Location = new System.Drawing.Point(218, 124);
+            this.comboBoxTenNganh.Name = "comboBoxTenNganh";
+            this.comboBoxTenNganh.Size = new System.Drawing.Size(322, 33);
+            this.comboBoxTenNganh.TabIndex = 11;
             // 
             // rdbKhongSd
             // 
@@ -258,6 +268,7 @@
             this.buttonNganhHoc.TabIndex = 4;
             this.buttonNganhHoc.Text = "Tìm kiếm";
             this.buttonNganhHoc.UseVisualStyleBackColor = false;
+            this.buttonNganhHoc.Click += new System.EventHandler(this.buttonNganhHoc_Click);
             // 
             // buttonXoa
             // 
@@ -311,16 +322,6 @@
             this.buttonThemMoi.Text = "Thêm mới";
             this.buttonThemMoi.UseVisualStyleBackColor = false;
             this.buttonThemMoi.Click += new System.EventHandler(this.buttonThemMoi_Click);
-            // 
-            // comboBoxTenNganh
-            // 
-            this.comboBoxTenNganh.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBoxTenNganh.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxTenNganh.FormattingEnabled = true;
-            this.comboBoxTenNganh.Location = new System.Drawing.Point(218, 124);
-            this.comboBoxTenNganh.Name = "comboBoxTenNganh";
-            this.comboBoxTenNganh.Size = new System.Drawing.Size(322, 33);
-            this.comboBoxTenNganh.TabIndex = 11;
             // 
             // ucChuyenNganh
             // 

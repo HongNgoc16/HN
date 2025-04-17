@@ -18,6 +18,7 @@ namespace QuanLyVanBangTotNghiep_BTL
         public dm_SinhVien()
         {
             this.VanBangTams = new HashSet<VanBangTam>();
+            this.VanBangChinhThucs = new HashSet<VanBangChinhThuc>();
         }
     
         public int Id_SinhVien { get; set; }
@@ -40,5 +41,7 @@ namespace QuanLyVanBangTotNghiep_BTL
         public virtual dm_XepLoai dm_XepLoai { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<VanBangTam> VanBangTams { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<VanBangChinhThuc> VanBangChinhThucs { get; set; }
     }
 }
