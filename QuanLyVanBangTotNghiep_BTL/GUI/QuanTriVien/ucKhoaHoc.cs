@@ -11,41 +11,41 @@ using System.Windows.Forms;
 using QuanLyVanBangTotNghiep_BTL;
 namespace QuanLyVanBangTotNghiep_BTL.GUI
 {
-    public partial class ucKhoaHoc : UserControl
+    public partial class UcKhoaHoc : UserControl
     {
         int opt = -1;
         QLVB_Entities db = new QLVB_Entities();
-        public ucKhoaHoc()
+        public UcKhoaHoc()
         {
             InitializeComponent();
         }
         public void HienThiDuLieu()
         {
-            dgKhoaHoc.DataSource = db.chon_khoahoc();
+            dgvKhoaHoc.DataSource = db.chon_khoahoc();
         }
 
-        private void ucKhoaHoc_Load(object sender, EventArgs e)
+        private void UcKhoaHoc_Load(object sender, EventArgs e)
         {
             HienThiDuLieu();
         }
 
-        private void buttonThemMoi_Click(object sender, EventArgs e)
+        private void BtnThemMoi_Click(object sender, EventArgs e)
         {
-            textMaKhoaHoc.Clear();
-            maskedTextBoxNamBatDau.Clear();
-            maskedTextBoxNamKetThuc.Clear();
-            radioButtonChuaTotNghiep.Checked = false;
-            radioButtonDaTotNghiep.Checked = false;
-            textMaKhoaHoc.Focus();
+            txtMaKhoaHoc.Clear();
+            mtxtNamBatDau.Clear();
+            mtxtNamKetThuc.Clear();
+            rdoChuaTotNghiep.Checked = false;
+            rdoDaTotNghiep.Checked = false;
+            txtMaKhoaHoc.Focus();
            
             opt = 1;
         }
 
-        private void buttonLuu_Click(object sender, EventArgs e)
+        private void BtnLuu_Click(object sender, EventArgs e)
         {
             
-            string namBatDauStr = maskedTextBoxNamBatDau.Text.Trim();
-            string namKetThucStr = maskedTextBoxNamKetThuc.Text.Trim();
+            string namBatDauStr = mtxtNamBatDau.Text.Trim();
+            string namKetThucStr = mtxtNamKetThuc.Text.Trim();
 
             
             if (namBatDauStr.Length != 4 || namKetThucStr.Length != 4)
@@ -76,11 +76,11 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
             }
 
             
-            bool trangThai = radioButtonDaTotNghiep.Checked;
+            bool trangThai = rdoDaTotNghiep.Checked;
 
             if (opt == 1) 
             {
-                db.them_khoahoc(textMaKhoaHoc.Text, namBatDau, namKetThuc, trangThai);
+                db.them_khoahoc(txtMaKhoaHoc.Text, namBatDau, namKetThuc, trangThai);
                 MessageBox.Show("Thêm khóa học thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -91,15 +91,15 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
 
         }
 
-        private void buttonXoa_Click(object sender, EventArgs e)
+        private void BtnXoa_Click(object sender, EventArgs e)
         {
-            if (dgKhoaHoc.CurrentRow == null || dgKhoaHoc.CurrentRow.Index < 0)
+            if (dgvKhoaHoc.CurrentRow == null || dgvKhoaHoc.CurrentRow.Index < 0)
             {
                 MessageBox.Show("Vui lòng chọn một khóa học để xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            int id = Convert.ToInt32(dgKhoaHoc[0, dgKhoaHoc.CurrentRow.Index].Value);
+            int id = Convert.ToInt32(dgvKhoaHoc[0, dgvKhoaHoc.CurrentRow.Index].Value);
 
             DialogResult confirmResult = MessageBox.Show(
                 "Bạn có chắc chắn muốn xóa khóa học này không?", "Xác nhận xóa",
@@ -114,33 +114,33 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
             }
         }
 
-        private void dgKhoaHoc_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void DgvKhoaHoc_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                textMaKhoaHoc.Text = dgKhoaHoc.Rows[e.RowIndex].Cells[1].Value.ToString();
-                maskedTextBoxNamBatDau.Text = dgKhoaHoc.Rows[e.RowIndex].Cells[2].Value.ToString();
-                maskedTextBoxNamKetThuc.Text = dgKhoaHoc.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txtMaKhoaHoc.Text = dgvKhoaHoc.Rows[e.RowIndex].Cells[1].Value.ToString();
+                mtxtNamBatDau.Text = dgvKhoaHoc.Rows[e.RowIndex].Cells[2].Value.ToString();
+                mtxtNamKetThuc.Text = dgvKhoaHoc.Rows[e.RowIndex].Cells[3].Value.ToString();
 
-                bool trangThai = Convert.ToBoolean(dgKhoaHoc.Rows[e.RowIndex].Cells[4].Value);
-                radioButtonDaTotNghiep.Checked = trangThai;
-                radioButtonChuaTotNghiep.Checked = !trangThai;
+                bool trangThai = Convert.ToBoolean(dgvKhoaHoc.Rows[e.RowIndex].Cells[4].Value);
+                rdoDaTotNghiep.Checked = trangThai;
+                rdoChuaTotNghiep.Checked = !trangThai;
             }
         }
 
       
 
-        private void buttonSua_Click(object sender, EventArgs e)
+        private void BtnSua_Click(object sender, EventArgs e)
 
         {
-            if (dgKhoaHoc.CurrentRow == null || dgKhoaHoc.CurrentRow.Index < 0)
+            if (dgvKhoaHoc.CurrentRow == null || dgvKhoaHoc.CurrentRow.Index < 0)
             {
                 MessageBox.Show("Vui lòng chọn một dòng để sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            string namBatDauStr = maskedTextBoxNamBatDau.Text.Trim();
-            string namKetThucStr = maskedTextBoxNamKetThuc.Text.Trim();
+            string namBatDauStr = mtxtNamBatDau.Text.Trim();
+            string namKetThucStr = mtxtNamKetThuc.Text.Trim();
 
             if (namBatDauStr.Length != 4 || namKetThucStr.Length != 4)
             {
@@ -168,21 +168,21 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
                 return;
             }
 
-            bool trangThai = radioButtonDaTotNghiep.Checked;
+            bool trangThai = rdoDaTotNghiep.Checked;
 
-            int id = Convert.ToInt32(dgKhoaHoc[0, dgKhoaHoc.CurrentRow.Index].Value);
-            db.sua_khoahoc(id, textMaKhoaHoc.Text, namBatDau, namKetThuc, trangThai);
+            int id = Convert.ToInt32(dgvKhoaHoc[0, dgvKhoaHoc.CurrentRow.Index].Value);
+            db.sua_khoahoc(id, txtMaKhoaHoc.Text, namBatDau, namKetThuc, trangThai);
             MessageBox.Show("Sửa khóa học thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             HienThiDuLieu();
 
         }
 
-        private void buttonTimKiem_Click(object sender, EventArgs e)
+        private void BtnTimKiem_Click(object sender, EventArgs e)
         {
-            string maKhoaHoc = textMaKhoaHoc.Text.Trim();
-            string namBatDauText = maskedTextBoxNamBatDau.Text.Trim();
-            string namKetThucText = maskedTextBoxNamKetThuc.Text.Trim();
+            string maKhoaHoc = txtMaKhoaHoc.Text.Trim();
+            string namBatDauText = mtxtNamBatDau.Text.Trim();
+            string namKetThucText = mtxtNamKetThuc.Text.Trim();
 
             int namBatDau, namKetThuc;
             bool isNamBatDauValid = int.TryParse(namBatDauText, out namBatDau);
@@ -203,7 +203,7 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
 
             if (danhSachKetQua.Count > 0)
             {
-                dgKhoaHoc.DataSource = danhSachKetQua;
+                dgvKhoaHoc.DataSource = danhSachKetQua;
             }
             else
             {

@@ -17,12 +17,12 @@ namespace QuanLyVanBangTotNghiep_BTL
         public string Ma_SinhVien { get; set; }
         public string Ho_Va_Ten { get; set; }
         public string Gioi_Tinh { get; set; }
-        public Nullable<System.DateTime> Ngay_Sinh { get; set; }
+        public System.DateTime Ngay_Sinh { get; set; }
         public string So_Dien_Thoai { get; set; }
         public string Email { get; set; }
-        public Nullable<decimal> Diem_Trung_Binh_Tich_Luy { get; set; }
+        public decimal Diem_Trung_Binh_Tich_Luy { get; set; }
         public string Ten_ChuyenNganh { get; set; }
-        public string Ma_KhoaHoc { get; set; }
+        public int Nam_Ket_Thuc { get; set; }
         public string Ten_DonViQuanLy { get; set; }
         public string Ten_XepLoai { get; set; }
         public string Trang_Thai { get; set; }

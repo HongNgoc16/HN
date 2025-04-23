@@ -28,7 +28,7 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI.BoPhanQuanLy
             dateTimeNgaySinh.Value = Convert.ToDateTime(row.Cells["Ngay_Sinh"].Value);
             textNganhHoc.Text = row.Cells["Ten_Nganh"].Value?.ToString();
             textChuyenNganh.Text = row.Cells["Ten_ChuyenNganh"].Value?.ToString();
-            textKhoaHoc.Text = row.Cells["Ma_KhoaHoc"].Value?.ToString();
+            txtNamTotNghiep.Text = row.Cells["Nam_Ket_Thuc"].Value?.ToString();
             textXepLoai.Text = row.Cells["Ten_XepLoai"].Value?.ToString();
             textSHVB.Text = row.Cells["SoHieu"].Value?.ToString();
             dateTimeNgayCap.Value = Convert.ToDateTime(row.Cells["Ngay_Cap"].Value);
@@ -54,16 +54,12 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI.BoPhanQuanLy
 
             var vbBLL = new VanBangCT_BLL();
             var phoiBLL = new PhoiBang_BLL();
-
-            // Cập nhật văn bằng: trạng thái = 1 (Đã cấp), gán Id_PhoiBang, Ngày_Cấp
             vbBLL.CapNhatTrangThaiVanBang(idVB, idPhoiBang);
-
-            // Cập nhật trạng thái phôi: đã cấp
             phoiBLL.CapNhatTrangThaiPhoi(idPhoiBang);
 
             MessageBox.Show("Cấp bằng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            OnCapNhatThanhCong?.Invoke(); // gọi form cha reload
+            OnCapNhatThanhCong?.Invoke(); 
             this.Close();
         }
     }

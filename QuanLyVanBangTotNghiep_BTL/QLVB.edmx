@@ -847,7 +847,7 @@
           <FunctionImport Name="chon_sinhvien" ReturnType="Collection(QuanLyVanBangModel.chon_sinhvien_Result)" />
           <EntitySet Name="DotCapBangTNs" EntityType="QuanLyVanBangModel.DotCapBangTN" />
           <FunctionImport Name="chon_dot_cap" ReturnType="Collection(QuanLyVanBangModel.chon_dot_cap_Result)" />
-          <FunctionImport Name="lay_thong_tin_sinhvien" ReturnType="Collection(QuanLyVanBangModel.lay_thong_tin_sinhvien_Result)">
+          <FunctionImport Name="lay_thong_tin_sinhvien">
           <Parameter Name="Ma_SinhVien" Mode="In" Type="String" />
           </FunctionImport>
           <EntitySet Name="VanBangTams" EntityType="QuanLyVanBangModel.VanBangTam" />
@@ -924,6 +924,25 @@
             <Parameter Name="SoHieu" Mode="In" Type="String" />
             <Parameter Name="XepLoai" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="lay_thong_tin_sinhvien1" ReturnType="Collection(QuanLyVanBangModel.lay_thong_tin_sinhvien1_Result)">
+            <Parameter Name="Ma_SinhVien" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="timkiem_vanbangchinhthuc1" ReturnType="Collection(QuanLyVanBangModel.timkiem_vanbangchinhthuc1_Result)">
+            <Parameter Name="MaSinhVien" Mode="In" Type="String" />
+            <Parameter Name="TenNganh" Mode="In" Type="String" />
+            <Parameter Name="TenChuyenNganh" Mode="In" Type="String" />
+            <Parameter Name="TrangThai" Mode="In" Type="Int32" />
+            <Parameter Name="HoVaTen" Mode="In" Type="String" />
+            <Parameter Name="NgaySinh" Mode="In" Type="DateTime" />
+            <Parameter Name="SoHieu" Mode="In" Type="String" />
+            <Parameter Name="XepLoai" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="timkiem_vanbangtam1" ReturnType="Collection(QuanLyVanBangModel.timkiem_vanbangtam1_Result)">
+            <Parameter Name="MaSinhVien" Mode="In" Type="String" />
+            <Parameter Name="TenNganh" Mode="In" Type="String" />
+            <Parameter Name="TenChuyenNganh" Mode="In" Type="String" />
+            <Parameter Name="TrangThai" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="chon_donviquanly_Result">
           <Property Type="Int32" Name="Id_DonViQuanLy" Nullable="false" />
@@ -973,30 +992,6 @@
           <Property Type="Int32" Name="Id_Dot_Cap" Nullable="false" />
           <Property Type="String" Name="Ten_Dot_Cap" Nullable="false" MaxLength="50" />
         </ComplexType>
-        <ComplexType Name="chon_sinhvien_Result">
-          <Property Type="Int32" Name="Id_SinhVien" Nullable="false" />
-          <Property Type="String" Name="Ma_SinhVien" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="Ho_Va_Ten" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="Gioi_Tinh" Nullable="false" MaxLength="3" />
-          <Property Type="DateTime" Name="Ngay_Sinh" Nullable="true" />
-          <Property Type="String" Name="So_Dien_Thoai" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
-          <Property Type="Decimal" Name="Diem_Trung_Binh_Tich_Luy" Nullable="true" Precision="4" Scale="2" />
-          <Property Type="String" Name="Ten_ChuyenNganh" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="Ma_KhoaHoc" Nullable="true" MaxLength="10" />
-          <Property Type="String" Name="Ten_DonViQuanLy" Nullable="true" MaxLength="30" />
-          <Property Type="String" Name="Ten_XepLoai" Nullable="true" MaxLength="25" />
-          <Property Type="String" Name="Trang_Thai" Nullable="false" MaxLength="15" />
-        </ComplexType>
-        <ComplexType Name="lay_thong_tin_sinhvien_Result">
-          <Property Type="Int32" Name="Id_SinhVien" Nullable="false" />
-          <Property Type="String" Name="Ho_Va_Ten" Nullable="true" MaxLength="50" />
-          <Property Type="DateTime" Name="Ngay_Sinh" Nullable="true" />
-          <Property Type="String" Name="Ten_Nganh" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="Ten_ChuyenNganh" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="Ma_KhoaHoc" Nullable="true" MaxLength="10" />
-          <Property Type="String" Name="Ten_XepLoai" Nullable="true" MaxLength="25" />
-        </ComplexType>
         <ComplexType Name="chon_chuyennganh_Result">
           <Property Type="Int32" Name="Id_ChuyenNganh" Nullable="false" />
           <Property Type="String" Name="Ma_ChuyenNganh" Nullable="true" MaxLength="50" />
@@ -1042,21 +1037,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <ComplexType Name="chon_vanbangtam_Result">
-          <Property Type="Int32" Name="Id_VanBang" Nullable="false" />
-          <Property Type="String" Name="So_Hieu_Van_Bang" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="Ten_Dot_Cap" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="Ma_SinhVien" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="Ho_Va_Ten" Nullable="false" MaxLength="50" />
-          <Property Type="DateTime" Name="Ngay_Sinh" Nullable="false" />
-          <Property Type="String" Name="Ten_Nganh" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="Ten_ChuyenNganh" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="Ma_KhoaHoc" Nullable="false" MaxLength="10" />
-          <Property Type="String" Name="Ten_XepLoai" Nullable="false" MaxLength="25" />
-          <Property Type="DateTime" Name="Ngay_Cap" Nullable="false" />
-          <Property Type="String" Name="Noi_Cap" Nullable="false" />
-          <Property Type="String" Name="Trang_Thai" Nullable="false" MaxLength="14" />
-        </ComplexType>
         <ComplexType Name="timkiem_vanbangtam_Result">
           <Property Type="Int32" Name="Id_VanBang" Nullable="false" />
           <Property Type="String" Name="So_Hieu_Van_Bang" Nullable="false" MaxLength="50" />
@@ -1077,22 +1057,6 @@
           <Property Type="String" Name="SoHieuPhoi" Nullable="false" MaxLength="50" />
           <Property Type="DateTime" Name="NgayNhap" Nullable="true" />
           <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="255" />
-          <Property Type="String" Name="TrangThai" Nullable="false" MaxLength="14" />
-        </ComplexType>
-        <ComplexType Name="chon_vanbangchinhthuc_Result">
-          <Property Type="Int32" Name="Id_VanBang" Nullable="false" />
-          <Property Type="String" Name="SoHieu" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="Ten_Dot_Cap" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="Ma_SinhVien" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="Ho_Va_Ten" Nullable="false" MaxLength="50" />
-          <Property Type="DateTime" Name="Ngay_Sinh" Nullable="false" />
-          <Property Type="String" Name="Ten_Nganh" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="Ten_ChuyenNganh" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="Ma_KhoaHoc" Nullable="false" MaxLength="10" />
-          <Property Type="String" Name="Ten_XepLoai" Nullable="false" MaxLength="25" />
-          <Property Type="DateTime" Name="Ngay_Cap" Nullable="false" />
-          <Property Type="String" Name="Noi_Cap" Nullable="false" MaxLength="100" />
-          <Property Type="String" Name="SoHieuPhoi" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="TrangThai" Nullable="false" MaxLength="14" />
         </ComplexType>
         <EntityType Name="PhoiBang">
@@ -1172,6 +1136,92 @@
           <Property Type="DateTime" Name="Ngay_Cap" Nullable="false" />
           <Property Type="String" Name="Noi_Cap" Nullable="false" MaxLength="100" />
           <Property Type="String" Name="SoHieuPhoi" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Trang_Thai" Nullable="false" MaxLength="14" />
+        </ComplexType>
+        <ComplexType Name="chon_sinhvien_Result">
+          <Property Type="Int32" Name="Id_SinhVien" Nullable="false" />
+          <Property Type="String" Name="Ma_SinhVien" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Ho_Va_Ten" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Gioi_Tinh" Nullable="false" MaxLength="3" />
+          <Property Type="DateTime" Name="Ngay_Sinh" Nullable="false" />
+          <Property Type="String" Name="So_Dien_Thoai" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="Diem_Trung_Binh_Tich_Luy" Nullable="false" Precision="4" Scale="2" />
+          <Property Type="String" Name="Ten_ChuyenNganh" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="Nam_Ket_Thuc" Nullable="false" />
+          <Property Type="String" Name="Ten_DonViQuanLy" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="Ten_XepLoai" Nullable="false" MaxLength="25" />
+          <Property Type="String" Name="Trang_Thai" Nullable="false" MaxLength="15" />
+        </ComplexType>
+        <ComplexType Name="chon_vanbangchinhthuc_Result">
+          <Property Type="Int32" Name="Id_VanBang" Nullable="false" />
+          <Property Type="String" Name="SoHieu" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Ten_Dot_Cap" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Ma_SinhVien" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Ho_Va_Ten" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="Ngay_Sinh" Nullable="false" />
+          <Property Type="String" Name="Ten_Nganh" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Ten_ChuyenNganh" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="Nam_Ket_Thuc" Nullable="false" />
+          <Property Type="String" Name="Ten_XepLoai" Nullable="false" MaxLength="25" />
+          <Property Type="DateTime" Name="Ngay_Cap" Nullable="false" />
+          <Property Type="String" Name="Noi_Cap" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="SoHieuPhoi" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="TrangThai" Nullable="false" MaxLength="14" />
+        </ComplexType>
+        <ComplexType Name="chon_vanbangtam_Result">
+          <Property Type="Int32" Name="Id_VanBang" Nullable="false" />
+          <Property Type="String" Name="So_Hieu_Van_Bang" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Ten_Dot_Cap" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Ma_SinhVien" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Ho_Va_Ten" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="Ngay_Sinh" Nullable="false" />
+          <Property Type="String" Name="Ten_Nganh" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Ten_ChuyenNganh" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="Nam_Ket_Thuc" Nullable="false" />
+          <Property Type="String" Name="Ten_XepLoai" Nullable="false" MaxLength="25" />
+          <Property Type="DateTime" Name="Ngay_Cap" Nullable="false" />
+          <Property Type="String" Name="Noi_Cap" Nullable="false" />
+          <Property Type="String" Name="Trang_Thai" Nullable="false" MaxLength="14" />
+        </ComplexType>
+        <ComplexType Name="lay_thong_tin_sinhvien1_Result">
+          <Property Type="Int32" Name="Id_SinhVien" Nullable="false" />
+          <Property Type="String" Name="Ho_Va_Ten" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="Ngay_Sinh" Nullable="false" />
+          <Property Type="String" Name="Ten_Nganh" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Ten_ChuyenNganh" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="Nam_Ket_Thuc" Nullable="false" />
+          <Property Type="String" Name="Ten_XepLoai" Nullable="false" MaxLength="25" />
+        </ComplexType>
+        <ComplexType Name="timkiem_vanbangchinhthuc1_Result">
+          <Property Type="Int32" Name="Id_VanBang" Nullable="false" />
+          <Property Type="String" Name="SoHieu" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Ten_Dot_Cap" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Ma_SinhVien" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Ho_Va_Ten" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="Ngay_Sinh" Nullable="false" />
+          <Property Type="String" Name="Ten_Nganh" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Ten_ChuyenNganh" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="Nam_Ket_Thuc" Nullable="false" />
+          <Property Type="String" Name="Ten_XepLoai" Nullable="false" MaxLength="25" />
+          <Property Type="DateTime" Name="Ngay_Cap" Nullable="false" />
+          <Property Type="String" Name="Noi_Cap" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="SoHieuPhoi" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Trang_Thai" Nullable="false" MaxLength="14" />
+        </ComplexType>
+        <ComplexType Name="timkiem_vanbangtam1_Result">
+          <Property Type="Int32" Name="Id_VanBang" Nullable="false" />
+          <Property Type="String" Name="So_Hieu_Van_Bang" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Ten_Dot_Cap" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Ma_SinhVien" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Ho_Va_Ten" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="Ngay_Sinh" Nullable="false" />
+          <Property Type="String" Name="Ten_Nganh" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Ten_ChuyenNganh" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="Nam_Ket_Thuc" Nullable="false" />
+          <Property Type="String" Name="Ten_XepLoai" Nullable="false" MaxLength="25" />
+          <Property Type="DateTime" Name="Ngay_Cap" Nullable="false" />
+          <Property Type="String" Name="Noi_Cap" Nullable="false" />
           <Property Type="String" Name="Trang_Thai" Nullable="false" MaxLength="14" />
         </ComplexType>
       </Schema>
@@ -1377,7 +1427,7 @@
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Diem_Trung_Binh_Tich_Luy" ColumnName="Diem_Trung_Binh_Tich_Luy" />
                 <ScalarProperty Name="Ten_ChuyenNganh" ColumnName="Ten_ChuyenNganh" />
-                <ScalarProperty Name="Ma_KhoaHoc" ColumnName="Ma_KhoaHoc" />
+                <ScalarProperty Name="Nam_Ket_Thuc" ColumnName="Nam_Ket_Thuc" />
                 <ScalarProperty Name="Ten_DonViQuanLy" ColumnName="Ten_DonViQuanLy" />
                 <ScalarProperty Name="Ten_XepLoai" ColumnName="Ten_XepLoai" />
                 <ScalarProperty Name="Trang_Thai" ColumnName="Trang_Thai" />
@@ -1397,19 +1447,6 @@
               <ComplexTypeMapping TypeName="QuanLyVanBangModel.chon_dot_cap_Result">
                 <ScalarProperty Name="Id_Dot_Cap" ColumnName="Id_Dot_Cap" />
                 <ScalarProperty Name="Ten_Dot_Cap" ColumnName="Ten_Dot_Cap" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="lay_thong_tin_sinhvien" FunctionName="QuanLyVanBangModel.Store.lay_thong_tin_sinhvien">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="QuanLyVanBangModel.lay_thong_tin_sinhvien_Result">
-                <ScalarProperty Name="Id_SinhVien" ColumnName="Id_SinhVien" />
-                <ScalarProperty Name="Ho_Va_Ten" ColumnName="Ho_Va_Ten" />
-                <ScalarProperty Name="Ngay_Sinh" ColumnName="Ngay_Sinh" />
-                <ScalarProperty Name="Ten_Nganh" ColumnName="Ten_Nganh" />
-                <ScalarProperty Name="Ten_ChuyenNganh" ColumnName="Ten_ChuyenNganh" />
-                <ScalarProperty Name="Ma_KhoaHoc" ColumnName="Ma_KhoaHoc" />
-                <ScalarProperty Name="Ten_XepLoai" ColumnName="Ten_XepLoai" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
@@ -1437,7 +1474,7 @@
                 <ScalarProperty Name="Ngay_Sinh" ColumnName="Ngay_Sinh" />
                 <ScalarProperty Name="Ten_Nganh" ColumnName="Ten_Nganh" />
                 <ScalarProperty Name="Ten_ChuyenNganh" ColumnName="Ten_ChuyenNganh" />
-                <ScalarProperty Name="Ma_KhoaHoc" ColumnName="Ma_KhoaHoc" />
+                <ScalarProperty Name="Nam_Ket_Thuc" ColumnName="Nam_Ket_Thuc" />
                 <ScalarProperty Name="Ten_XepLoai" ColumnName="Ten_XepLoai" />
                 <ScalarProperty Name="Ngay_Cap" ColumnName="Ngay_Cap" />
                 <ScalarProperty Name="Noi_Cap" ColumnName="Noi_Cap" />
@@ -1449,25 +1486,6 @@
           <FunctionImportMapping FunctionImportName="them_vanbangtam" FunctionName="QuanLyVanBangModel.Store.them_vanbangtam" />
           <FunctionImportMapping FunctionImportName="xoa_vanbang" FunctionName="QuanLyVanBangModel.Store.xoa_vanbang" />
           <FunctionImportMapping FunctionImportName="xoa_vanbangtam" FunctionName="QuanLyVanBangModel.Store.xoa_vanbangtam" />
-          <FunctionImportMapping FunctionImportName="timkiem_vanbangtam" FunctionName="QuanLyVanBangModel.Store.timkiem_vanbangtam">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="QuanLyVanBangModel.timkiem_vanbangtam_Result">
-                <ScalarProperty Name="Id_VanBang" ColumnName="Id_VanBang" />
-                <ScalarProperty Name="So_Hieu_Van_Bang" ColumnName="So_Hieu_Van_Bang" />
-                <ScalarProperty Name="Ten_Dot_Cap" ColumnName="Ten_Dot_Cap" />
-                <ScalarProperty Name="Ma_SinhVien" ColumnName="Ma_SinhVien" />
-                <ScalarProperty Name="Ho_Va_Ten" ColumnName="Ho_Va_Ten" />
-                <ScalarProperty Name="Ngay_Sinh" ColumnName="Ngay_Sinh" />
-                <ScalarProperty Name="Ten_Nganh" ColumnName="Ten_Nganh" />
-                <ScalarProperty Name="Ten_ChuyenNganh" ColumnName="Ten_ChuyenNganh" />
-                <ScalarProperty Name="Ma_KhoaHoc" ColumnName="Ma_KhoaHoc" />
-                <ScalarProperty Name="Ten_XepLoai" ColumnName="Ten_XepLoai" />
-                <ScalarProperty Name="Ngay_Cap" ColumnName="Ngay_Cap" />
-                <ScalarProperty Name="Noi_Cap" ColumnName="Noi_Cap" />
-                <ScalarProperty Name="Trang_Thai" ColumnName="Trang_Thai" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="chon_vanbangchinhthuc" FunctionName="QuanLyVanBangModel.Store.chon_vanbangchinhthuc">
             <ResultMapping>
               <ComplexTypeMapping TypeName="QuanLyVanBangModel.chon_vanbangchinhthuc_Result">
@@ -1479,7 +1497,7 @@
                 <ScalarProperty Name="Ngay_Sinh" ColumnName="Ngay_Sinh" />
                 <ScalarProperty Name="Ten_Nganh" ColumnName="Ten_Nganh" />
                 <ScalarProperty Name="Ten_ChuyenNganh" ColumnName="Ten_ChuyenNganh" />
-                <ScalarProperty Name="Ma_KhoaHoc" ColumnName="Ma_KhoaHoc" />
+                <ScalarProperty Name="Nam_Ket_Thuc" ColumnName="Nam_Ket_Thuc" />
                 <ScalarProperty Name="Ten_XepLoai" ColumnName="Ten_XepLoai" />
                 <ScalarProperty Name="Ngay_Cap" ColumnName="Ngay_Cap" />
                 <ScalarProperty Name="Noi_Cap" ColumnName="Noi_Cap" />
@@ -1526,9 +1544,22 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="chuyenduyet_vanbang" FunctionName="QuanLyVanBangModel.Store.chuyenduyet_vanbang" />
-          <FunctionImportMapping FunctionImportName="timkiem_vanbangchinhthuc" FunctionName="QuanLyVanBangModel.Store.timkiem_vanbangchinhthuc">
+          <FunctionImportMapping FunctionImportName="lay_thong_tin_sinhvien1" FunctionName="QuanLyVanBangModel.Store.lay_thong_tin_sinhvien">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="QuanLyVanBangModel.timkiem_vanbangchinhthuc_Result">
+              <ComplexTypeMapping TypeName="QuanLyVanBangModel.lay_thong_tin_sinhvien1_Result">
+                <ScalarProperty Name="Id_SinhVien" ColumnName="Id_SinhVien" />
+                <ScalarProperty Name="Ho_Va_Ten" ColumnName="Ho_Va_Ten" />
+                <ScalarProperty Name="Ngay_Sinh" ColumnName="Ngay_Sinh" />
+                <ScalarProperty Name="Ten_Nganh" ColumnName="Ten_Nganh" />
+                <ScalarProperty Name="Ten_ChuyenNganh" ColumnName="Ten_ChuyenNganh" />
+                <ScalarProperty Name="Nam_Ket_Thuc" ColumnName="Nam_Ket_Thuc" />
+                <ScalarProperty Name="Ten_XepLoai" ColumnName="Ten_XepLoai" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="timkiem_vanbangchinhthuc1" FunctionName="QuanLyVanBangModel.Store.timkiem_vanbangchinhthuc">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QuanLyVanBangModel.timkiem_vanbangchinhthuc1_Result">
                 <ScalarProperty Name="Id_VanBang" ColumnName="Id_VanBang" />
                 <ScalarProperty Name="SoHieu" ColumnName="SoHieu" />
                 <ScalarProperty Name="Ten_Dot_Cap" ColumnName="Ten_Dot_Cap" />
@@ -1537,11 +1568,30 @@
                 <ScalarProperty Name="Ngay_Sinh" ColumnName="Ngay_Sinh" />
                 <ScalarProperty Name="Ten_Nganh" ColumnName="Ten_Nganh" />
                 <ScalarProperty Name="Ten_ChuyenNganh" ColumnName="Ten_ChuyenNganh" />
-                <ScalarProperty Name="Ma_KhoaHoc" ColumnName="Ma_KhoaHoc" />
+                <ScalarProperty Name="Nam_Ket_Thuc" ColumnName="Nam_Ket_Thuc" />
                 <ScalarProperty Name="Ten_XepLoai" ColumnName="Ten_XepLoai" />
                 <ScalarProperty Name="Ngay_Cap" ColumnName="Ngay_Cap" />
                 <ScalarProperty Name="Noi_Cap" ColumnName="Noi_Cap" />
                 <ScalarProperty Name="SoHieuPhoi" ColumnName="SoHieuPhoi" />
+                <ScalarProperty Name="Trang_Thai" ColumnName="Trang_Thai" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="timkiem_vanbangtam1" FunctionName="QuanLyVanBangModel.Store.timkiem_vanbangtam">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QuanLyVanBangModel.timkiem_vanbangtam1_Result">
+                <ScalarProperty Name="Id_VanBang" ColumnName="Id_VanBang" />
+                <ScalarProperty Name="So_Hieu_Van_Bang" ColumnName="So_Hieu_Van_Bang" />
+                <ScalarProperty Name="Ten_Dot_Cap" ColumnName="Ten_Dot_Cap" />
+                <ScalarProperty Name="Ma_SinhVien" ColumnName="Ma_SinhVien" />
+                <ScalarProperty Name="Ho_Va_Ten" ColumnName="Ho_Va_Ten" />
+                <ScalarProperty Name="Ngay_Sinh" ColumnName="Ngay_Sinh" />
+                <ScalarProperty Name="Ten_Nganh" ColumnName="Ten_Nganh" />
+                <ScalarProperty Name="Ten_ChuyenNganh" ColumnName="Ten_ChuyenNganh" />
+                <ScalarProperty Name="Nam_Ket_Thuc" ColumnName="Nam_Ket_Thuc" />
+                <ScalarProperty Name="Ten_XepLoai" ColumnName="Ten_XepLoai" />
+                <ScalarProperty Name="Ngay_Cap" ColumnName="Ngay_Cap" />
+                <ScalarProperty Name="Noi_Cap" ColumnName="Noi_Cap" />
                 <ScalarProperty Name="Trang_Thai" ColumnName="Trang_Thai" />
               </ComplexTypeMapping>
             </ResultMapping>

@@ -76,8 +76,10 @@
             this.dgDuyet.Name = "dgDuyet";
             this.dgDuyet.RowHeadersWidth = 62;
             this.dgDuyet.RowTemplate.Height = 28;
+            this.dgDuyet.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgDuyet.Size = new System.Drawing.Size(574, 537);
             this.dgDuyet.TabIndex = 54;
+            this.dgDuyet.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDuyet_CellContentClick);
             this.dgDuyet.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDuyet_CellDoubleClick_1);
             // 
             // panel3

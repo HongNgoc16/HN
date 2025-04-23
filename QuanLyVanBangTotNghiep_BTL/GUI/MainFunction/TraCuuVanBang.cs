@@ -24,11 +24,14 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
             string maSinhVien = textMaSV.Text.Trim();
             string hoVaTen = textHoVaTen.Text.Trim();
             string soHieu = textSoHieuVB.Text.Trim();
+            if (string.IsNullOrEmpty(maSinhVien) && string.IsNullOrEmpty(hoVaTen) && string.IsNullOrEmpty(soHieu))
+            {
+                MessageBox.Show("Vui lòng nhập ít nhất một thông tin để tra cứu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-            // Gọi BLL để tìm kiếm dữ liệu
             var ketQua = bll.TraCuuVanBang(maSinhVien, hoVaTen, soHieu);
 
-            // Hiển thị kết quả lên DataGridView
             dgvTraCuu.DataSource = ketQua;
         }
 

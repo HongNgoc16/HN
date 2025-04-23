@@ -10,7 +10,7 @@ namespace QuanLyVanBangTotNghiep_BTL.BLL
     {
         LayThongTin_DAL dal = new LayThongTin_DAL();
 
-        public lay_thong_tin_sinhvien_Result LayThongTinTheoMaSV(string maSV)
+        public lay_thong_tin_sinhvien1_Result LayThongTinTheoMaSV(string maSV)
         {
             return dal.LayThongTinTheoMaSV(maSV);
         }

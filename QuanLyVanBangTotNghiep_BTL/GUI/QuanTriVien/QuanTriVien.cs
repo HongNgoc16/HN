@@ -24,27 +24,27 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
         }
         private void buttonNguoiDung_Click(object sender, EventArgs e)
         {
-            LoadUserControl(new ucNguoiDung());
+            LoadUserControl(new UcNguoiDung());
         }
 
         private void buttonDonViQuanLy_Click(object sender, EventArgs e)
         {
-            LoadUserControl(new ucDonViQuanLy());
+            LoadUserControl(new UcDonViQuanLy());
         }
 
         private void buttonNganhHoc_Click(object sender, EventArgs e)
         {
-            LoadUserControl(new ucNganhHoc());
+            LoadUserControl(new UcNganhHoc());
         }
 
         private void buttonChuyenNganh_Click(object sender, EventArgs e)
         {
-            LoadUserControl(new ucChuyenNganh());
+            LoadUserControl(new UcChuyenNganh());
         }
 
         private void buttonKhoaHoc_Click(object sender, EventArgs e)
         {
-            LoadUserControl(new ucKhoaHoc());
+            LoadUserControl(new UcKhoaHoc());
         }
 
         private void buttonLoaiTotNghiep_Click(object sender, EventArgs e)

@@ -16,5 +16,10 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI.BoPhanQuanLy
         {
             InitializeComponent();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

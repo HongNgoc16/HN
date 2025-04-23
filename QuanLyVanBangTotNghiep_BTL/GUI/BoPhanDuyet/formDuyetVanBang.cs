@@ -30,10 +30,11 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
             dateTimeNgaySinh.Value = Convert.ToDateTime(row.Cells["Ngay_Sinh"].Value);
             textNganhHoc.Text = row.Cells["Ten_Nganh"].Value?.ToString();
             textChuyenNganh.Text = row.Cells["Ten_ChuyenNganh"].Value?.ToString();
-            textKhoaHoc.Text = row.Cells["Ma_KhoaHoc"].Value?.ToString();
+            txtNamTotNghiep.Text = row.Cells["Nam_Ket_Thuc"].Value?.ToString();
             textXepLoai.Text = row.Cells["Ten_XepLoai"].Value?.ToString();
             textSHVB.Text = row.Cells["So_Hieu_Van_Bang"].Value?.ToString();
-            dateTimeNgayCap.Value = Convert.ToDateTime(row.Cells["Ngay_Cap"].Value);
+            DateTime ngayCap = Convert.ToDateTime(row.Cells["Ngay_Cap"].Value);
+            mtbNgayCap.Text = ngayCap.ToString("dd/MM/yyyy");
             textNoiCap.Text = row.Cells["Noi_Cap"].Value?.ToString();
             string trangThaiStr = row.Cells["Trang_Thai"].Value?.ToString();
             if (trangThaiStr == "Đã duyệt" || trangThaiStr == "Từ chối")
@@ -57,10 +58,7 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
 
             MessageBox.Show("Duyệt thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            OnCapNhatThanhCong?.Invoke();
-
-            // Chuyển duyệt văn bằng
-           
+            OnCapNhatThanhCong?.Invoke();           
             bll.ChuyenDuyetVanBang(_idVanBang);
 
            
@@ -71,11 +69,11 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
         private void buttonTuChoi_Click(object sender, EventArgs e)
         {
             VanBangTam_BLL bll = new VanBangTam_BLL();
-            bll.CapNhatTrangThai(_idVanBang, 2); // 2 = Từ chối
+            bll.CapNhatTrangThai(_idVanBang, 2); 
 
             MessageBox.Show("Từ chối thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            OnCapNhatThanhCong?.Invoke(); // ← gọi về form cha
+            OnCapNhatThanhCong?.Invoke();
             this.Close();
         }
     }

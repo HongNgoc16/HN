@@ -1,6 +1,6 @@
 ﻿namespace QuanLyVanBangTotNghiep_BTL.GUI
 {
-    partial class ucNguoiDung
+    partial class UcNguoiDung
     {
         /// <summary> 
         /// Required designer variable.
@@ -31,16 +31,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cboBoxLoaiND = new System.Windows.Forms.ComboBox();
-            this.textMatKhau = new System.Windows.Forms.TextBox();
-            this.textTenDangNhap = new System.Windows.Forms.TextBox();
-            this.textMaND = new System.Windows.Forms.TextBox();
+            this.cboLoaiND = new System.Windows.Forms.ComboBox();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
+            this.txtTenDangNhap = new System.Windows.Forms.TextBox();
+            this.txtMaND = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgNguoiDung = new System.Windows.Forms.DataGridView();
+            this.dgvNguoiDung = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonLuu = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -50,7 +50,7 @@
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgNguoiDung)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNguoiDung)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,10 +77,10 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.cboBoxLoaiND);
-            this.groupBox2.Controls.Add(this.textMatKhau);
-            this.groupBox2.Controls.Add(this.textTenDangNhap);
-            this.groupBox2.Controls.Add(this.textMaND);
+            this.groupBox2.Controls.Add(this.cboLoaiND);
+            this.groupBox2.Controls.Add(this.txtMatKhau);
+            this.groupBox2.Controls.Add(this.txtTenDangNhap);
+            this.groupBox2.Controls.Add(this.txtMaND);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
@@ -96,45 +96,45 @@
             // 
             // cboBoxLoaiND
             // 
-            this.cboBoxLoaiND.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cboBoxLoaiND.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cboBoxLoaiND.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboBoxLoaiND.FormattingEnabled = true;
-            this.cboBoxLoaiND.Items.AddRange(new object[] {
+            this.cboLoaiND.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboLoaiND.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboLoaiND.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboLoaiND.FormattingEnabled = true;
+            this.cboLoaiND.Items.AddRange(new object[] {
             "qtv",
             "bpql",
             "bpd"});
-            this.cboBoxLoaiND.Location = new System.Drawing.Point(598, 86);
-            this.cboBoxLoaiND.Name = "cboBoxLoaiND";
-            this.cboBoxLoaiND.Size = new System.Drawing.Size(292, 33);
-            this.cboBoxLoaiND.TabIndex = 7;
+            this.cboLoaiND.Location = new System.Drawing.Point(598, 86);
+            this.cboLoaiND.Name = "cboBoxLoaiND";
+            this.cboLoaiND.Size = new System.Drawing.Size(292, 33);
+            this.cboLoaiND.TabIndex = 7;
             // 
             // textMatKhau
             // 
-            this.textMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textMatKhau.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textMatKhau.Location = new System.Drawing.Point(156, 89);
-            this.textMatKhau.Name = "textMatKhau";
-            this.textMatKhau.Size = new System.Drawing.Size(288, 31);
-            this.textMatKhau.TabIndex = 6;
+            this.txtMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMatKhau.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau.Location = new System.Drawing.Point(156, 89);
+            this.txtMatKhau.Name = "textMatKhau";
+            this.txtMatKhau.Size = new System.Drawing.Size(288, 31);
+            this.txtMatKhau.TabIndex = 6;
             // 
             // textTenDangNhap
             // 
-            this.textTenDangNhap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textTenDangNhap.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textTenDangNhap.Location = new System.Drawing.Point(598, 37);
-            this.textTenDangNhap.Name = "textTenDangNhap";
-            this.textTenDangNhap.Size = new System.Drawing.Size(292, 31);
-            this.textTenDangNhap.TabIndex = 5;
+            this.txtTenDangNhap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTenDangNhap.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenDangNhap.Location = new System.Drawing.Point(598, 37);
+            this.txtTenDangNhap.Name = "textTenDangNhap";
+            this.txtTenDangNhap.Size = new System.Drawing.Size(292, 31);
+            this.txtTenDangNhap.TabIndex = 5;
             // 
             // textMaND
             // 
-            this.textMaND.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textMaND.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textMaND.Location = new System.Drawing.Point(156, 40);
-            this.textMaND.Name = "textMaND";
-            this.textMaND.Size = new System.Drawing.Size(288, 31);
-            this.textMaND.TabIndex = 4;
+            this.txtMaND.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMaND.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaND.Location = new System.Drawing.Point(156, 40);
+            this.txtMaND.Name = "textMaND";
+            this.txtMaND.Size = new System.Drawing.Size(288, 31);
+            this.txtMaND.TabIndex = 4;
             // 
             // label5
             // 
@@ -186,7 +186,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dgNguoiDung);
+            this.groupBox1.Controls.Add(this.dgvNguoiDung);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.HotPink;
@@ -199,16 +199,16 @@
             // 
             // dgNguoiDung
             // 
-            this.dgNguoiDung.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgNguoiDung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgNguoiDung.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgNguoiDung.Location = new System.Drawing.Point(3, 30);
-            this.dgNguoiDung.Name = "dgNguoiDung";
-            this.dgNguoiDung.RowHeadersWidth = 62;
-            this.dgNguoiDung.RowTemplate.Height = 28;
-            this.dgNguoiDung.Size = new System.Drawing.Size(929, 241);
-            this.dgNguoiDung.TabIndex = 0;
-            this.dgNguoiDung.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgNguoiDung_CellClick);
+            this.dgvNguoiDung.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvNguoiDung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNguoiDung.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvNguoiDung.Location = new System.Drawing.Point(3, 30);
+            this.dgvNguoiDung.Name = "dgNguoiDung";
+            this.dgvNguoiDung.RowHeadersWidth = 62;
+            this.dgvNguoiDung.RowTemplate.Height = 28;
+            this.dgvNguoiDung.Size = new System.Drawing.Size(929, 241);
+            this.dgvNguoiDung.TabIndex = 0;
+            this.dgvNguoiDung.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvNguoiDung_CellClick);
             // 
             // panel2
             // 
@@ -238,7 +238,7 @@
             this.buttonLuu.TabIndex = 6;
             this.buttonLuu.Text = "Lưu";
             this.buttonLuu.UseVisualStyleBackColor = false;
-            this.buttonLuu.Click += new System.EventHandler(this.buttonLuu_Click);
+            this.buttonLuu.Click += new System.EventHandler(this.BtnLuu_Click);
             // 
             // button3
             // 
@@ -274,7 +274,7 @@
             this.buttonXoa.TabIndex = 3;
             this.buttonXoa.Text = "Xóa";
             this.buttonXoa.UseVisualStyleBackColor = false;
-            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
+            this.buttonXoa.Click += new System.EventHandler(this.BtnXoa_Click);
             // 
             // buttonSua
             // 
@@ -292,7 +292,7 @@
             this.buttonSua.TabIndex = 2;
             this.buttonSua.Text = "Sửa";
             this.buttonSua.UseVisualStyleBackColor = false;
-            this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
+            this.buttonSua.Click += new System.EventHandler(this.BtnSua_Click);
             // 
             // buttonThemMoi
             // 
@@ -310,7 +310,7 @@
             this.buttonThemMoi.TabIndex = 1;
             this.buttonThemMoi.Text = "Thêm mới";
             this.buttonThemMoi.UseVisualStyleBackColor = false;
-            this.buttonThemMoi.Click += new System.EventHandler(this.buttonThemMoi_Click);
+            this.buttonThemMoi.Click += new System.EventHandler(this.BtnThemMoi_Click);
             // 
             // ucNguoiDung
             // 
@@ -322,13 +322,13 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "ucNguoiDung";
             this.Size = new System.Drawing.Size(935, 557);
-            this.Load += new System.EventHandler(this.ucNguoiDung_Load);
+            this.Load += new System.EventHandler(this.UcNguoiDung_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgNguoiDung)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNguoiDung)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -339,16 +339,16 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox cboBoxLoaiND;
-        private System.Windows.Forms.TextBox textMatKhau;
-        private System.Windows.Forms.TextBox textTenDangNhap;
-        private System.Windows.Forms.TextBox textMaND;
+        private System.Windows.Forms.ComboBox cboLoaiND;
+        private System.Windows.Forms.TextBox txtMatKhau;
+        private System.Windows.Forms.TextBox txtTenDangNhap;
+        private System.Windows.Forms.TextBox txtMaND;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dgNguoiDung;
+        private System.Windows.Forms.DataGridView dgvNguoiDung;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button buttonLuu;
         private System.Windows.Forms.Button button3;

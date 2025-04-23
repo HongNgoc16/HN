@@ -38,7 +38,7 @@
             this.textNoiCap = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textXepLoai = new System.Windows.Forms.TextBox();
-            this.textKhoaHoc = new System.Windows.Forms.TextBox();
+            this.txtNamTotNghiep = new System.Windows.Forms.TextBox();
             this.textNganhHoc = new System.Windows.Forms.TextBox();
             this.textSHVB = new System.Windows.Forms.TextBox();
             this.textHoVaTen = new System.Windows.Forms.TextBox();
@@ -140,13 +140,13 @@
             this.textXepLoai.Size = new System.Drawing.Size(277, 26);
             this.textXepLoai.TabIndex = 63;
             // 
-            // textKhoaHoc
+            // txtNamTotNghiep
             // 
-            this.textKhoaHoc.Enabled = false;
-            this.textKhoaHoc.Location = new System.Drawing.Point(262, 274);
-            this.textKhoaHoc.Name = "textKhoaHoc";
-            this.textKhoaHoc.Size = new System.Drawing.Size(277, 26);
-            this.textKhoaHoc.TabIndex = 62;
+            this.txtNamTotNghiep.Enabled = false;
+            this.txtNamTotNghiep.Location = new System.Drawing.Point(262, 274);
+            this.txtNamTotNghiep.Name = "txtNamTotNghiep";
+            this.txtNamTotNghiep.Size = new System.Drawing.Size(277, 26);
+            this.txtNamTotNghiep.TabIndex = 62;
             // 
             // textNganhHoc
             // 
@@ -212,9 +212,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(59, 274);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 20);
+            this.label6.Size = new System.Drawing.Size(117, 20);
             this.label6.TabIndex = 54;
-            this.label6.Text = "Khóa học";
+            this.label6.Text = "Nam tốt nghiệp";
             // 
             // label5
             // 
@@ -273,7 +273,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(606, 609);
+            this.ClientSize = new System.Drawing.Size(630, 609);
             this.Controls.Add(this.cboBoxSoHieuPhoi);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCapBang);
@@ -286,7 +286,7 @@
             this.Controls.Add(this.textNoiCap);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textXepLoai);
-            this.Controls.Add(this.textKhoaHoc);
+            this.Controls.Add(this.txtNamTotNghiep);
             this.Controls.Add(this.textNganhHoc);
             this.Controls.Add(this.textSHVB);
             this.Controls.Add(this.textHoVaTen);
@@ -319,7 +319,7 @@
         private System.Windows.Forms.TextBox textNoiCap;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textXepLoai;
-        private System.Windows.Forms.TextBox textKhoaHoc;
+        private System.Windows.Forms.TextBox txtNamTotNghiep;
         private System.Windows.Forms.TextBox textNganhHoc;
         private System.Windows.Forms.TextBox textSHVB;
         private System.Windows.Forms.TextBox textHoVaTen;

@@ -51,7 +51,7 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
                 textHoVaTen.Text = sv.Ho_Va_Ten;
                 textNganhHoc.Text = sv.Ten_Nganh;
                 textChuyenNganh.Text = sv.Ten_ChuyenNganh;
-                textKhoaHoc.Text = sv.Ma_KhoaHoc;
+                mtbNamTotNghiep.Text = sv.Nam_Ket_Thuc.ToString();
                 textXepLoai.Text = sv.Ten_XepLoai;
                 hidden_IdSinhVien = sv.Id_SinhVien;
             }
@@ -61,7 +61,7 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
                 textHoVaTen.Clear();
                 textNganhHoc.Clear();
                 textChuyenNganh.Clear();
-                textKhoaHoc.Clear();
+                mtbNamTotNghiep.Clear();
                 textXepLoai.Clear();
                 hidden_IdSinhVien = -1;
             }
@@ -113,7 +113,7 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
                 textHoVaTen.Clear();
                 textNganhHoc.Clear();
                 textChuyenNganh.Clear();
-                textKhoaHoc.Clear();
+                mtbNamTotNghiep.Clear();
                 textXepLoai.Clear();
                 hidden_IdSinhVien = -1;
             }
