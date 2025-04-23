@@ -79,5 +79,15 @@ namespace QuanLyVanBangTotNghiep_BTL.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap z6528134402230_ac6c5acc2bc193592d8a5dde684ecc21 {
+            get {
+                object obj = ResourceManager.GetObject("z6528134402230_ac6c5acc2bc193592d8a5dde684ecc21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -11,22 +11,22 @@ using System.Data.Entity;
 using QuanLyVanBangTotNghiep_BTL;
 namespace QuanLyVanBangTotNghiep_BTL.GUI
 {
-    public partial class ucNganhHoc : UserControl
+    public partial class UcNganhHoc : UserControl
     {
         int opt = -1;
         QLVB_Entities db = new QLVB_Entities();
-        public ucNganhHoc()
+        public UcNganhHoc()
         {
             InitializeComponent();
         }
 
-        private void buttonThemMoi_Click(object sender, EventArgs e)
+        private void BtnThemMoi_Click(object sender, EventArgs e)
         {
-            textMaNganh.Clear();
-            textTenNganh.Clear();
-            rdbDangSd.Checked = false;
-            rdbKhongSd.Checked = false;
-            textMaNganh.Focus();
+            txtMaNganh.Clear();
+            txtTenNganh.Clear();
+            rdoDangSd.Checked = false;
+            rdoKhongSd.Checked = false;
+            txtMaNganh.Focus();
             opt= 1;    
         }
         public void HienThiDuLieu()
@@ -41,48 +41,48 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
                          : "Không sử dụng"
         }).ToList();
 
-    dgNganhHoc.DataSource = danhSach;
+    dgvNganhHoc.DataSource = danhSach;
 
     // Đổi tên tiêu đề cột sang tiếng Việt
-    dgNganhHoc.Columns[0].HeaderText = "Mã Ngành";
-    dgNganhHoc.Columns[1].HeaderText = "Tên Ngành";
-    dgNganhHoc.Columns[2].HeaderText = "Trạng Thái";
+    dgvNganhHoc.Columns[0].HeaderText = "Mã Ngành";
+    dgvNganhHoc.Columns[1].HeaderText = "Tên Ngành";
+    dgvNganhHoc.Columns[2].HeaderText = "Trạng Thái";
 
     // Thiết lập font Times New Roman, không đậm
-    dgNganhHoc.Font = new Font("Times New Roman", 11, FontStyle.Regular);
-    dgNganhHoc.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman", 12, FontStyle.Regular);
-    dgNganhHoc.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+    dgvNganhHoc.Font = new Font("Times New Roman", 11, FontStyle.Regular);
+    dgvNganhHoc.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman", 12, FontStyle.Regular);
+    dgvNganhHoc.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
     // Căn lề nếu cần
-    dgNganhHoc.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+    dgvNganhHoc.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
 
     // Tự động giãn cột
-    dgNganhHoc.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+    dgvNganhHoc.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
      
        
       
-        private void ucNganhHoc_Load(object sender, EventArgs e)
+        private void UcNganhHoc_Load(object sender, EventArgs e)
         {
             HienThiDuLieu();
         }
         
 
-        private void buttonLuu_Click(object sender, EventArgs e)
+        private void BtnLuu_Click(object sender, EventArgs e)
         {
-            bool trang_Thai_Su_Dung = rdbDangSd.Checked;  // Nếu chọn Đang sử dụng thì true, còn lại là false
+            bool trangThaiSuDung = rdoDangSd.Checked;  // Nếu chọn Đang sử dụng thì true, còn lại là false
 
             if (opt == 1)  // Nếu là thêm mới
             {
-                db.them_nganhhoc(textMaNganh.Text, textTenNganh.Text, trang_Thai_Su_Dung);
+                db.them_nganhhoc(txtMaNganh.Text, txtTenNganh.Text, trangThaiSuDung);
                 opt = -1;
                 HienThiDuLieu();
                 MessageBox.Show("Thêm ngành học thành công!");
             }
             else if (opt == 2)  // Nếu là sửa
             {
-                int id = Convert.ToInt32(dgNganhHoc[0, dgNganhHoc.CurrentRow.Index].Value.ToString());
-                db.sua_nganhhoc(id, textMaNganh.Text, textTenNganh.Text, trang_Thai_Su_Dung);
+                int id = Convert.ToInt32(dgvNganhHoc[0, dgvNganhHoc.CurrentRow.Index].Value.ToString());
+                db.sua_nganhhoc(id, txtMaNganh.Text, txtTenNganh.Text, trangThaiSuDung);
                 opt = -1;
                 HienThiDuLieu();
                 MessageBox.Show("Sửa ngành học thành công!");
@@ -90,34 +90,34 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
 
         }
 
-        private void dgNganhHoc_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void DgvNganhHoc_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)  // Kiểm tra có chọn được dòng không
             {
-                textMaNganh.Text = dgNganhHoc.Rows[e.RowIndex].Cells[0].Value.ToString();  // Cột 0: Mã Ngành
-                textTenNganh.Text = dgNganhHoc.Rows[e.RowIndex].Cells[1].Value.ToString();  // Cột 1: Tên Ngành
+                txtMaNganh.Text = dgvNganhHoc.Rows[e.RowIndex].Cells[0].Value.ToString();  // Cột 0: Mã Ngành
+                txtTenNganh.Text = dgvNganhHoc.Rows[e.RowIndex].Cells[1].Value.ToString();  // Cột 1: Tên Ngành
 
-                string trangThai = dgNganhHoc.Rows[e.RowIndex].Cells[2].Value.ToString();  // Cột 2: Trạng Thái
+                string trangThai = dgvNganhHoc.Rows[e.RowIndex].Cells[2].Value.ToString();  // Cột 2: Trạng Thái
 
                 // Nếu trạng thái là "Đang sử dụng", đánh dấu vào radio button Đang sử dụng
                 if (trangThai == "Đang sử dụng")
                 {
-                    rdbDangSd.Checked = true;
-                    rdbKhongSd.Checked = false;
+                    rdoDangSd.Checked = true;
+                    rdoKhongSd.Checked = false;
                 }
                 else // Nếu là "Không sử dụng", đánh dấu vào radio button Không sử dụng
                 {
-                    rdbKhongSd.Checked = true;
-                    rdbDangSd.Checked = false;
+                    rdoKhongSd.Checked = true;
+                    rdoDangSd.Checked = false;
                 }
             }
         }
 
-        private void buttonXoa_Click(object sender, EventArgs e)
+        private void BtnXoa_Click(object sender, EventArgs e)
         {
-            if (dgNganhHoc.CurrentRow != null)
+            if (dgvNganhHoc.CurrentRow != null)
             {
-                int id = Convert.ToInt32(dgNganhHoc[0, dgNganhHoc.CurrentRow.Index].Value.ToString());
+                int id = Convert.ToInt32(dgvNganhHoc[0, dgvNganhHoc.CurrentRow.Index].Value.ToString());
 
                 DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
@@ -133,29 +133,29 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
             }
         }
 
-        private void buttonSua_Click(object sender, EventArgs e)
+        private void BtnSua_Click(object sender, EventArgs e)
         {
-            if (dgNganhHoc.CurrentRow != null)
+            if (dgvNganhHoc.CurrentRow != null)
             {
-                bool trang_Thai_Su_Dung = rdbDangSd.Checked;
+                bool trangThaiSuDung = rdoDangSd.Checked;
 
 
-                int id = Convert.ToInt32(dgNganhHoc[0, dgNganhHoc.CurrentRow.Index].Value.ToString());
-                db.sua_nganhhoc(id, textMaNganh.Text, textTenNganh.Text, trang_Thai_Su_Dung);
+                int id = Convert.ToInt32(dgvNganhHoc[0, dgvNganhHoc.CurrentRow.Index].Value.ToString());
+                db.sua_nganhhoc(id, txtMaNganh.Text, txtTenNganh.Text, trangThaiSuDung);
                 opt = -1;
                 HienThiDuLieu();
                 MessageBox.Show("Sửa ngành học thành công!");
             }
         }
 
-        private void buttonNganhHoc_Click(object sender, EventArgs e)
+        private void BtnTimKiem_Click(object sender, EventArgs e)
         {
-            string maNganh = textMaNganh.Text.Trim().ToLower();
-            string tenNganh = textTenNganh.Text.Trim().ToLower();
+            string maNganh = txtMaNganh.Text.Trim().ToLower();
+            string tenNganh = txtTenNganh.Text.Trim().ToLower();
 
             // Kiểm tra xem người dùng có muốn lọc theo trạng thái sử dụng không
-            bool locTheoTrangThai = rdbDangSd.Checked || rdbKhongSd.Checked;
-            bool trangThaiSuDung = rdbDangSd.Checked;
+            bool locTheoTrangThai = rdoDangSd.Checked || rdoKhongSd.Checked;
+            bool trangThaiSuDung = rdoDangSd.Checked;
 
             var ketQua = db.chon_nganhhoc().AsQueryable();
 
@@ -178,7 +178,7 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
 
             if (danhSach.Any())
             {
-                dgNganhHoc.DataSource = danhSach;
+                dgvNganhHoc.DataSource = danhSach;
             }
             else
             {

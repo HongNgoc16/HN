@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.trangChủToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.gỬIYÊUCẦUCHỈNHSỬAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hƯỚNGDẪNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonIn = new System.Windows.Forms.Button();
             this.buttonDangKy = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -52,26 +59,94 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.trangChủToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.gỬIYÊUCẦUCHỈNHSỬAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hƯỚNGDẪNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.trangChủToolStripMenuItem,
+            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem,
+            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem1,
+            this.gỬIYÊUCẦUCHỈNHSỬAToolStripMenuItem,
+            this.hƯỚNGDẪNToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(993, 36);
+            this.menuStrip1.TabIndex = 11;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // trangChủToolStripMenuItem
+            // 
+            this.trangChủToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.trangChủToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trangChủToolStripMenuItem.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.trangChủToolStripMenuItem.Name = "trangChủToolStripMenuItem";
+            this.trangChủToolStripMenuItem.Size = new System.Drawing.Size(130, 29);
+            this.trangChủToolStripMenuItem.Text = "TRANG CHỦ";
+            // 
+            // đĂNGKÝCẤPBẢNSAOToolStripMenuItem
+            // 
+            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem.Name = "đĂNGKÝCẤPBẢNSAOToolStripMenuItem";
+            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem.Size = new System.Drawing.Size(103, 29);
+            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem.Text = "TRA CỨU";
+            // 
+            // đĂNGKÝCẤPBẢNSAOToolStripMenuItem1
+            // 
+            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem1.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem1.Name = "đĂNGKÝCẤPBẢNSAOToolStripMenuItem1";
+            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem1.Size = new System.Drawing.Size(228, 29);
+            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem1.Text = "ĐĂNG KÝ CẤP BẢN SAO";
+            // 
+            // gỬIYÊUCẦUCHỈNHSỬAToolStripMenuItem
+            // 
+            this.gỬIYÊUCẦUCHỈNHSỬAToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.gỬIYÊUCẦUCHỈNHSỬAToolStripMenuItem.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.gỬIYÊUCẦUCHỈNHSỬAToolStripMenuItem.Name = "gỬIYÊUCẦUCHỈNHSỬAToolStripMenuItem";
+            this.gỬIYÊUCẦUCHỈNHSỬAToolStripMenuItem.Size = new System.Drawing.Size(238, 29);
+            this.gỬIYÊUCẦUCHỈNHSỬAToolStripMenuItem.Text = "GỬI YÊU CẦU CHỈNH SỬA";
+            // 
+            // hƯỚNGDẪNToolStripMenuItem
+            // 
+            this.hƯỚNGDẪNToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.hƯỚNGDẪNToolStripMenuItem.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.hƯỚNGDẪNToolStripMenuItem.Name = "hƯỚNGDẪNToolStripMenuItem";
+            this.hƯỚNGDẪNToolStripMenuItem.Size = new System.Drawing.Size(139, 29);
+            this.hƯỚNGDẪNToolStripMenuItem.Text = "HƯỚNG DẪN";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 36);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(993, 435);
+            this.panel1.TabIndex = 12;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.buttonIn);
             this.panel2.Controls.Add(this.buttonDangKy);
-            this.panel2.Location = new System.Drawing.Point(18, 389);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 310);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(974, 77);
-            this.panel2.TabIndex = 14;
+            this.panel2.Size = new System.Drawing.Size(993, 125);
+            this.panel2.TabIndex = 20;
             // 
             // buttonIn
             // 
@@ -99,39 +174,40 @@
             this.buttonDangKy.Text = "Đăng ký";
             this.buttonDangKy.UseVisualStyleBackColor = false;
             // 
-            // panel1
+            // panel3
             // 
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(12, 122);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(971, 261);
-            this.panel1.TabIndex = 13;
+            this.panel3.Controls.Add(this.textBox7);
+            this.panel3.Controls.Add(this.dateTimePicker1);
+            this.panel3.Controls.Add(this.textBox6);
+            this.panel3.Controls.Add(this.textBox5);
+            this.panel3.Controls.Add(this.comboBox2);
+            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Controls.Add(this.textBox4);
+            this.panel3.Controls.Add(this.textBox3);
+            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 49);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(993, 261);
+            this.panel3.TabIndex = 19;
             // 
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.Location = new System.Drawing.Point(677, 204);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(277, 34);
+            this.textBox7.Size = new System.Drawing.Size(88, 34);
             this.textBox7.TabIndex = 23;
             // 
             // dateTimePicker1
@@ -145,7 +221,7 @@
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(624, 156);
+            this.textBox6.Location = new System.Drawing.Point(651, 156);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(330, 34);
             this.textBox6.TabIndex = 21;
@@ -162,7 +238,7 @@
             // 
             this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(624, 106);
+            this.comboBox2.Location = new System.Drawing.Point(651, 103);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(330, 36);
             this.comboBox2.TabIndex = 19;
@@ -179,7 +255,7 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(624, 60);
+            this.textBox4.Location = new System.Drawing.Point(651, 63);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(330, 34);
             this.textBox4.TabIndex = 15;
@@ -195,7 +271,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(624, 12);
+            this.textBox2.Location = new System.Drawing.Point(651, 15);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(330, 34);
             this.textBox2.TabIndex = 13;
@@ -287,9 +363,9 @@
             this.label5.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label5.Location = new System.Drawing.Point(509, 66);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 28);
+            this.label5.Size = new System.Drawing.Size(141, 28);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Nơi sinh:";
+            this.label5.Text = "Chuyên ngành:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
@@ -328,105 +404,62 @@
             this.label2.Text = "Họ và tên:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // menuStrip1
+            // panel4
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.trangChủToolStripMenuItem,
-            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem,
-            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem1,
-            this.gỬIYÊUCẦUCHỈNHSỬAToolStripMenuItem,
-            this.hƯỚNGDẪNToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(9, 9);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(846, 33);
-            this.menuStrip1.TabIndex = 11;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // trangChủToolStripMenuItem
-            // 
-            this.trangChủToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.trangChủToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.trangChủToolStripMenuItem.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.trangChủToolStripMenuItem.Name = "trangChủToolStripMenuItem";
-            this.trangChủToolStripMenuItem.Size = new System.Drawing.Size(130, 29);
-            this.trangChủToolStripMenuItem.Text = "TRANG CHỦ";
-            // 
-            // đĂNGKÝCẤPBẢNSAOToolStripMenuItem
-            // 
-            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem.Name = "đĂNGKÝCẤPBẢNSAOToolStripMenuItem";
-            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem.Size = new System.Drawing.Size(103, 29);
-            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem.Text = "TRA CỨU";
-            // 
-            // đĂNGKÝCẤPBẢNSAOToolStripMenuItem1
-            // 
-            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem1.Name = "đĂNGKÝCẤPBẢNSAOToolStripMenuItem1";
-            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem1.Size = new System.Drawing.Size(228, 29);
-            this.đĂNGKÝCẤPBẢNSAOToolStripMenuItem1.Text = "ĐĂNG KÝ CẤP BẢN SAO";
-            // 
-            // gỬIYÊUCẦUCHỈNHSỬAToolStripMenuItem
-            // 
-            this.gỬIYÊUCẦUCHỈNHSỬAToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.gỬIYÊUCẦUCHỈNHSỬAToolStripMenuItem.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.gỬIYÊUCẦUCHỈNHSỬAToolStripMenuItem.Name = "gỬIYÊUCẦUCHỈNHSỬAToolStripMenuItem";
-            this.gỬIYÊUCẦUCHỈNHSỬAToolStripMenuItem.Size = new System.Drawing.Size(238, 29);
-            this.gỬIYÊUCẦUCHỈNHSỬAToolStripMenuItem.Text = "GỬI YÊU CẦU CHỈNH SỬA";
-            // 
-            // hƯỚNGDẪNToolStripMenuItem
-            // 
-            this.hƯỚNGDẪNToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.hƯỚNGDẪNToolStripMenuItem.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.hƯỚNGDẪNToolStripMenuItem.Name = "hƯỚNGDẪNToolStripMenuItem";
-            this.hƯỚNGDẪNToolStripMenuItem.Size = new System.Drawing.Size(139, 29);
-            this.hƯỚNGDẪNToolStripMenuItem.Text = "HƯỚNG DẪN";
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(993, 49);
+            this.panel4.TabIndex = 18;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(208, 53);
+            this.label1.Location = new System.Drawing.Point(236, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(520, 37);
-            this.label1.TabIndex = 10;
+            this.label1.TabIndex = 15;
             this.label1.Text = "ĐĂNG KÝ CẤP BẢN SAO BẰNG TỐT NGHIỆP";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // DangKyCapBanSao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(993, 471);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.label1);
             this.Name = "DangKyCapBanSao";
             this.Text = "DangKyCapBanSao";
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem trangChủToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem đĂNGKÝCẤPBẢNSAOToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem đĂNGKÝCẤPBẢNSAOToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem gỬIYÊUCẦUCHỈNHSỬAToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hƯỚNGDẪNToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button buttonIn;
         private System.Windows.Forms.Button buttonDangKy;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox textBox6;
@@ -447,12 +480,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem trangChủToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đĂNGKÝCẤPBẢNSAOToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đĂNGKÝCẤPBẢNSAOToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem gỬIYÊUCẦUCHỈNHSỬAToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hƯỚNGDẪNToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel4;
     }
 }

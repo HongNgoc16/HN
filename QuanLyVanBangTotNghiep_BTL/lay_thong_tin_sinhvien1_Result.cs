@@ -11,14 +11,14 @@ namespace QuanLyVanBangTotNghiep_BTL
 {
     using System;
     
-    public partial class lay_thong_tin_sinhvien_Result
+    public partial class lay_thong_tin_sinhvien1_Result
     {
         public int Id_SinhVien { get; set; }
         public string Ho_Va_Ten { get; set; }
-        public Nullable<System.DateTime> Ngay_Sinh { get; set; }
+        public System.DateTime Ngay_Sinh { get; set; }
         public string Ten_Nganh { get; set; }
         public string Ten_ChuyenNganh { get; set; }
-        public string Ma_KhoaHoc { get; set; }
+        public int Nam_Ket_Thuc { get; set; }
         public string Ten_XepLoai { get; set; }
     }
 }

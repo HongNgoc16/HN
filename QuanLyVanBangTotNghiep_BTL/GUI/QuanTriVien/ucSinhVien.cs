@@ -21,44 +21,44 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
         }
         private void LoadComboboxes()
         {
-            comboBoxChuyenNganh.DataSource = db.dm_ChuyenNganh.Where(c => c.Trang_Thai_Su_Dung == true).ToList();
-            comboBoxChuyenNganh.DisplayMember = "Ten_ChuyenNganh";
-            comboBoxChuyenNganh.ValueMember = "Id_ChuyenNganh";
+            cboChuyenNganh.DataSource = db.dm_ChuyenNganh.Where(c => c.Trang_Thai_Su_Dung == true).ToList();
+            cboChuyenNganh.DisplayMember = "Ten_ChuyenNganh";
+            cboChuyenNganh.ValueMember = "Id_ChuyenNganh";
 
-            comboBoxKhoaHoc.DataSource = db.dm_KhoaHoc.Where(k => k.Trang_Thai == true).ToList();
-            comboBoxKhoaHoc.DisplayMember = "Ma_KhoaHoc";
-            comboBoxKhoaHoc.ValueMember = "Id_KhoaHoc";
+            cboNamTotNghiep.DataSource = db.dm_KhoaHoc.Where(k => k.Trang_Thai == true).ToList();
+            cboNamTotNghiep.DisplayMember = "Nam_Ket_Thuc";
+            cboNamTotNghiep.ValueMember = "Id_KhoaHoc";
 
-            comboBoxDVQL.DataSource = db.dm_DonViQuanLy.Where(d => d.Trang_Thai_Su_Dung == true).ToList();
-            comboBoxDVQL.DisplayMember = "Ten_DonViQuanLy";
-            comboBoxDVQL.ValueMember = "Id_DonViQuanLy";
+            cboDVQL.DataSource = db.dm_DonViQuanLy.Where(d => d.Trang_Thai_Su_Dung == true).ToList();
+            cboDVQL.DisplayMember = "Ten_DonViQuanLy";
+            cboDVQL.ValueMember = "Id_DonViQuanLy";
 
-            comboBoxXepLoai.DataSource = db.dm_XepLoai.Where(x => x.Trang_Thai_Su_Dung == true).ToList();
-            comboBoxXepLoai.DisplayMember = "Ten_XepLoai"; 
-            comboBoxXepLoai.ValueMember = "Id_XepLoai";
+            cboXepLoai.DataSource = db.dm_XepLoai.Where(x => x.Trang_Thai_Su_Dung == true).ToList();
+            cboXepLoai.DisplayMember = "Ten_XepLoai"; 
+            cboXepLoai.ValueMember = "Id_XepLoai";
         }
             private void HienThiDuLieu()
         {
-            dgSinhVien.DataSource = bll.GetChon_Sinhvien_Results();
+            dgvSinhVien.DataSource = bll.GetChon_Sinhvien_Results();
         }
 
-        private void buttonThemMoi_Click(object sender, EventArgs e)
+        private void BtnThemMoi_Click(object sender, EventArgs e)
         {
-            textMaSV.Clear();
-            textHoVaTen.Clear();
-            radioButtonNam.Checked = false;
-            radioButtonNu.Checked = false;
-            dateNgaySinh.Value = DateTime.Now;
-            comboBoxChuyenNganh.SelectedIndex = -1;
-            textSoDienThoai.Clear();
-            textEmail.Clear();
-            textDiemTB.Clear();
-            comboBoxKhoaHoc.SelectedIndex = -1;
-            comboBoxDVQL.SelectedIndex = -1;
-            comboBoxXepLoai.SelectedIndex = -1;
-            radioButtonDaTN.Checked = false;
-            radioButtonChuaTN.Checked = false;
-            textMaSV.Focus();   
+            txtMaSV.Clear();
+            txtHoVaTen.Clear();
+            rdoNam.Checked = false;
+            rdoNu.Checked = false;
+            dtpNgaySinh.Value = DateTime.Now;
+            cboChuyenNganh.SelectedIndex = -1;
+            txtSoDienThoai.Clear();
+            txtEmail.Clear();
+            txtDiemTB.Clear();
+            cboNamTotNghiep.SelectedIndex = -1;
+            cboDVQL.SelectedIndex = -1;
+            cboXepLoai.SelectedIndex = -1;
+            rdoDaTN.Checked = false;
+            rdoChuaTN.Checked = false;
+            txtMaSV.Focus();   
             opt = 1; 
         }
 
@@ -70,92 +70,92 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
         private bool ValidateInput()
         {
             // Validate Mã sinh viên
-            if (string.IsNullOrWhiteSpace(textMaSV.Text))
+            if (string.IsNullOrWhiteSpace(txtMaSV.Text))
             {
                 MessageBox.Show("Mã sinh viên không được để trống!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                textMaSV.Focus();
+                txtMaSV.Focus();
                 return false;
             }
 
             // Validate Họ và tên
-            if (string.IsNullOrWhiteSpace(textHoVaTen.Text))
+            if (string.IsNullOrWhiteSpace(txtHoVaTen.Text))
             {
                 MessageBox.Show("Họ và tên không được để trống!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                textHoVaTen.Focus();
+                txtHoVaTen.Focus();
                 return false;
             }
 
             // Validate Giới tính (sửa lại tên RadioButton)
-            if (!radioButtonNam.Checked && !radioButtonNu.Checked) // Đổi từ radioButtonDaTN sang radioButtonNam/Nu
+            if (!rdoNam.Checked && !rdoNu.Checked) // Đổi từ radioButtonDaTN sang radioButtonNam/Nu
             {
                 MessageBox.Show("Vui lòng chọn giới tính!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             // Validate Chuyên ngành
-            if (comboBoxChuyenNganh.SelectedIndex == -1)
+            if (cboChuyenNganh.SelectedIndex == -1)
             {
                 MessageBox.Show("Vui lòng chọn chuyên ngành!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                comboBoxChuyenNganh.Focus();
+                cboChuyenNganh.Focus();
                 return false;
             }
 
             // Validate Khóa học
-            if (comboBoxKhoaHoc.SelectedIndex == -1)
+            if (cboNamTotNghiep.SelectedIndex == -1)
             {
                 MessageBox.Show("Vui lòng chọn khóa học!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                comboBoxKhoaHoc.Focus();
+                cboNamTotNghiep.Focus();
                 return false;
             }
 
             // Validate Số điện thoại
-            if (string.IsNullOrWhiteSpace(textSoDienThoai.Text))
+            if (string.IsNullOrWhiteSpace(txtSoDienThoai.Text))
             {
                 MessageBox.Show("Số điện thoại không được để trống!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                textSoDienThoai.Focus();
+                txtSoDienThoai.Focus();
                 return false;
             }
 
             // Validate Email
-            if (string.IsNullOrWhiteSpace(textEmail.Text))
+            if (string.IsNullOrWhiteSpace(txtEmail.Text))
             {
                 MessageBox.Show("Email không được để trống!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                textEmail.Focus();
+                txtEmail.Focus();
                 return false;
             }
-            else if (!textEmail.Text.Contains("@"))
+            else if (!txtEmail.Text.Contains("@"))
             {
                 MessageBox.Show("Email không hợp lệ!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                textEmail.Focus();
+                txtEmail.Focus();
                 return false;
             }
 
             // Validate Điểm trung bình
-            if (!decimal.TryParse(textDiemTB.Text, out decimal diem) || diem < 0 || diem > 10)
+            if (!decimal.TryParse(txtDiemTB.Text, out decimal diem) || diem < 0 || diem > 10)
             {
                 MessageBox.Show("Điểm trung bình phải từ 0.00 đến 10.00!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                textDiemTB.Focus();
+                txtDiemTB.Focus();
                 return false;
             }
 
             // Validate Xếp loại
-            if (comboBoxXepLoai.SelectedIndex == -1)
+            if (cboXepLoai.SelectedIndex == -1)
             {
                 MessageBox.Show("Vui lòng chọn xếp loại!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                comboBoxXepLoai.Focus();
+                cboXepLoai.Focus();
                 return false;
             }
 
             // Validate Đơn vị quản lý
-            if (comboBoxDVQL.SelectedIndex == -1)
+            if (cboDVQL.SelectedIndex == -1)
             {
                 MessageBox.Show("Vui lòng chọn đơn vị quản lý!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                comboBoxDVQL.Focus();
+                cboDVQL.Focus();
                 return false;
             }
 
             // Validate Trạng thái (sửa lại tên RadioButton)
-            if (!radioButtonDaTN.Checked && !radioButtonChuaTN.Checked)
+            if (!rdoDaTN.Checked && !rdoChuaTN.Checked)
             {
                 MessageBox.Show("Vui lòng chọn trạng thái tốt nghiệp!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -167,31 +167,31 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
 
 
 
-        private void buttonLuu_Click(object sender, EventArgs e)
+        private void BtnLuu_Click(object sender, EventArgs e)
         {
             {
                 if (!ValidateInput()) return;
 
                 try
                 {
-                    bool gioiTinh = radioButtonNu.Checked;
-                    bool trangThai = radioButtonDaTN.Checked;
-                    decimal diemTB = decimal.Parse(textDiemTB.Text);
+                    bool gioiTinh = rdoNu.Checked;
+                    bool trangThai = rdoDaTN.Checked;
+                    decimal diemTB = decimal.Parse(txtDiemTB.Text);
 
                     if (opt == 1) // Thêm mới
                     {
                         bll.ThemSinhVien(
-                            textMaSV.Text.Trim(),
-                            textHoVaTen.Text.Trim(),
+                            txtMaSV.Text.Trim(),
+                            txtHoVaTen.Text.Trim(),
                             gioiTinh,
-                            dateNgaySinh.Value,
-                            (int)comboBoxChuyenNganh.SelectedValue,
-                            (int)comboBoxKhoaHoc.SelectedValue,
-                            textSoDienThoai.Text.Trim(),
-                             textEmail.Text.Trim(),
+                            dtpNgaySinh.Value,
+                            (int)cboChuyenNganh.SelectedValue,
+                            (int)cboNamTotNghiep.SelectedValue,
+                            txtSoDienThoai.Text.Trim(),
+                             txtEmail.Text.Trim(),
                             diemTB,
-                            (int)comboBoxXepLoai.SelectedValue,
-                            (int)comboBoxDVQL.SelectedValue,
+                            (int)cboXepLoai.SelectedValue,
+                            (int)cboDVQL.SelectedValue,
                             trangThai
                         );
                         MessageBox.Show("Thêm sinh viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -213,52 +213,52 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
 
         }
 
-        private void dgSinhVien_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void DgvSinhVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.RowIndex < dgSinhVien.Rows.Count)
+            if (e.RowIndex >= 0 && e.RowIndex < dgvSinhVien.Rows.Count)
             {
-                var row = dgSinhVien.Rows[e.RowIndex];
+                var row = dgvSinhVien.Rows[e.RowIndex];
                 opt = 2; // Đánh dấu đang ở chế độ sửa
 
                 // Lấy dữ liệu từ DataGridView
-                textMaSV.Text = row.Cells["Ma_SinhVien"].Value?.ToString();
-                textHoVaTen.Text = row.Cells["Ho_Va_Ten"].Value?.ToString();
+                txtMaSV.Text = row.Cells["Ma_SinhVien"].Value?.ToString();
+                txtHoVaTen.Text = row.Cells["Ho_Va_Ten"].Value?.ToString();
 
                 // Xử lý giới tính
                 string gioiTinh = row.Cells["Gioi_Tinh"].Value?.ToString();
-                radioButtonNam.Checked = gioiTinh == "Nam";
-                radioButtonNu.Checked = gioiTinh == "Nữ";
+                rdoNam.Checked = gioiTinh == "Nam";
+                rdoNu.Checked = gioiTinh == "Nữ";
 
                 // Ngày sinh
                 if (row.Cells["Ngay_Sinh"].Value != null)
                 {
-                    dateNgaySinh.Value = Convert.ToDateTime(row.Cells["Ngay_Sinh"].Value);
+                    dtpNgaySinh.Value = Convert.ToDateTime(row.Cells["Ngay_Sinh"].Value);
                 }
                 // Chọn combobox Chuyên ngành
-                if (dgSinhVien.DataSource != null)
+                if (dgvSinhVien.DataSource != null)
                 {
-                    var data = (dgSinhVien.DataSource as System.Collections.Generic.List<chon_sinhvien_Result>)[e.RowIndex];
-                    comboBoxChuyenNganh.SelectedValue = data.Ten_ChuyenNganh;
-                    comboBoxKhoaHoc.SelectedValue = data.Ma_KhoaHoc;
-                    comboBoxXepLoai.SelectedValue = data.Ten_XepLoai;
-                    comboBoxDVQL.SelectedValue = data.Ten_DonViQuanLy;
+                    var data = (dgvSinhVien.DataSource as System.Collections.Generic.List<chon_sinhvien_Result>)[e.RowIndex];
+                    cboChuyenNganh.SelectedValue = data.Ten_ChuyenNganh;
+                    cboNamTotNghiep.SelectedValue = data.Nam_Ket_Thuc;
+                    cboXepLoai.SelectedValue = data.Ten_XepLoai;
+                    cboDVQL.SelectedValue = data.Ten_DonViQuanLy;
                 }
 
-                textSoDienThoai.Text = row.Cells["So_Dien_Thoai"].Value?.ToString();
-                textEmail.Text = row.Cells["Email"].Value?.ToString();
-                textDiemTB.Text = row.Cells["Diem_Trung_Binh_Tich_Luy"].Value?.ToString();
+                txtSoDienThoai.Text = row.Cells["So_Dien_Thoai"].Value?.ToString();
+                txtEmail.Text = row.Cells["Email"].Value?.ToString();
+                txtDiemTB.Text = row.Cells["Diem_Trung_Binh_Tich_Luy"].Value?.ToString();
                 // Xử lý trạng thái
                 string trangThai = row.Cells["Trang_Thai"].Value?.ToString();
-                radioButtonDaTN.Checked = trangThai == "Đã tốt nghiệp";
-                radioButtonChuaTN.Checked = trangThai == "Chưa tốt nghiệp";
+                rdoDaTN.Checked = trangThai == "Đã tốt nghiệp";
+                rdoChuaTN.Checked = trangThai == "Chưa tốt nghiệp";
             }
 
         }
 
-        private void buttonSua_Click(object sender, EventArgs e)
+        private void BtnSua_Click(object sender, EventArgs e)
         {
             // Kiểm tra đã chọn dòng nào chưa
-            if (dgSinhVien.CurrentRow == null)
+            if (dgvSinhVien.CurrentRow == null)
             {
                 MessageBox.Show("Vui lòng chọn sinh viên cần sửa!", "Cảnh báo",
                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -272,14 +272,14 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
             try
             {
                 // Lấy ID từ dòng đang chọn (đã được lưu trong biến opt hoặc từ DataGridView)
-                int idSinhVien = Convert.ToInt32(dgSinhVien.CurrentRow.Cells["Id_SinhVien"].Value);
+                int idSinhVien = Convert.ToInt32(dgvSinhVien.CurrentRow.Cells["Id_SinhVien"].Value);
 
                 // Lấy dữ liệu từ các control
-                bool gioiTinh = radioButtonNu.Checked;
-                bool trangThai = radioButtonDaTN.Checked;
+                bool gioiTinh = rdoNu.Checked;
+                bool trangThai = rdoDaTN.Checked;
                 decimal diemTB;
 
-                if (!decimal.TryParse(textDiemTB.Text, out diemTB))
+                if (!decimal.TryParse(txtDiemTB.Text, out diemTB))
                 {
                     MessageBox.Show("Điểm trung bình không hợp lệ!", "Lỗi",
                                   MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -289,17 +289,17 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
                 // Gọi phương thức sửa từ BLL
                 bll.SuaSinhVien(
                     idSinhVien,
-                    textMaSV.Text.Trim(),
-                    textHoVaTen.Text.Trim(),
+                    txtMaSV.Text.Trim(),
+                    txtHoVaTen.Text.Trim(),
                     gioiTinh,
-                    dateNgaySinh.Value,
-                    (int)comboBoxChuyenNganh.SelectedValue,  // Lưu ý: Đây phải là ID, không phải tên
-                    (int)comboBoxKhoaHoc.SelectedValue,      // Lưu ý: Đây phải là ID, không phải mã
-                    textSoDienThoai.Text.Trim(),
-                    textEmail.Text.Trim(),
+                    dtpNgaySinh.Value,
+                    (int)cboChuyenNganh.SelectedValue,  // Lưu ý: Đây phải là ID, không phải tên
+                    (int)cboNamTotNghiep.SelectedValue,      // Lưu ý: Đây phải là ID, không phải mã
+                    txtSoDienThoai.Text.Trim(),
+                    txtEmail.Text.Trim(),
                     diemTB,
-                    (int)comboBoxXepLoai.SelectedValue,      // Lưu ý: Đây phải là ID
-                    (int)comboBoxDVQL.SelectedValue,         // Lưu ý: Đây phải là ID
+                    (int)cboXepLoai.SelectedValue,      // Lưu ý: Đây phải là ID
+                    (int)cboDVQL.SelectedValue,         // Lưu ý: Đây phải là ID
                     trangThai
                 );
 
@@ -317,9 +317,9 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
 
         }
 
-        private void buttonXoa_Click(object sender, EventArgs e)
+        private void BtnXoa_Click(object sender, EventArgs e)
         {
-            if (dgSinhVien.CurrentRow == null)
+            if (dgvSinhVien.CurrentRow == null)
             {
                 MessageBox.Show("Vui lòng chọn sinh viên cần xóa!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -330,7 +330,7 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
             {
                 try
                 {
-                    int id = Convert.ToInt32(dgSinhVien.CurrentRow.Cells["Id_SinhVien"].Value);
+                    int id = Convert.ToInt32(dgvSinhVien.CurrentRow.Cells["Id_SinhVien"].Value);
                     bll.XoaSinhVien(id);
                     HienThiDuLieu();
                     MessageBox.Show("Xóa sinh viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -343,7 +343,7 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void BtnTimKiem_Click(object sender, EventArgs e)
         {
             try
             {
@@ -351,63 +351,58 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
                 var ketQua = tatCaSinhVien.AsQueryable(); // Sử dụng AsQueryable để hỗ trợ tìm kiếm không phân biệt hoa thường
 
                 // Tìm kiếm không phân biệt hoa thường cho mã SV và họ tên
-                if (!string.IsNullOrWhiteSpace(textMaSV.Text))
+                if (!string.IsNullOrWhiteSpace(txtMaSV.Text))
                 {
-                    string maSV = textMaSV.Text.Trim().ToLower();
+                    string maSV = txtMaSV.Text.Trim().ToLower();
                     ketQua = ketQua.Where(sv => sv.Ma_SinhVien.ToLower().Contains(maSV));
                 }
 
-                if (!string.IsNullOrWhiteSpace(textHoVaTen.Text))
+                if (!string.IsNullOrWhiteSpace(txtHoVaTen.Text))
                 {
-                    string hoTen = textHoVaTen.Text.Trim().ToLower();
+                    string hoTen = txtHoVaTen.Text.Trim().ToLower();
                     ketQua = ketQua.Where(sv => sv.Ho_Va_Ten.ToLower().Contains(hoTen));
                 }
 
                 // Các điều kiện tìm kiếm khác giữ nguyên
-                if (radioButtonNam.Checked || radioButtonNu.Checked)
+                if (rdoNam.Checked || rdoNu.Checked)
                 {
-                    string gioiTinh = radioButtonNam.Checked ? "Nam" : "Nữ";
+                    string gioiTinh = rdoNam.Checked ? "Nam" : "Nữ";
                     ketQua = ketQua.Where(sv => sv.Gioi_Tinh == gioiTinh);
                 }
 
-                if (comboBoxChuyenNganh.SelectedIndex != -1)
+                if (cboChuyenNganh.SelectedIndex != -1)
                 {
-                    string chuyenNganh = comboBoxChuyenNganh.Text;
+                    string chuyenNganh = cboChuyenNganh.Text;
                     ketQua = ketQua.Where(sv => sv.Ten_ChuyenNganh == chuyenNganh);
                 }
 
-                if (!string.IsNullOrWhiteSpace(textDiemTB.Text) && decimal.TryParse(textDiemTB.Text, out decimal diem))
+                if (!string.IsNullOrWhiteSpace(txtDiemTB.Text) && decimal.TryParse(txtDiemTB.Text, out decimal diem))
                 {
                     ketQua = ketQua.Where(sv => sv.Diem_Trung_Binh_Tich_Luy == diem);
                 }
 
-                if (comboBoxDVQL.SelectedIndex != -1)
+                if (cboDVQL.SelectedIndex != -1)
                 {
-                    string donViQL = comboBoxDVQL.Text;
+                    string donViQL = cboDVQL.Text;
                     ketQua = ketQua.Where(sv => sv.Ten_DonViQuanLy == donViQL);
                 }
 
-                if (comboBoxKhoaHoc.SelectedIndex != -1)
-                {
-                    string khoaHoc = comboBoxKhoaHoc.Text;
-                    ketQua = ketQua.Where(sv => sv.Ma_KhoaHoc == khoaHoc);
-                }
 
-                if (comboBoxXepLoai.SelectedIndex != -1)
+                if (cboXepLoai.SelectedIndex != -1)
                 {
-                    string xepLoai = comboBoxXepLoai.Text;
+                    string xepLoai = cboXepLoai.Text;
                     ketQua = ketQua.Where(sv => sv.Ten_XepLoai == xepLoai);
                 }
 
-                if (radioButtonDaTN.Checked || radioButtonChuaTN.Checked)
+                if (rdoDaTN.Checked || rdoChuaTN.Checked)
                 {
-                    string trangThai = radioButtonDaTN.Checked ? "Đã tốt nghiệp" : "Chưa tốt nghiệp";
+                    string trangThai = rdoDaTN.Checked ? "Đã tốt nghiệp" : "Chưa tốt nghiệp";
                     ketQua = ketQua.Where(sv => sv.Trang_Thai == trangThai);
                 }
 
                 // Thực hiện truy vấn và hiển thị kết quả
                 var ketQuaCuoiCung = ketQua.ToList();
-                dgSinhVien.DataSource = ketQuaCuoiCung;
+                dgvSinhVien.DataSource = ketQuaCuoiCung;
 
                 if (!ketQuaCuoiCung.Any())
                 {
@@ -428,49 +423,49 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
            
         }
 
-        private void dgSinhVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DgvSinhVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void dgSinhVien_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        private void DgvSinhVien_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.RowIndex < dgSinhVien.Rows.Count)
+            if (e.RowIndex >= 0 && e.RowIndex < dgvSinhVien.Rows.Count)
             {
-                var row = dgSinhVien.Rows[e.RowIndex];
+                var row = dgvSinhVien.Rows[e.RowIndex];
                 opt = 2; // Đánh dấu đang ở chế độ sửa
 
                 // Lấy dữ liệu từ DataGridView
-                textMaSV.Text = row.Cells["Ma_SinhVien"].Value?.ToString();
-                textHoVaTen.Text = row.Cells["Ho_Va_Ten"].Value?.ToString();
+                txtMaSV.Text = row.Cells["Ma_SinhVien"].Value?.ToString();
+                txtHoVaTen.Text = row.Cells["Ho_Va_Ten"].Value?.ToString();
 
                 // Xử lý giới tính
                 string gioiTinh = row.Cells["Gioi_Tinh"].Value?.ToString();
-                radioButtonNam.Checked = gioiTinh == "Nam";
-                radioButtonNu.Checked = gioiTinh == "Nữ";
+                rdoNam.Checked = gioiTinh == "Nam";
+                rdoNu.Checked = gioiTinh == "Nữ";
 
                 // Ngày sinh
                 if (row.Cells["Ngay_Sinh"].Value != null)
                 {
-                    dateNgaySinh.Value = Convert.ToDateTime(row.Cells["Ngay_Sinh"].Value);
+                    dtpNgaySinh.Value = Convert.ToDateTime(row.Cells["Ngay_Sinh"].Value);
                 }
                 // Chọn combobox Chuyên ngành
-                if (dgSinhVien.DataSource != null)
+                if (dgvSinhVien.DataSource != null)
                 {
-                    var data = (dgSinhVien.DataSource as System.Collections.Generic.List<chon_sinhvien_Result>)[e.RowIndex];
-                    comboBoxChuyenNganh.SelectedValue = data.Ten_ChuyenNganh;
-                    comboBoxKhoaHoc.SelectedValue = data.Ma_KhoaHoc;
-                    comboBoxXepLoai.SelectedValue = data.Ten_XepLoai;
-                    comboBoxDVQL.SelectedValue = data.Ten_DonViQuanLy;
+                    var data = (dgvSinhVien.DataSource as System.Collections.Generic.List<chon_sinhvien_Result>)[e.RowIndex];
+                    cboChuyenNganh.SelectedValue = data.Ten_ChuyenNganh;
+                    cboNamTotNghiep.SelectedValue = data.Nam_Ket_Thuc;
+                    cboXepLoai.SelectedValue = data.Ten_XepLoai;
+                    cboDVQL.SelectedValue = data.Ten_DonViQuanLy;
                 }
 
-                textSoDienThoai.Text = row.Cells["So_Dien_Thoai"].Value?.ToString();
-                textEmail.Text = row.Cells["Email"].Value?.ToString();
-                textDiemTB.Text = row.Cells["Diem_Trung_Binh_Tich_Luy"].Value?.ToString();
+                txtSoDienThoai.Text = row.Cells["So_Dien_Thoai"].Value?.ToString();
+                txtEmail.Text = row.Cells["Email"].Value?.ToString();
+                txtDiemTB.Text = row.Cells["Diem_Trung_Binh_Tich_Luy"].Value?.ToString();
                 // Xử lý trạng thái
                 string trangThai = row.Cells["Trang_Thai"].Value?.ToString();
-                radioButtonDaTN.Checked = trangThai == "Đã tốt nghiệp";
-                radioButtonChuaTN.Checked = trangThai == "Chưa tốt nghiệp";
+                rdoDaTN.Checked = trangThai == "Đã tốt nghiệp";
+                rdoChuaTN.Checked = trangThai == "Chưa tốt nghiệp";
             }
 
 

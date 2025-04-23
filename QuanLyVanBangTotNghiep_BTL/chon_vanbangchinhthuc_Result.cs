@@ -21,7 +21,7 @@ namespace QuanLyVanBangTotNghiep_BTL
         public System.DateTime Ngay_Sinh { get; set; }
         public string Ten_Nganh { get; set; }
         public string Ten_ChuyenNganh { get; set; }
-        public string Ma_KhoaHoc { get; set; }
+        public int Nam_Ket_Thuc { get; set; }
         public string Ten_XepLoai { get; set; }
         public System.DateTime Ngay_Cap { get; set; }
         public string Noi_Cap { get; set; }

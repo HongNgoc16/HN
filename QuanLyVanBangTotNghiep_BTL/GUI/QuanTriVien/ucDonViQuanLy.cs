@@ -12,52 +12,52 @@ using QuanLyVanBangTotNghiep_BTL.BLL;
 
 namespace QuanLyVanBangTotNghiep_BTL.GUI
 {
-    public partial class ucDonViQuanLy : UserControl
+    public partial class UcDonViQuanLy : UserControl
     {
         int opt = -1;
         private dm_DonViQuanLy_BLL bll = new dm_DonViQuanLy_BLL();
-        public ucDonViQuanLy()
+        public UcDonViQuanLy()
         {
             InitializeComponent();
         }
         private void HienThiDuLieu()
         {
-            dgDonViQuanLy.DataSource = bll.GetChon_Donviquanly_Results();
+            dgvDonViQuanLy.DataSource = bll.GetChon_Donviquanly_Results();
         }
-        private void ucDonViQuanLy_Load(object sender, EventArgs e)
+        private void UcDonViQuanLy_Load(object sender, EventArgs e)
         {
             HienThiDuLieu();
             //dgDonViQuanLy.CellFormatting += dgDonViQuanLy_CellFormatting;
         }
 
-        private void buttonThemMoi_Click(object sender, EventArgs e)
+        private void BtnThemMoi_Click(object sender, EventArgs e)
         {
-            textMaDVQL.Clear();
-            textTenDVQL.Clear();
-            textTenDVQLCha.Clear();
-            rdbDangSd.Checked = false;
-            rdbKhongSd.Checked = false;
-            textMaDVQL.Focus();
+            txtMaDVQL.Clear();
+            txtTenDVQL.Clear();
+            txtTenDVQLCha.Clear();
+            rdoDangSuDung.Checked = false;
+            rdoKhongSuDung.Checked = false;
+            txtMaDVQL.Focus();
             opt = 1;
         }
 
-        private void buttonSua_Click(object sender, EventArgs e)
+        private void BtnSua_Click(object sender, EventArgs e)
         {
-            if (dgDonViQuanLy.CurrentRow != null)
+            if (dgvDonViQuanLy.CurrentRow != null)
             {
-                bool trang_Thai_Su_Dung = rdbDangSd.Checked;
-                int id = Convert.ToInt32(dgDonViQuanLy[0, dgDonViQuanLy.CurrentRow.Index].Value.ToString());
-                bll.SuaDonViQuanLy(id, textMaDVQL.Text, textTenDVQL.Text, textTenDVQLCha.Text, trang_Thai_Su_Dung);
+                bool trangThaiSuDung = rdoDangSuDung.Checked;
+                int id = Convert.ToInt32(dgvDonViQuanLy[0, dgvDonViQuanLy.CurrentRow.Index].Value.ToString());
+                bll.SuaDonViQuanLy(id, txtMaDVQL.Text, txtTenDVQL.Text, txtTenDVQLCha.Text, trangThaiSuDung);
                 HienThiDuLieu();
                 MessageBox.Show("Sửa đơn vị quản lý thành công!");
             }
         }
 
-        private void buttonXoa_Click(object sender, EventArgs e)
+        private void BtnXoa_Click(object sender, EventArgs e)
         {
-            if (dgDonViQuanLy.CurrentRow != null)
+            if (dgvDonViQuanLy.CurrentRow != null)
             {
-                int id = Convert.ToInt32(dgDonViQuanLy[0, dgDonViQuanLy.CurrentRow.Index].Value.ToString());
+                int id = Convert.ToInt32(dgvDonViQuanLy[0, dgvDonViQuanLy.CurrentRow.Index].Value.ToString());
                 DialogResult rs = MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (rs == DialogResult.Yes)
                 {
@@ -69,43 +69,43 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
             }
         }
 
-        private void buttonLuu_Click(object sender, EventArgs e)
+        private void BtnLuu_Click(object sender, EventArgs e)
         {
-            bool trang_Thai_Su_Dung = rdbDangSd.Checked;
+            bool trangThaiSuDung = rdoDangSuDung.Checked;
             if (opt == 1)
             {
-                bll.ThemDonViQuanLy(textMaDVQL.Text, textTenDVQL.Text, textTenDVQLCha.Text, trang_Thai_Su_Dung);
+                bll.ThemDonViQuanLy(txtMaDVQL.Text, txtTenDVQL.Text, txtTenDVQLCha.Text, trangThaiSuDung);
                 HienThiDuLieu();
                 MessageBox.Show("Thêm đơn vị quản lý thành công!");
                 opt = -1;
             }
         }
 
-        private void dgDonViQuanLy_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void DgvDonViQuanLy_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            textMaDVQL.Text = dgDonViQuanLy[1, dgDonViQuanLy.CurrentRow.Index].Value.ToString();
-            textTenDVQL.Text = dgDonViQuanLy[2, dgDonViQuanLy.CurrentRow.Index].Value.ToString();
-            textTenDVQLCha.Text = dgDonViQuanLy[3, dgDonViQuanLy.CurrentRow.Index].Value.ToString();
-            bool trang_Thai_Su_Dung = Convert.ToBoolean(dgDonViQuanLy[4, e.RowIndex].Value);
-            rdbDangSd.Checked = trang_Thai_Su_Dung;
-            rdbKhongSd.Checked = !trang_Thai_Su_Dung;
+            txtMaDVQL.Text = dgvDonViQuanLy[1, dgvDonViQuanLy.CurrentRow.Index].Value.ToString();
+            txtTenDVQL.Text = dgvDonViQuanLy[2, dgvDonViQuanLy.CurrentRow.Index].Value.ToString();
+            txtTenDVQLCha.Text = dgvDonViQuanLy[3, dgvDonViQuanLy.CurrentRow.Index].Value.ToString();
+            bool trang_Thai_Su_Dung = Convert.ToBoolean(dgvDonViQuanLy[4, e.RowIndex].Value);
+            rdoDangSuDung.Checked = trang_Thai_Su_Dung;
+            rdoKhongSuDung.Checked = !trang_Thai_Su_Dung;
         }
 
-        private void buttonTimKiem_Click(object sender, EventArgs e)
+        private void BtnTimKiem_Click(object sender, EventArgs e)
         {
-            string maDVQL = textMaDVQL.Text.Trim();
-            string tenDVQL = textTenDVQL.Text.Trim();
-            string tenDVQLCha = textTenDVQLCha.Text.Trim();
+            string maDVQL = txtMaDVQL.Text.Trim();
+            string tenDVQL = txtTenDVQL.Text.Trim();
+            string tenDVQLCha = txtTenDVQLCha.Text.Trim();
 
-            bool locTheoTrangThai = rdbDangSd.Checked || rdbKhongSd.Checked;
+            bool locTheoTrangThai = rdoDangSuDung.Checked || rdoKhongSuDung.Checked;
             bool? trangThaiSuDung = null;
 
             // Xác định trạng thái cần tìm
-            if (rdbDangSd.Checked)
+            if (rdoDangSuDung.Checked)
             {
                 trangThaiSuDung = true;
             }
-            else if (rdbKhongSd.Checked)
+            else if (rdoKhongSuDung.Checked)
             {
                 trangThaiSuDung = false;
             }
@@ -162,15 +162,15 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
     );
                     }
 
-                    dgDonViQuanLy.DataSource = dt;
+                    dgvDonViQuanLy.DataSource = dt;
 
                     // Định dạng DataGridView
-                    dgDonViQuanLy.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                    dgDonViQuanLy.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
+                    dgvDonViQuanLy.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dgvDonViQuanLy.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
                 }
                 else
                 {
-                    dgDonViQuanLy.DataSource = null;
+                    dgvDonViQuanLy.DataSource = null;
                     MessageBox.Show("Không tìm thấy đơn vị quản lý nào phù hợp!",
                                   "Thông báo",
                                   MessageBoxButtons.OK,

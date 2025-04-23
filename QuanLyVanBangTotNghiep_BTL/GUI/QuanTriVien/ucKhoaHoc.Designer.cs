@@ -1,6 +1,6 @@
 ﻿namespace QuanLyVanBangTotNghiep_BTL.GUI
 {
-    partial class ucKhoaHoc
+    partial class UcKhoaHoc
     {
         /// <summary> 
         /// Required designer variable.
@@ -31,17 +31,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.maskedTextBoxNamKetThuc = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBoxNamBatDau = new System.Windows.Forms.MaskedTextBox();
-            this.radioButtonChuaTotNghiep = new System.Windows.Forms.RadioButton();
-            this.radioButtonDaTotNghiep = new System.Windows.Forms.RadioButton();
+            this.mtxtNamKetThuc = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtNamBatDau = new System.Windows.Forms.MaskedTextBox();
+            this.rdoChuaTotNghiep = new System.Windows.Forms.RadioButton();
+            this.rdoDaTotNghiep = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
-            this.textMaKhoaHoc = new System.Windows.Forms.TextBox();
+            this.txtMaKhoaHoc = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgKhoaHoc = new System.Windows.Forms.DataGridView();
+            this.dgvKhoaHoc = new System.Windows.Forms.DataGridView();
             this.buttonThemMoi = new System.Windows.Forms.Button();
             this.buttonSua = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -51,7 +51,7 @@
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgKhoaHoc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKhoaHoc)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,12 +78,12 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.maskedTextBoxNamKetThuc);
-            this.groupBox2.Controls.Add(this.maskedTextBoxNamBatDau);
-            this.groupBox2.Controls.Add(this.radioButtonChuaTotNghiep);
-            this.groupBox2.Controls.Add(this.radioButtonDaTotNghiep);
+            this.groupBox2.Controls.Add(this.mtxtNamKetThuc);
+            this.groupBox2.Controls.Add(this.mtxtNamBatDau);
+            this.groupBox2.Controls.Add(this.rdoChuaTotNghiep);
+            this.groupBox2.Controls.Add(this.rdoDaTotNghiep);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.textMaKhoaHoc);
+            this.groupBox2.Controls.Add(this.txtMaKhoaHoc);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label1);
@@ -98,43 +98,43 @@
             // 
             // maskedTextBoxNamKetThuc
             // 
-            this.maskedTextBoxNamKetThuc.Location = new System.Drawing.Point(218, 129);
-            this.maskedTextBoxNamKetThuc.Mask = "0000";
-            this.maskedTextBoxNamKetThuc.Name = "maskedTextBoxNamKetThuc";
-            this.maskedTextBoxNamKetThuc.Size = new System.Drawing.Size(100, 31);
-            this.maskedTextBoxNamKetThuc.TabIndex = 13;
+            this.mtxtNamKetThuc.Location = new System.Drawing.Point(218, 129);
+            this.mtxtNamKetThuc.Mask = "0000";
+            this.mtxtNamKetThuc.Name = "maskedTextBoxNamKetThuc";
+            this.mtxtNamKetThuc.Size = new System.Drawing.Size(100, 31);
+            this.mtxtNamKetThuc.TabIndex = 13;
             // 
             // maskedTextBoxNamBatDau
             // 
-            this.maskedTextBoxNamBatDau.Location = new System.Drawing.Point(218, 86);
-            this.maskedTextBoxNamBatDau.Mask = "0000";
-            this.maskedTextBoxNamBatDau.Name = "maskedTextBoxNamBatDau";
-            this.maskedTextBoxNamBatDau.Size = new System.Drawing.Size(100, 31);
-            this.maskedTextBoxNamBatDau.TabIndex = 12;
+            this.mtxtNamBatDau.Location = new System.Drawing.Point(218, 86);
+            this.mtxtNamBatDau.Mask = "0000";
+            this.mtxtNamBatDau.Name = "maskedTextBoxNamBatDau";
+            this.mtxtNamBatDau.Size = new System.Drawing.Size(100, 31);
+            this.mtxtNamBatDau.TabIndex = 12;
             // 
             // radioButtonChuaTotNghiep
             // 
-            this.radioButtonChuaTotNghiep.AutoSize = true;
-            this.radioButtonChuaTotNghiep.ForeColor = System.Drawing.Color.Black;
-            this.radioButtonChuaTotNghiep.Location = new System.Drawing.Point(385, 174);
-            this.radioButtonChuaTotNghiep.Name = "radioButtonChuaTotNghiep";
-            this.radioButtonChuaTotNghiep.Size = new System.Drawing.Size(165, 29);
-            this.radioButtonChuaTotNghiep.TabIndex = 10;
-            this.radioButtonChuaTotNghiep.TabStop = true;
-            this.radioButtonChuaTotNghiep.Text = "Chưa tốt nghiệp";
-            this.radioButtonChuaTotNghiep.UseVisualStyleBackColor = true;
+            this.rdoChuaTotNghiep.AutoSize = true;
+            this.rdoChuaTotNghiep.ForeColor = System.Drawing.Color.Black;
+            this.rdoChuaTotNghiep.Location = new System.Drawing.Point(385, 174);
+            this.rdoChuaTotNghiep.Name = "radioButtonChuaTotNghiep";
+            this.rdoChuaTotNghiep.Size = new System.Drawing.Size(165, 29);
+            this.rdoChuaTotNghiep.TabIndex = 10;
+            this.rdoChuaTotNghiep.TabStop = true;
+            this.rdoChuaTotNghiep.Text = "Chưa tốt nghiệp";
+            this.rdoChuaTotNghiep.UseVisualStyleBackColor = true;
             // 
             // radioButtonDaTotNghiep
             // 
-            this.radioButtonDaTotNghiep.AutoSize = true;
-            this.radioButtonDaTotNghiep.ForeColor = System.Drawing.Color.Black;
-            this.radioButtonDaTotNghiep.Location = new System.Drawing.Point(218, 172);
-            this.radioButtonDaTotNghiep.Name = "radioButtonDaTotNghiep";
-            this.radioButtonDaTotNghiep.Size = new System.Drawing.Size(146, 29);
-            this.radioButtonDaTotNghiep.TabIndex = 9;
-            this.radioButtonDaTotNghiep.TabStop = true;
-            this.radioButtonDaTotNghiep.Text = "Đã tốt nghiệp";
-            this.radioButtonDaTotNghiep.UseVisualStyleBackColor = true;
+            this.rdoDaTotNghiep.AutoSize = true;
+            this.rdoDaTotNghiep.ForeColor = System.Drawing.Color.Black;
+            this.rdoDaTotNghiep.Location = new System.Drawing.Point(218, 172);
+            this.rdoDaTotNghiep.Name = "radioButtonDaTotNghiep";
+            this.rdoDaTotNghiep.Size = new System.Drawing.Size(146, 29);
+            this.rdoDaTotNghiep.TabIndex = 9;
+            this.rdoDaTotNghiep.TabStop = true;
+            this.rdoDaTotNghiep.Text = "Đã tốt nghiệp";
+            this.rdoDaTotNghiep.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -150,12 +150,12 @@
             // 
             // textMaKhoaHoc
             // 
-            this.textMaKhoaHoc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textMaKhoaHoc.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textMaKhoaHoc.Location = new System.Drawing.Point(218, 40);
-            this.textMaKhoaHoc.Name = "textMaKhoaHoc";
-            this.textMaKhoaHoc.Size = new System.Drawing.Size(322, 31);
-            this.textMaKhoaHoc.TabIndex = 4;
+            this.txtMaKhoaHoc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMaKhoaHoc.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaKhoaHoc.Location = new System.Drawing.Point(218, 40);
+            this.txtMaKhoaHoc.Name = "textMaKhoaHoc";
+            this.txtMaKhoaHoc.Size = new System.Drawing.Size(322, 31);
+            this.txtMaKhoaHoc.TabIndex = 4;
             // 
             // label4
             // 
@@ -195,7 +195,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dgKhoaHoc);
+            this.groupBox1.Controls.Add(this.dgvKhoaHoc);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.HotPink;
@@ -208,16 +208,16 @@
             // 
             // dgKhoaHoc
             // 
-            this.dgKhoaHoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgKhoaHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgKhoaHoc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgKhoaHoc.Location = new System.Drawing.Point(3, 27);
-            this.dgKhoaHoc.Name = "dgKhoaHoc";
-            this.dgKhoaHoc.RowHeadersWidth = 62;
-            this.dgKhoaHoc.RowTemplate.Height = 28;
-            this.dgKhoaHoc.Size = new System.Drawing.Size(896, 206);
-            this.dgKhoaHoc.TabIndex = 0;
-            this.dgKhoaHoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgKhoaHoc_CellClick);
+            this.dgvKhoaHoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvKhoaHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKhoaHoc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvKhoaHoc.Location = new System.Drawing.Point(3, 27);
+            this.dgvKhoaHoc.Name = "dgKhoaHoc";
+            this.dgvKhoaHoc.RowHeadersWidth = 62;
+            this.dgvKhoaHoc.RowTemplate.Height = 28;
+            this.dgvKhoaHoc.Size = new System.Drawing.Size(896, 206);
+            this.dgvKhoaHoc.TabIndex = 0;
+            this.dgvKhoaHoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvKhoaHoc_CellClick);
             // 
             // buttonThemMoi
             // 
@@ -235,7 +235,7 @@
             this.buttonThemMoi.TabIndex = 1;
             this.buttonThemMoi.Text = "Thêm mới";
             this.buttonThemMoi.UseVisualStyleBackColor = false;
-            this.buttonThemMoi.Click += new System.EventHandler(this.buttonThemMoi_Click);
+            this.buttonThemMoi.Click += new System.EventHandler(this.BtnThemMoi_Click);
             // 
             // buttonSua
             // 
@@ -253,7 +253,7 @@
             this.buttonSua.TabIndex = 2;
             this.buttonSua.Text = "Sửa";
             this.buttonSua.UseVisualStyleBackColor = false;
-            this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
+            this.buttonSua.Click += new System.EventHandler(this.BtnSua_Click);
             // 
             // button2
             // 
@@ -271,7 +271,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "Xóa";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.buttonXoa_Click);
+            this.button2.Click += new System.EventHandler(this.BtnXoa_Click);
             // 
             // buttonTimKiem
             // 
@@ -289,7 +289,7 @@
             this.buttonTimKiem.TabIndex = 4;
             this.buttonTimKiem.Text = "Tìm kiếm";
             this.buttonTimKiem.UseVisualStyleBackColor = false;
-            this.buttonTimKiem.Click += new System.EventHandler(this.buttonTimKiem_Click);
+            this.buttonTimKiem.Click += new System.EventHandler(this.BtnTimKiem_Click);
             // 
             // panel2
             // 
@@ -319,7 +319,7 @@
             this.buttonLuu.TabIndex = 5;
             this.buttonLuu.Text = "Lưu";
             this.buttonLuu.UseVisualStyleBackColor = false;
-            this.buttonLuu.Click += new System.EventHandler(this.buttonLuu_Click);
+            this.buttonLuu.Click += new System.EventHandler(this.BtnLuu_Click);
             // 
             // ucKhoaHoc
             // 
@@ -331,13 +331,13 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "ucKhoaHoc";
             this.Size = new System.Drawing.Size(902, 566);
-            this.Load += new System.EventHandler(this.ucKhoaHoc_Load);
+            this.Load += new System.EventHandler(this.UcKhoaHoc_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgKhoaHoc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKhoaHoc)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -349,17 +349,17 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButtonChuaTotNghiep;
-        private System.Windows.Forms.RadioButton radioButtonDaTotNghiep;
+        private System.Windows.Forms.RadioButton rdoChuaTotNghiep;
+        private System.Windows.Forms.RadioButton rdoDaTotNghiep;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textMaKhoaHoc;
+        private System.Windows.Forms.TextBox txtMaKhoaHoc;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dgKhoaHoc;
-        private System.Windows.Forms.MaskedTextBox maskedTextBoxNamKetThuc;
-        private System.Windows.Forms.MaskedTextBox maskedTextBoxNamBatDau;
+        private System.Windows.Forms.DataGridView dgvKhoaHoc;
+        private System.Windows.Forms.MaskedTextBox mtxtNamKetThuc;
+        private System.Windows.Forms.MaskedTextBox mtxtNamBatDau;
         private System.Windows.Forms.Button buttonThemMoi;
         private System.Windows.Forms.Button buttonSua;
         private System.Windows.Forms.Button button2;

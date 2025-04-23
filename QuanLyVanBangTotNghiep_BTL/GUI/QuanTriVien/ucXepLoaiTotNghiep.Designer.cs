@@ -31,15 +31,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rdbKhongSd = new System.Windows.Forms.RadioButton();
-            this.rdbDangSd = new System.Windows.Forms.RadioButton();
+            this.rdbKhongSuDung = new System.Windows.Forms.RadioButton();
+            this.rdbDangSuDung = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
-            this.textDiemToiDa = new System.Windows.Forms.TextBox();
+            this.txtDiemToiDa = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textDiemToiThieu = new System.Windows.Forms.TextBox();
-            this.textTenXL = new System.Windows.Forms.TextBox();
-            this.textMaXL = new System.Windows.Forms.TextBox();
+            this.txtDiemToiThieu = new System.Windows.Forms.TextBox();
+            this.txtTenXL = new System.Windows.Forms.TextBox();
+            this.txtMaXL = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -81,15 +81,15 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.rdbKhongSd);
-            this.groupBox2.Controls.Add(this.rdbDangSd);
+            this.groupBox2.Controls.Add(this.rdbKhongSuDung);
+            this.groupBox2.Controls.Add(this.rdbDangSuDung);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.textDiemToiDa);
+            this.groupBox2.Controls.Add(this.txtDiemToiDa);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.textDiemToiThieu);
-            this.groupBox2.Controls.Add(this.textTenXL);
-            this.groupBox2.Controls.Add(this.textMaXL);
+            this.groupBox2.Controls.Add(this.txtDiemToiThieu);
+            this.groupBox2.Controls.Add(this.txtTenXL);
+            this.groupBox2.Controls.Add(this.txtMaXL);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label1);
@@ -104,27 +104,27 @@
             // 
             // rdbKhongSd
             // 
-            this.rdbKhongSd.AutoSize = true;
-            this.rdbKhongSd.ForeColor = System.Drawing.Color.Black;
-            this.rdbKhongSd.Location = new System.Drawing.Point(385, 227);
-            this.rdbKhongSd.Name = "rdbKhongSd";
-            this.rdbKhongSd.Size = new System.Drawing.Size(155, 29);
-            this.rdbKhongSd.TabIndex = 14;
-            this.rdbKhongSd.TabStop = true;
-            this.rdbKhongSd.Text = "Không sử dụng";
-            this.rdbKhongSd.UseVisualStyleBackColor = true;
+            this.rdbKhongSuDung.AutoSize = true;
+            this.rdbKhongSuDung.ForeColor = System.Drawing.Color.Black;
+            this.rdbKhongSuDung.Location = new System.Drawing.Point(385, 227);
+            this.rdbKhongSuDung.Name = "rdbKhongSd";
+            this.rdbKhongSuDung.Size = new System.Drawing.Size(155, 29);
+            this.rdbKhongSuDung.TabIndex = 14;
+            this.rdbKhongSuDung.TabStop = true;
+            this.rdbKhongSuDung.Text = "Không sử dụng";
+            this.rdbKhongSuDung.UseVisualStyleBackColor = true;
             // 
             // rdbDangSd
             // 
-            this.rdbDangSd.AutoSize = true;
-            this.rdbDangSd.ForeColor = System.Drawing.Color.Black;
-            this.rdbDangSd.Location = new System.Drawing.Point(218, 225);
-            this.rdbDangSd.Name = "rdbDangSd";
-            this.rdbDangSd.Size = new System.Drawing.Size(147, 29);
-            this.rdbDangSd.TabIndex = 13;
-            this.rdbDangSd.TabStop = true;
-            this.rdbDangSd.Text = "Đang sử dụng";
-            this.rdbDangSd.UseVisualStyleBackColor = true;
+            this.rdbDangSuDung.AutoSize = true;
+            this.rdbDangSuDung.ForeColor = System.Drawing.Color.Black;
+            this.rdbDangSuDung.Location = new System.Drawing.Point(218, 225);
+            this.rdbDangSuDung.Name = "rdbDangSd";
+            this.rdbDangSuDung.Size = new System.Drawing.Size(147, 29);
+            this.rdbDangSuDung.TabIndex = 13;
+            this.rdbDangSuDung.TabStop = true;
+            this.rdbDangSuDung.Text = "Đang sử dụng";
+            this.rdbDangSuDung.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -140,12 +140,12 @@
             // 
             // textDiemToiDa
             // 
-            this.textDiemToiDa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textDiemToiDa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textDiemToiDa.Location = new System.Drawing.Point(218, 176);
-            this.textDiemToiDa.Name = "textDiemToiDa";
-            this.textDiemToiDa.Size = new System.Drawing.Size(322, 31);
-            this.textDiemToiDa.TabIndex = 8;
+            this.txtDiemToiDa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDiemToiDa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiemToiDa.Location = new System.Drawing.Point(218, 176);
+            this.txtDiemToiDa.Name = "textDiemToiDa";
+            this.txtDiemToiDa.Size = new System.Drawing.Size(322, 31);
+            this.txtDiemToiDa.TabIndex = 8;
             // 
             // label5
             // 
@@ -173,30 +173,30 @@
             // 
             // textDiemToiThieu
             // 
-            this.textDiemToiThieu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textDiemToiThieu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textDiemToiThieu.Location = new System.Drawing.Point(218, 131);
-            this.textDiemToiThieu.Name = "textDiemToiThieu";
-            this.textDiemToiThieu.Size = new System.Drawing.Size(322, 31);
-            this.textDiemToiThieu.TabIndex = 7;
+            this.txtDiemToiThieu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDiemToiThieu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiemToiThieu.Location = new System.Drawing.Point(218, 131);
+            this.txtDiemToiThieu.Name = "textDiemToiThieu";
+            this.txtDiemToiThieu.Size = new System.Drawing.Size(322, 31);
+            this.txtDiemToiThieu.TabIndex = 7;
             // 
             // textTenXL
             // 
-            this.textTenXL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textTenXL.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textTenXL.Location = new System.Drawing.Point(218, 86);
-            this.textTenXL.Name = "textTenXL";
-            this.textTenXL.Size = new System.Drawing.Size(322, 31);
-            this.textTenXL.TabIndex = 6;
+            this.txtTenXL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTenXL.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenXL.Location = new System.Drawing.Point(218, 86);
+            this.txtTenXL.Name = "textTenXL";
+            this.txtTenXL.Size = new System.Drawing.Size(322, 31);
+            this.txtTenXL.TabIndex = 6;
             // 
             // textMaXL
             // 
-            this.textMaXL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textMaXL.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textMaXL.Location = new System.Drawing.Point(218, 41);
-            this.textMaXL.Name = "textMaXL";
-            this.textMaXL.Size = new System.Drawing.Size(322, 31);
-            this.textMaXL.TabIndex = 5;
+            this.txtMaXL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMaXL.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaXL.Location = new System.Drawing.Point(218, 41);
+            this.txtMaXL.Name = "textMaXL";
+            this.txtMaXL.Size = new System.Drawing.Size(322, 31);
+            this.txtMaXL.TabIndex = 5;
             // 
             // label4
             // 
@@ -257,7 +257,7 @@
             this.dgXepLoai.RowTemplate.Height = 28;
             this.dgXepLoai.Size = new System.Drawing.Size(923, 208);
             this.dgXepLoai.TabIndex = 0;
-            this.dgXepLoai.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgXepLoai_CellClick);
+            this.dgXepLoai.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgXepLoai_CellClick);
             // 
             // panel2
             // 
@@ -287,7 +287,7 @@
             this.buttonLuu.TabIndex = 6;
             this.buttonLuu.Text = "Lưu";
             this.buttonLuu.UseVisualStyleBackColor = false;
-            this.buttonLuu.Click += new System.EventHandler(this.buttonLuu_Click);
+            this.buttonLuu.Click += new System.EventHandler(this.BtnLuu_Click);
             // 
             // button3
             // 
@@ -305,7 +305,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "Tìm kiếm";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.BtnTimKiem_Click);
             // 
             // buttonXoa
             // 
@@ -323,7 +323,7 @@
             this.buttonXoa.TabIndex = 3;
             this.buttonXoa.Text = "Xóa";
             this.buttonXoa.UseVisualStyleBackColor = false;
-            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
+            this.buttonXoa.Click += new System.EventHandler(this.BtnXoa_Click);
             // 
             // buttonSua
             // 
@@ -341,7 +341,7 @@
             this.buttonSua.TabIndex = 2;
             this.buttonSua.Text = "Sửa";
             this.buttonSua.UseVisualStyleBackColor = false;
-            this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
+            this.buttonSua.Click += new System.EventHandler(this.BtnSua_Click);
             // 
             // buttonThemMoi
             // 
@@ -359,7 +359,7 @@
             this.buttonThemMoi.TabIndex = 1;
             this.buttonThemMoi.Text = "Thêm mới";
             this.buttonThemMoi.UseVisualStyleBackColor = false;
-            this.buttonThemMoi.Click += new System.EventHandler(this.buttonThemMoi_Click);
+            this.buttonThemMoi.Click += new System.EventHandler(this.BtnThemMoi_Click);
             // 
             // ucXepLoaiTotNghiep
             // 
@@ -390,12 +390,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textDiemToiDa;
+        private System.Windows.Forms.TextBox txtDiemToiDa;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textDiemToiThieu;
-        private System.Windows.Forms.TextBox textTenXL;
-        private System.Windows.Forms.TextBox textMaXL;
+        private System.Windows.Forms.TextBox txtDiemToiThieu;
+        private System.Windows.Forms.TextBox txtTenXL;
+        private System.Windows.Forms.TextBox txtMaXL;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
@@ -407,7 +407,7 @@
         private System.Windows.Forms.Button buttonXoa;
         private System.Windows.Forms.Button buttonSua;
         private System.Windows.Forms.Button buttonThemMoi;
-        private System.Windows.Forms.RadioButton rdbKhongSd;
-        private System.Windows.Forms.RadioButton rdbDangSd;
+        private System.Windows.Forms.RadioButton rdbKhongSuDung;
+        private System.Windows.Forms.RadioButton rdbDangSuDung;
     }
 }

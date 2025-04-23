@@ -31,10 +31,10 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI.BoPhanQuanLy
             textMaSV.Text = row.Cells["Ma_SinhVien"].Value?.ToString();
             textHoVaTen.Text = row.Cells["Ho_Va_Ten"].Value?.ToString();
             dateTimeNgaySinh.Value = Convert.ToDateTime(row.Cells["Ngay_Sinh"].Value);
-           textNganhHoc.Text = row.Cells["Ten_Nganh"].Value?.ToString();
+           textNganh.Text = row.Cells["Ten_Nganh"].Value?.ToString();
             textChuyenNganh.Text = row.Cells["Ten_ChuyenNganh"].Value?.ToString();
-            textKhoaHoc.Text = row.Cells["Ma_KhoaHoc"].Value?.ToString();
-            textXepLoai.Text = row.Cells["Ten_XepLoai"].Value?.ToString();
+            txtNamTotNghiep.Text = row.Cells["Nam_Ket_Thuc"].Value?.ToString();
+            textXL.Text = row.Cells["Ten_XepLoai"].Value?.ToString();
             textSHVB.Text = row.Cells["SoHieu"].Value?.ToString();
             dateTimeNgayCap.Value = Convert.ToDateTime(row.Cells["Ngay_Cap"].Value);
             textNoiCap.Text = row.Cells["Noi_Cap"].Value?.ToString();

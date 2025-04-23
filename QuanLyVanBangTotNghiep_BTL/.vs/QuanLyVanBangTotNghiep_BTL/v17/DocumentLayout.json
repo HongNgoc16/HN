@@ -9,11 +9,11 @@
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 1,
+      "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 117,
+          "DockedWidth": 200,
           "SelectedChildIndex": 1,
           "Children": [
             {
@@ -29,13 +29,13 @@
               "ToolTip": "D:\\Ng\u00F4n ng\u1EEF l\u1EADp tr\u00ECnh\\B\u00E0i t\u1EADp l\u1EDBn\\btl-hn\\QuanLyVanBangTotNghiep_BTL\\QLVB.edmx [Diagram1]",
               "RelativeToolTip": "QLVB.edmx [Diagram1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2025-04-17T13:45:27.81Z",
+              "WhenOpened": "2025-04-22T09:26:01.276Z",
               "EditorCaption": " [Diagram1]"
             }
           ]
         },
         {
-          "DockedHeight": 30,
+          "DockedWidth": 1217,
           "SelectedChildIndex": -1,
           "Children": [
             {
@@ -45,7 +45,7 @@
           ]
         },
         {
-          "DockedHeight": 366,
+          "DockedWidth": 86,
           "SelectedChildIndex": -1,
           "Children": [
             {

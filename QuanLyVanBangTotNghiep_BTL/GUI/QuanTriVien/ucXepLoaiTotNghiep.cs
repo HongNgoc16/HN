@@ -28,33 +28,33 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
             HienThiDuLieu();
         }
 
-        private void buttonThemMoi_Click(object sender, EventArgs e)
+        private void BtnThemMoi_Click(object sender, EventArgs e)
         {
-            textMaXL.Clear();
-            textTenXL.Clear();
-            textDiemToiThieu.Clear();
-            textDiemToiDa.Clear();
-            rdbDangSd.Checked = false;
-            rdbKhongSd.Checked = false;
-            textMaXL.Focus();
+            txtMaXL.Clear();
+            txtTenXL.Clear();
+            txtDiemToiThieu.Clear();
+            txtDiemToiDa.Clear();
+            rdbDangSuDung.Checked = false;
+            rdbKhongSuDung.Checked = false;
+            txtMaXL.Focus();
             opt = 1;
         }
 
-        private void buttonSua_Click(object sender, EventArgs e)
+        private void BtnSua_Click(object sender, EventArgs e)
         {
-            bool trang_Thai_Su_Dung = rdbDangSd.Checked;
+            bool trangThaiSuDung = rdbDangSuDung.Checked;
             if (dgXepLoai.CurrentRow != null)
             {
                 int id = Convert.ToInt32(dgXepLoai[0, dgXepLoai.CurrentRow.Index].Value);
-                bll.SuaXepLoai(id, textMaXL.Text, textTenXL.Text,
-                               Convert.ToDecimal(textDiemToiThieu.Text),
-                               Convert.ToDecimal(textDiemToiDa.Text),
-                               trang_Thai_Su_Dung);
+                bll.SuaXepLoai(id, txtMaXL.Text, txtTenXL.Text,
+                               Convert.ToDecimal(txtDiemToiThieu.Text),
+                               Convert.ToDecimal(txtDiemToiDa.Text),
+                               trangThaiSuDung);
                 HienThiDuLieu();
                 MessageBox.Show("Sửa xếp loại thành công!");
             }
         }
-        private void buttonXoa_Click(object sender, EventArgs e)
+        private void BtnXoa_Click(object sender, EventArgs e)
         {
             if (dgXepLoai.CurrentRow != null)
             {
@@ -69,37 +69,37 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
             }
         }
 
-        private void buttonLuu_Click(object sender, EventArgs e)
+        private void BtnLuu_Click(object sender, EventArgs e)
         {
-            bool trang_Thai_Su_Dung = rdbDangSd.Checked;
+            bool trangThaiSuDung = rdbDangSuDung.Checked;
 
             if (opt == 1)
             {
-                bll.ThemXepLoai(textMaXL.Text, textTenXL.Text,
-                                Convert.ToDecimal(textDiemToiThieu.Text),
-                                Convert.ToDecimal(textDiemToiDa.Text),
-                                trang_Thai_Su_Dung);
+                bll.ThemXepLoai(txtMaXL.Text, txtTenXL.Text,
+                                Convert.ToDecimal(txtDiemToiThieu.Text),
+                                Convert.ToDecimal(txtDiemToiDa.Text),
+                                trangThaiSuDung);
                 HienThiDuLieu();
                 MessageBox.Show("Thêm xếp loại thành công!");
                 opt = -1;
             }
         }
 
-        private void dgXepLoai_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void DgXepLoai_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             
-                textMaXL.Text = dgXepLoai[1, dgXepLoai.CurrentRow.Index].Value.ToString();
-                textTenXL.Text = dgXepLoai[2, dgXepLoai.CurrentRow.Index].Value.ToString();
-                textDiemToiThieu.Text = dgXepLoai[3, dgXepLoai.CurrentRow.Index].Value.ToString();
-                textDiemToiDa.Text = dgXepLoai[4, dgXepLoai.CurrentRow.Index].Value.ToString();
+                txtMaXL.Text = dgXepLoai[1, dgXepLoai.CurrentRow.Index].Value.ToString();
+                txtTenXL.Text = dgXepLoai[2, dgXepLoai.CurrentRow.Index].Value.ToString();
+                txtDiemToiThieu.Text = dgXepLoai[3, dgXepLoai.CurrentRow.Index].Value.ToString();
+                txtDiemToiDa.Text = dgXepLoai[4, dgXepLoai.CurrentRow.Index].Value.ToString();
 
                 bool trang_Thai_Su_Dung = Convert.ToBoolean(dgXepLoai[5, e.RowIndex].Value); // Assuming column 5 holds the "TrangThaiSuDung" value.
-                rdbDangSd.Checked = trang_Thai_Su_Dung;
-                rdbKhongSd.Checked = !trang_Thai_Su_Dung;
+                rdbDangSuDung.Checked = trang_Thai_Su_Dung;
+                rdbKhongSuDung.Checked = !trang_Thai_Su_Dung;
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void BtnTimKiem_Click(object sender, EventArgs e)
         {
           /*  string maXL = textMaXL.Text.Trim().ToLower();
             string tenXL = textTenXL.Text.Trim().ToLower();

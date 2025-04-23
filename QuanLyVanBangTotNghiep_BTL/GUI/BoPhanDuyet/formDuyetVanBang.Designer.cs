@@ -36,11 +36,10 @@
             this.textChuyenNganh = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.dateTimeNgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.dateTimeNgayCap = new System.Windows.Forms.DateTimePicker();
             this.textNoiCap = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textXepLoai = new System.Windows.Forms.TextBox();
-            this.textKhoaHoc = new System.Windows.Forms.TextBox();
+            this.txtNamTotNghiep = new System.Windows.Forms.TextBox();
             this.textNganhHoc = new System.Windows.Forms.TextBox();
             this.textSHVB = new System.Windows.Forms.TextBox();
             this.textHoVaTen = new System.Windows.Forms.TextBox();
@@ -53,11 +52,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.mtbNgayCap = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.mtbNgayCap);
             this.panel1.Controls.Add(this.buttonTuChoi);
             this.panel1.Controls.Add(this.buttonDuyet);
             this.panel1.Controls.Add(this.comboBoxDotCap);
@@ -65,11 +66,10 @@
             this.panel1.Controls.Add(this.textChuyenNganh);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.dateTimeNgaySinh);
-            this.panel1.Controls.Add(this.dateTimeNgayCap);
             this.panel1.Controls.Add(this.textNoiCap);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.textXepLoai);
-            this.panel1.Controls.Add(this.textKhoaHoc);
+            this.panel1.Controls.Add(this.txtNamTotNghiep);
             this.panel1.Controls.Add(this.textNganhHoc);
             this.panel1.Controls.Add(this.textSHVB);
             this.panel1.Controls.Add(this.textHoVaTen);
@@ -151,14 +151,6 @@
             this.dateTimeNgaySinh.Size = new System.Drawing.Size(277, 26);
             this.dateTimeNgaySinh.TabIndex = 43;
             // 
-            // dateTimeNgayCap
-            // 
-            this.dateTimeNgayCap.Enabled = false;
-            this.dateTimeNgayCap.Location = new System.Drawing.Point(266, 411);
-            this.dateTimeNgayCap.Name = "dateTimeNgayCap";
-            this.dateTimeNgayCap.Size = new System.Drawing.Size(277, 26);
-            this.dateTimeNgayCap.TabIndex = 42;
-            // 
             // textNoiCap
             // 
             this.textNoiCap.Enabled = false;
@@ -184,13 +176,13 @@
             this.textXepLoai.Size = new System.Drawing.Size(277, 26);
             this.textXepLoai.TabIndex = 39;
             // 
-            // textKhoaHoc
+            // txtNamTotNghiep
             // 
-            this.textKhoaHoc.Enabled = false;
-            this.textKhoaHoc.Location = new System.Drawing.Point(266, 289);
-            this.textKhoaHoc.Name = "textKhoaHoc";
-            this.textKhoaHoc.Size = new System.Drawing.Size(277, 26);
-            this.textKhoaHoc.TabIndex = 38;
+            this.txtNamTotNghiep.Enabled = false;
+            this.txtNamTotNghiep.Location = new System.Drawing.Point(266, 289);
+            this.txtNamTotNghiep.Name = "txtNamTotNghiep";
+            this.txtNamTotNghiep.Size = new System.Drawing.Size(277, 26);
+            this.txtNamTotNghiep.TabIndex = 38;
             // 
             // textNganhHoc
             // 
@@ -256,9 +248,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(63, 289);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 20);
+            this.label6.Size = new System.Drawing.Size(117, 20);
             this.label6.TabIndex = 30;
-            this.label6.Text = "Khóa học";
+            this.label6.Text = "Năm tốt nghiệp";
             // 
             // label5
             // 
@@ -296,6 +288,15 @@
             this.label2.TabIndex = 26;
             this.label2.Text = "Mã sinh viên";
             // 
+            // mtbNgayCap
+            // 
+            this.mtbNgayCap.Location = new System.Drawing.Point(262, 413);
+            this.mtbNgayCap.Mask = "00/00/0000";
+            this.mtbNgayCap.Name = "mtbNgayCap";
+            this.mtbNgayCap.Size = new System.Drawing.Size(281, 26);
+            this.mtbNgayCap.TabIndex = 50;
+            this.mtbNgayCap.ValidatingType = typeof(System.DateTime);
+            // 
             // formDuyetVanBang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -321,11 +322,10 @@
         private System.Windows.Forms.TextBox textChuyenNganh;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dateTimeNgaySinh;
-        private System.Windows.Forms.DateTimePicker dateTimeNgayCap;
         private System.Windows.Forms.TextBox textNoiCap;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textXepLoai;
-        private System.Windows.Forms.TextBox textKhoaHoc;
+        private System.Windows.Forms.TextBox txtNamTotNghiep;
         private System.Windows.Forms.TextBox textNganhHoc;
         private System.Windows.Forms.TextBox textSHVB;
         private System.Windows.Forms.TextBox textHoVaTen;
@@ -338,5 +338,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.MaskedTextBox mtbNgayCap;
     }
 }

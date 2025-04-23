@@ -1,6 +1,6 @@
 ﻿namespace QuanLyVanBangTotNghiep_BTL.GUI
 {
-    partial class ucDonViQuanLy
+    partial class UcDonViQuanLy
     {
         /// <summary> 
         /// Required designer variable.
@@ -31,17 +31,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rdbKhongSd = new System.Windows.Forms.RadioButton();
-            this.rdbDangSd = new System.Windows.Forms.RadioButton();
+            this.rdoKhongSuDung = new System.Windows.Forms.RadioButton();
+            this.rdoDangSuDung = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
-            this.textTenDVQLCha = new System.Windows.Forms.TextBox();
-            this.textTenDVQL = new System.Windows.Forms.TextBox();
-            this.textMaDVQL = new System.Windows.Forms.TextBox();
+            this.txtTenDVQLCha = new System.Windows.Forms.TextBox();
+            this.txtTenDVQL = new System.Windows.Forms.TextBox();
+            this.txtMaDVQL = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgDonViQuanLy = new System.Windows.Forms.DataGridView();
+            this.dgvDonViQuanLy = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonLuu = new System.Windows.Forms.Button();
             this.buttonTimKiem = new System.Windows.Forms.Button();
@@ -51,7 +51,7 @@
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgDonViQuanLy)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDonViQuanLy)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,12 +78,12 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.rdbKhongSd);
-            this.groupBox2.Controls.Add(this.rdbDangSd);
+            this.groupBox2.Controls.Add(this.rdoKhongSuDung);
+            this.groupBox2.Controls.Add(this.rdoDangSuDung);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.textTenDVQLCha);
-            this.groupBox2.Controls.Add(this.textTenDVQL);
-            this.groupBox2.Controls.Add(this.textMaDVQL);
+            this.groupBox2.Controls.Add(this.txtTenDVQLCha);
+            this.groupBox2.Controls.Add(this.txtTenDVQL);
+            this.groupBox2.Controls.Add(this.txtMaDVQL);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label1);
@@ -98,27 +98,27 @@
             // 
             // rdbKhongSd
             // 
-            this.rdbKhongSd.AutoSize = true;
-            this.rdbKhongSd.ForeColor = System.Drawing.Color.Black;
-            this.rdbKhongSd.Location = new System.Drawing.Point(385, 175);
-            this.rdbKhongSd.Name = "rdbKhongSd";
-            this.rdbKhongSd.Size = new System.Drawing.Size(155, 29);
-            this.rdbKhongSd.TabIndex = 12;
-            this.rdbKhongSd.TabStop = true;
-            this.rdbKhongSd.Text = "Không sử dụng";
-            this.rdbKhongSd.UseVisualStyleBackColor = true;
+            this.rdoKhongSuDung.AutoSize = true;
+            this.rdoKhongSuDung.ForeColor = System.Drawing.Color.Black;
+            this.rdoKhongSuDung.Location = new System.Drawing.Point(385, 175);
+            this.rdoKhongSuDung.Name = "rdbKhongSd";
+            this.rdoKhongSuDung.Size = new System.Drawing.Size(155, 29);
+            this.rdoKhongSuDung.TabIndex = 12;
+            this.rdoKhongSuDung.TabStop = true;
+            this.rdoKhongSuDung.Text = "Không sử dụng";
+            this.rdoKhongSuDung.UseVisualStyleBackColor = true;
             // 
             // rdbDangSd
             // 
-            this.rdbDangSd.AutoSize = true;
-            this.rdbDangSd.ForeColor = System.Drawing.Color.Black;
-            this.rdbDangSd.Location = new System.Drawing.Point(218, 173);
-            this.rdbDangSd.Name = "rdbDangSd";
-            this.rdbDangSd.Size = new System.Drawing.Size(147, 29);
-            this.rdbDangSd.TabIndex = 11;
-            this.rdbDangSd.TabStop = true;
-            this.rdbDangSd.Text = "Đang sử dụng";
-            this.rdbDangSd.UseVisualStyleBackColor = true;
+            this.rdoDangSuDung.AutoSize = true;
+            this.rdoDangSuDung.ForeColor = System.Drawing.Color.Black;
+            this.rdoDangSuDung.Location = new System.Drawing.Point(218, 173);
+            this.rdoDangSuDung.Name = "rdbDangSd";
+            this.rdoDangSuDung.Size = new System.Drawing.Size(147, 29);
+            this.rdoDangSuDung.TabIndex = 11;
+            this.rdoDangSuDung.TabStop = true;
+            this.rdoDangSuDung.Text = "Đang sử dụng";
+            this.rdoDangSuDung.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -134,30 +134,30 @@
             // 
             // textTenDVQLCha
             // 
-            this.textTenDVQLCha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textTenDVQLCha.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textTenDVQLCha.Location = new System.Drawing.Point(218, 128);
-            this.textTenDVQLCha.Name = "textTenDVQLCha";
-            this.textTenDVQLCha.Size = new System.Drawing.Size(322, 31);
-            this.textTenDVQLCha.TabIndex = 6;
+            this.txtTenDVQLCha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTenDVQLCha.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenDVQLCha.Location = new System.Drawing.Point(218, 128);
+            this.txtTenDVQLCha.Name = "textTenDVQLCha";
+            this.txtTenDVQLCha.Size = new System.Drawing.Size(322, 31);
+            this.txtTenDVQLCha.TabIndex = 6;
             // 
             // textTenDVQL
             // 
-            this.textTenDVQL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textTenDVQL.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textTenDVQL.Location = new System.Drawing.Point(218, 84);
-            this.textTenDVQL.Name = "textTenDVQL";
-            this.textTenDVQL.Size = new System.Drawing.Size(322, 31);
-            this.textTenDVQL.TabIndex = 5;
+            this.txtTenDVQL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTenDVQL.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenDVQL.Location = new System.Drawing.Point(218, 84);
+            this.txtTenDVQL.Name = "textTenDVQL";
+            this.txtTenDVQL.Size = new System.Drawing.Size(322, 31);
+            this.txtTenDVQL.TabIndex = 5;
             // 
             // textMaDVQL
             // 
-            this.textMaDVQL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textMaDVQL.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textMaDVQL.Location = new System.Drawing.Point(218, 40);
-            this.textMaDVQL.Name = "textMaDVQL";
-            this.textMaDVQL.Size = new System.Drawing.Size(322, 31);
-            this.textMaDVQL.TabIndex = 4;
+            this.txtMaDVQL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMaDVQL.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaDVQL.Location = new System.Drawing.Point(218, 40);
+            this.txtMaDVQL.Name = "textMaDVQL";
+            this.txtMaDVQL.Size = new System.Drawing.Size(322, 31);
+            this.txtMaDVQL.TabIndex = 4;
             // 
             // label4
             // 
@@ -197,7 +197,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dgDonViQuanLy);
+            this.groupBox1.Controls.Add(this.dgvDonViQuanLy);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.HotPink;
@@ -210,16 +210,16 @@
             // 
             // dgDonViQuanLy
             // 
-            this.dgDonViQuanLy.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgDonViQuanLy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgDonViQuanLy.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgDonViQuanLy.Location = new System.Drawing.Point(3, 27);
-            this.dgDonViQuanLy.Name = "dgDonViQuanLy";
-            this.dgDonViQuanLy.RowHeadersWidth = 62;
-            this.dgDonViQuanLy.RowTemplate.Height = 28;
-            this.dgDonViQuanLy.Size = new System.Drawing.Size(886, 184);
-            this.dgDonViQuanLy.TabIndex = 0;
-            this.dgDonViQuanLy.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDonViQuanLy_CellClick);
+            this.dgvDonViQuanLy.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDonViQuanLy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDonViQuanLy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDonViQuanLy.Location = new System.Drawing.Point(3, 27);
+            this.dgvDonViQuanLy.Name = "dgDonViQuanLy";
+            this.dgvDonViQuanLy.RowHeadersWidth = 62;
+            this.dgvDonViQuanLy.RowTemplate.Height = 28;
+            this.dgvDonViQuanLy.Size = new System.Drawing.Size(886, 184);
+            this.dgvDonViQuanLy.TabIndex = 0;
+            this.dgvDonViQuanLy.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvDonViQuanLy_CellClick);
             // 
             // panel2
             // 
@@ -249,7 +249,7 @@
             this.buttonLuu.TabIndex = 6;
             this.buttonLuu.Text = "Lưu";
             this.buttonLuu.UseVisualStyleBackColor = false;
-            this.buttonLuu.Click += new System.EventHandler(this.buttonLuu_Click);
+            this.buttonLuu.Click += new System.EventHandler(this.BtnLuu_Click);
             // 
             // buttonTimKiem
             // 
@@ -267,7 +267,7 @@
             this.buttonTimKiem.TabIndex = 4;
             this.buttonTimKiem.Text = "Tìm kiếm";
             this.buttonTimKiem.UseVisualStyleBackColor = false;
-            this.buttonTimKiem.Click += new System.EventHandler(this.buttonTimKiem_Click);
+            this.buttonTimKiem.Click += new System.EventHandler(this.BtnTimKiem_Click);
             // 
             // buttonXoa
             // 
@@ -285,7 +285,7 @@
             this.buttonXoa.TabIndex = 3;
             this.buttonXoa.Text = "Xóa";
             this.buttonXoa.UseVisualStyleBackColor = false;
-            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
+            this.buttonXoa.Click += new System.EventHandler(this.BtnXoa_Click);
             // 
             // buttonSua
             // 
@@ -303,7 +303,7 @@
             this.buttonSua.TabIndex = 2;
             this.buttonSua.Text = "Sửa";
             this.buttonSua.UseVisualStyleBackColor = false;
-            this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
+            this.buttonSua.Click += new System.EventHandler(this.BtnSua_Click);
             // 
             // buttonThemMoi
             // 
@@ -321,7 +321,7 @@
             this.buttonThemMoi.TabIndex = 1;
             this.buttonThemMoi.Text = "Thêm mới";
             this.buttonThemMoi.UseVisualStyleBackColor = false;
-            this.buttonThemMoi.Click += new System.EventHandler(this.buttonThemMoi_Click);
+            this.buttonThemMoi.Click += new System.EventHandler(this.BtnThemMoi_Click);
             // 
             // ucDonViQuanLy
             // 
@@ -333,13 +333,13 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "ucDonViQuanLy";
             this.Size = new System.Drawing.Size(892, 539);
-            this.Load += new System.EventHandler(this.ucDonViQuanLy_Load);
+            this.Load += new System.EventHandler(this.UcDonViQuanLy_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgDonViQuanLy)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDonViQuanLy)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -352,21 +352,21 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textTenDVQLCha;
-        private System.Windows.Forms.TextBox textTenDVQL;
-        private System.Windows.Forms.TextBox textMaDVQL;
+        private System.Windows.Forms.TextBox txtTenDVQLCha;
+        private System.Windows.Forms.TextBox txtTenDVQL;
+        private System.Windows.Forms.TextBox txtMaDVQL;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dgDonViQuanLy;
+        private System.Windows.Forms.DataGridView dgvDonViQuanLy;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button buttonLuu;
         private System.Windows.Forms.Button buttonTimKiem;
         private System.Windows.Forms.Button buttonXoa;
         private System.Windows.Forms.Button buttonSua;
         private System.Windows.Forms.Button buttonThemMoi;
-        private System.Windows.Forms.RadioButton rdbKhongSd;
-        private System.Windows.Forms.RadioButton rdbDangSd;
+        private System.Windows.Forms.RadioButton rdoKhongSuDung;
+        private System.Windows.Forms.RadioButton rdoDangSuDung;
     }
 }

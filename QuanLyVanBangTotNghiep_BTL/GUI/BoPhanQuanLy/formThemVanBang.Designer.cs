@@ -39,7 +39,6 @@
             this.textNoiCap = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textXepLoai = new System.Windows.Forms.TextBox();
-            this.textKhoaHoc = new System.Windows.Forms.TextBox();
             this.textNganhHoc = new System.Windows.Forms.TextBox();
             this.textSHVB = new System.Windows.Forms.TextBox();
             this.textHoVaTen = new System.Windows.Forms.TextBox();
@@ -52,11 +51,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.mtbNamTotNghiep = new System.Windows.Forms.MaskedTextBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.mtbNamTotNghiep);
             this.panel2.Controls.Add(this.comboBoxDotCap);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.textChuyenNganh);
@@ -67,7 +68,6 @@
             this.panel2.Controls.Add(this.textNoiCap);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.textXepLoai);
-            this.panel2.Controls.Add(this.textKhoaHoc);
             this.panel2.Controls.Add(this.textNganhHoc);
             this.panel2.Controls.Add(this.textSHVB);
             this.panel2.Controls.Add(this.textHoVaTen);
@@ -166,13 +166,6 @@
             this.textXepLoai.Size = new System.Drawing.Size(376, 26);
             this.textXepLoai.TabIndex = 15;
             // 
-            // textKhoaHoc
-            // 
-            this.textKhoaHoc.Location = new System.Drawing.Point(247, 283);
-            this.textKhoaHoc.Name = "textKhoaHoc";
-            this.textKhoaHoc.Size = new System.Drawing.Size(376, 26);
-            this.textKhoaHoc.TabIndex = 14;
-            // 
             // textNganhHoc
             // 
             this.textNganhHoc.Location = new System.Drawing.Point(243, 194);
@@ -234,9 +227,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(44, 283);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 20);
+            this.label6.Size = new System.Drawing.Size(117, 20);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Khóa học";
+            this.label6.Text = "Năm tốt nghiệp";
             // 
             // label5
             // 
@@ -274,6 +267,15 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã sinh viên";
             // 
+            // mtbNamTotNghiep
+            // 
+            this.mtbNamTotNghiep.Location = new System.Drawing.Point(247, 277);
+            this.mtbNamTotNghiep.Mask = "0000";
+            this.mtbNamTotNghiep.Name = "mtbNamTotNghiep";
+            this.mtbNamTotNghiep.Size = new System.Drawing.Size(66, 26);
+            this.mtbNamTotNghiep.TabIndex = 26;
+            this.mtbNamTotNghiep.ValidatingType = typeof(int);
+            // 
             // formThemVanBang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -301,7 +303,6 @@
         private System.Windows.Forms.DateTimePicker dateTimeNgayCap;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textXepLoai;
-        private System.Windows.Forms.TextBox textKhoaHoc;
         private System.Windows.Forms.TextBox textNganhHoc;
         private System.Windows.Forms.TextBox textSHVB;
         private System.Windows.Forms.TextBox textHoVaTen;
@@ -315,5 +316,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textNoiCap;
+        private System.Windows.Forms.MaskedTextBox mtbNamTotNghiep;
     }
 }

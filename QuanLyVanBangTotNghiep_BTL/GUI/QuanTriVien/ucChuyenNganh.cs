@@ -13,49 +13,49 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
 {
 
     
-    public partial class ucChuyenNganh : UserControl
+    public partial class UcChuyenNganh : UserControl
     {
         int opt = -1;
         QLVB_Entities db = new QLVB_Entities();
-        public ucChuyenNganh()
+        public UcChuyenNganh()
         {
             InitializeComponent();
         }
         public void HienThiDuLieu()
         {
-            dgChuyenNganh.DataSource = db.chon_chuyennganh();
+            dgvChuyenNganh.DataSource = db.chon_chuyennganh();
         }
         private void LoadComboBox()
         {
-            comboBoxTenNganh.DataSource = db.dm_NganhHoc.ToList();
-            comboBoxTenNganh.DisplayMember = "Ten_Nganh";
-            comboBoxTenNganh.ValueMember = "Id_NganhHoc";
+            cboTenNganh.DataSource = db.dm_NganhHoc.ToList();
+            cboTenNganh.DisplayMember = "Ten_Nganh";
+            cboTenNganh.ValueMember = "Id_NganhHoc";
         }
 
-        private void ucChuyenNganh_Load(object sender, EventArgs e)
+        private void UcChuyenNganh_Load(object sender, EventArgs e)
         {
             HienThiDuLieu();
             LoadComboBox();
         }
 
-        private void buttonThemMoi_Click(object sender, EventArgs e)
+        private void BtnThemMoi_Click(object sender, EventArgs e)
         {
-            textMaChuyenNganh.Clear();
-            textTenChuyenNganh.Clear();
-            rdbDangSd.Checked = false;
-            rdbKhongSd.Checked = false;
-            comboBoxTenNganh.SelectedIndex = -1;
-            textMaChuyenNganh.Focus();
+            txtMaChuyenNganh.Clear();
+            txtTenChuyenNganh.Clear();
+            rdoDangSuDung.Checked = false;
+            rdoKhongSuDung.Checked = false;
+            cboTenNganh.SelectedIndex = -1;
+            txtMaChuyenNganh.Focus();
             opt = 1;
 
         }
 
-        private void buttonLuu_Click(object sender, EventArgs e)
+        private void BtnLuu_Click(object sender, EventArgs e)
         {
-            string maCN = textMaChuyenNganh.Text;
-            string tenCN = textTenChuyenNganh.Text;
-            int idNganh = Convert.ToInt32(comboBoxTenNganh.SelectedValue);
-            bool trangThai = rdbDangSd.Checked;
+            string maCN = txtMaChuyenNganh.Text;
+            string tenCN = txtTenChuyenNganh.Text;
+            int idNganh = Convert.ToInt32(cboTenNganh.SelectedValue);
+            bool trangThai = rdoDangSuDung.Checked;
 
             db.them_chuyennganh(maCN, tenCN, idNganh, trangThai);
 
@@ -66,30 +66,30 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
 
         }
 
-        private void dgChuyenNganh_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void DgvChuyenNganh_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgChuyenNganh.CurrentRow != null)
+            if (dgvChuyenNganh.CurrentRow != null)
             {
-                textMaChuyenNganh.Text = dgChuyenNganh[1, dgChuyenNganh.CurrentRow.Index].Value.ToString();
-                textTenChuyenNganh.Text = dgChuyenNganh[2, dgChuyenNganh.CurrentRow.Index].Value.ToString();
-                string tenNganh = dgChuyenNganh[3, dgChuyenNganh.CurrentRow.Index].Value.ToString(); 
-                comboBoxTenNganh.Text = tenNganh;
-                bool trangThai = Convert.ToBoolean(dgChuyenNganh[4, dgChuyenNganh.CurrentRow.Index].Value);
-                rdbDangSd.Checked = trangThai;
-                rdbKhongSd.Checked = !trangThai;
+                txtMaChuyenNganh.Text = dgvChuyenNganh[1, dgvChuyenNganh.CurrentRow.Index].Value.ToString();
+                txtTenChuyenNganh.Text = dgvChuyenNganh[2, dgvChuyenNganh.CurrentRow.Index].Value.ToString();
+                string tenNganh = dgvChuyenNganh[3, dgvChuyenNganh.CurrentRow.Index].Value.ToString(); 
+                cboTenNganh.Text = tenNganh;
+                bool trangThai = Convert.ToBoolean(dgvChuyenNganh[4, dgvChuyenNganh.CurrentRow.Index].Value);
+                rdoDangSuDung.Checked = trangThai;
+                rdoKhongSuDung.Checked = !trangThai;
             }
         }
 
-        private void buttonSua_Click(object sender, EventArgs e)
+        private void BtnSua_Click(object sender, EventArgs e)
         {
           
-                if (dgChuyenNganh.CurrentRow != null)
+                if (dgvChuyenNganh.CurrentRow != null)
                 {
-                    int id = Convert.ToInt32(dgChuyenNganh[0, dgChuyenNganh.CurrentRow.Index].Value.ToString());
-                    string maCN = textMaChuyenNganh.Text;
-                    string tenCN = textTenChuyenNganh.Text;
-                    int idNganh = Convert.ToInt32(comboBoxTenNganh.SelectedValue);
-                    bool trangThai = rdbDangSd.Checked;
+                    int id = Convert.ToInt32(dgvChuyenNganh[0, dgvChuyenNganh.CurrentRow.Index].Value.ToString());
+                    string maCN = txtMaChuyenNganh.Text;
+                    string tenCN = txtTenChuyenNganh.Text;
+                    int idNganh = Convert.ToInt32(cboTenNganh.SelectedValue);
+                    bool trangThai = rdoDangSuDung.Checked;
 
                     db.sua_chuyennganh(id, maCN, tenCN, idNganh, trangThai);
                     HienThiDuLieu();
@@ -97,20 +97,20 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
                 }
             }
 
-        private void buttonNganhHoc_Click(object sender, EventArgs e)
+        private void BtnTimKiem_Click(object sender, EventArgs e)
         {
-            string maChuyenNganh = textMaChuyenNganh.Text.Trim();
-            string tenChuyenNganh = textTenChuyenNganh.Text.Trim();
-            string selectedNganh = comboBoxTenNganh.Text.Trim(); // Sửa lại chỗ này, dùng Text thay vì SelectedValue
+            string maChuyenNganh = txtMaChuyenNganh.Text.Trim();
+            string tenChuyenNganh = txtTenChuyenNganh.Text.Trim();
+            string selectedNganh = cboTenNganh.Text.Trim(); // Sửa lại chỗ này, dùng Text thay vì SelectedValue
 
-            bool locTheoTrangThai = rdbDangSd.Checked || rdbKhongSd.Checked;
+            bool locTheoTrangThai = rdoDangSuDung.Checked || rdoKhongSuDung.Checked;
             bool? trangThaiSuDung = null;
 
-            if (rdbDangSd.Checked)
+            if (rdoDangSuDung.Checked)
             {
                 trangThaiSuDung = true;
             }
-            else if (rdbKhongSd.Checked)
+            else if (rdoKhongSuDung.Checked)
             {
                 trangThaiSuDung = false;
             }
@@ -156,15 +156,15 @@ namespace QuanLyVanBangTotNghiep_BTL.GUI
                         );
                     }
 
-                    dgChuyenNganh.DataSource = dt;
+                    dgvChuyenNganh.DataSource = dt;
 
                     // Định dạng cột
-                    dgChuyenNganh.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                    dgChuyenNganh.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
+                    dgvChuyenNganh.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dgvChuyenNganh.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
                 }
                 else
                 {
-                    dgChuyenNganh.DataSource = null;
+                    dgvChuyenNganh.DataSource = null;
                     MessageBox.Show("Không tìm thấy chuyên ngành nào phù hợp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }

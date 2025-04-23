@@ -171,6 +171,12 @@
     <Compile Include="GUI\BoPhanQuanLy\BPQuanLy.Designer.cs">
       <DependentUpon>BPQuanLy.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\BoPhanQuanLy\FormBienBanThuHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BoPhanQuanLy\FormBienBanThuHoi.Designer.cs">
+      <DependentUpon>FormBienBanThuHoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\BoPhanQuanLy\formCapBang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,12 @@
     </Compile>
     <Compile Include="GUI\BoPhanQuanLy\formXemBang.Designer.cs">
       <DependentUpon>formXemBang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BoPhanQuanLy\UcQuanLyVanBangThuHoi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\BoPhanQuanLy\UcQuanLyVanBangThuHoi.Designer.cs">
+      <DependentUpon>UcQuanLyVanBangThuHoi.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\BoPhanQuanLy\uc_NhapVanBang.cs">
       <SubType>UserControl</SubType>
@@ -249,11 +261,11 @@
     <Compile Include="GUI\MainFunction\TrangChu.Designer.cs">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\QuanTriVien\ucChuyenNganh.cs">
+    <Compile Include="GUI\QuanTriVien\UcChuyenNganh.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\QuanTriVien\ucChuyenNganh.Designer.cs">
-      <DependentUpon>ucChuyenNganh.cs</DependentUpon>
+    <Compile Include="GUI\QuanTriVien\UcChuyenNganh.Designer.cs">
+      <DependentUpon>UcChuyenNganh.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\QuanTriVien\ucDonViQuanLy.cs">
       <SubType>UserControl</SubType>
@@ -303,7 +315,7 @@
     <Compile Include="GUI\QuanTriVien\uc_PhoiBang.Designer.cs">
       <DependentUpon>uc_PhoiBang.cs</DependentUpon>
     </Compile>
-    <Compile Include="lay_thong_tin_sinhvien_Result.cs">
+    <Compile Include="lay_thong_tin_sinhvien1_Result.cs">
       <DependentUpon>QLVB.tt</DependentUpon>
     </Compile>
     <Compile Include="PhoiBang.cs">
@@ -326,7 +338,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLVB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="timkiem_vanbangchinhthuc1_Result.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
     <Compile Include="timkiem_vanbangchinhthuc_Result.cs">
+      <DependentUpon>QLVB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="timkiem_vanbangtam1_Result.cs">
       <DependentUpon>QLVB.tt</DependentUpon>
     </Compile>
     <Compile Include="timkiem_vanbangtam_Result.cs">
@@ -353,6 +371,9 @@
     <EmbeddedResource Include="GUI\BoPhanQuanLy\BPQuanLy.resx">
       <DependentUpon>BPQuanLy.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BoPhanQuanLy\FormBienBanThuHoi.resx">
+      <DependentUpon>FormBienBanThuHoi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\BoPhanQuanLy\formCapBang.resx">
       <DependentUpon>formCapBang.cs</DependentUpon>
     </EmbeddedResource>
@@ -362,8 +383,14 @@
     <EmbeddedResource Include="GUI\BoPhanQuanLy\formXemBang.resx">
       <DependentUpon>formXemBang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BoPhanQuanLy\UcQuanLyVanBangThuHoi.resx">
+      <DependentUpon>UcQuanLyVanBangThuHoi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\BoPhanQuanLy\uc_BienBanHuyBang.resx">
       <DependentUpon>uc_BienBanHuyBang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BoPhanQuanLy\uc_CapBanSao.resx">
+      <DependentUpon>uc_CapBanSao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\BoPhanQuanLy\uc_NhapVanBang.resx">
       <DependentUpon>uc_NhapVanBang.cs</DependentUpon>
@@ -386,8 +413,8 @@
     <EmbeddedResource Include="GUI\MainFunction\TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QuanTriVien\ucChuyenNganh.resx">
-      <DependentUpon>ucChuyenNganh.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\QuanTriVien\UcChuyenNganh.resx">
+      <DependentUpon>UcChuyenNganh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuanTriVien\ucDonViQuanLy.resx">
       <DependentUpon>ucDonViQuanLy.cs</DependentUpon>
@@ -463,6 +490,7 @@
       <DependentUpon>QLVB.edmx</DependentUpon>
       <LastGenOutput>QLVB.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\z6528134402230_ac6c5acc2bc193592d8a5dde684ecc21.jpg" />
     <None Include="Resources\bang_dai_hoc.jpg" />
     <None Include="Resources\Bằng TN.png" />
   </ItemGroup>
